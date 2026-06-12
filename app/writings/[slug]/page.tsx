@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllWritings, getWritingBySlug } from '@/lib/writings'
 
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const writings = getAllWritings()
   return writings.map((w) => ({ slug: w.slug }))
