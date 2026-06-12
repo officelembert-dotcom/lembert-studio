@@ -1,50 +1,40 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { getAllNotes, getNoteBySlug } from '@/lib/notes'
+import { getAllWritings, getWritingBySlug } from '@/lib/writings'
 
 export async function generateStaticParams() {
-  const notes = getAllNotes()
-  return notes.map((note) => ({ slug: note.slug }))
+  const writings = getAllWritings()
+  return writings.map((w) => ({ slug: w.slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const note = getNoteBySlug(params.slug)
-  if (!note) return {}
-  return { title: `${note.title} — Lembert Studio` }
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const writing = getWritingBySlug(params.slug)
+  if (!writing) return {}
+  return { title: `${writing.title} — Lembert Studio` }
 }
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00')
-  return d.toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
-export default function NotePage({ params }: { params: { slug: string } }) {
-  const note = getNoteBySlug(params.slug)
-  if (!note) notFound()
+export default function WritingPage({ params }: { params: { slug: string } }) {
+  const writing = getWritingBySlug(params.slug)
+  if (!writing) notFound()
 
   return (
     <div className="page-enter mx-auto max-w-page px-6 md:px-10">
-      <div style={{ height: '4rem' }} />
+      <div style={{ height: '6rem' }} />
 
-      {/* Date */}
       <time
         className="font-inter block mb-6"
         style={{ fontSize: '12px', opacity: 0.55 }}
-        dateTime={note.date}
+        dateTime={writing.date}
       >
-        {formatDate(note.date)}
+        {formatDate(writing.date)}
       </time>
 
-      {/* Title */}
       <h1
         className="font-fraunces font-normal text-birch"
         style={{
@@ -54,10 +44,9 @@ export default function NotePage({ params }: { params: { slug: string } }) {
           maxWidth: '680px',
         }}
       >
-        {note.title}
+        {writing.title}
       </h1>
 
-      {/* Divider */}
       <div
         style={{
           height: '1px',
@@ -68,25 +57,19 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         }}
       />
 
-      {/* Body */}
-      <article
-        className="prose-note mx-auto"
-        style={{ maxWidth: '680px' }}
-      >
-        <MDXRemote source={note.content} />
+      <article className="prose-note mx-auto" style={{ maxWidth: '680px' }}>
+        <MDXRemote source={writing.content} />
       </article>
 
-      {/* Bottom space */}
       <div style={{ height: '4rem' }} />
 
-      {/* Back link */}
       <div style={{ maxWidth: '680px', marginBottom: '6rem' }}>
         <Link
-          href="/notes"
+          href="/writings"
           className="font-inter text-birch no-underline"
           style={{ fontSize: '13px', opacity: 0.55 }}
         >
-          ← Back to all notes
+          ← Back to all writings
         </Link>
       </div>
     </div>

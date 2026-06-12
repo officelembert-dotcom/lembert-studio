@@ -67,7 +67,7 @@ export default function NewsletterSignup() {
           className="font-inter text-birch bg-transparent flex-1"
           style={{
             fontSize: '0.9375rem',
-            borderBottom: '1px solid rgba(229,220,196,0.25)',
+            borderBottom: '1px solid rgba(227,217,189,0.25)',
             padding: '0.4rem 0',
             outline: 'none',
           }}
@@ -79,7 +79,7 @@ export default function NewsletterSignup() {
           style={{
             fontSize: '10px',
             letterSpacing: '0.24em',
-            borderBottom: '1px solid rgba(229,220,196,0.35)',
+            borderBottom: '1px solid rgba(227,217,189,0.35)',
             paddingBottom: '2px',
             background: 'none',
             cursor: 'pointer',

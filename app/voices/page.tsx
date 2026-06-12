@@ -57,7 +57,7 @@ export default function Voices() {
                     height: '80px',
                     borderRadius: '50%',
                     flexShrink: 0,
-                    background: 'rgba(229,220,196,0.07)',
+                    background: 'rgba(227,217,189,0.07)',
                   }}
                 >
                   {hasPhoto ? (
@@ -116,7 +116,7 @@ export default function Voices() {
                   style={{
                     width: '60px',
                     height: '1px',
-                    backgroundColor: 'rgba(229,220,196,0.12)',
+                    backgroundColor: 'rgba(227,217,189,0.12)',
                   }}
                 />
               )}

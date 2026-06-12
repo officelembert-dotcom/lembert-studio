@@ -85,7 +85,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
                 style={{
                   fontSize: '0.9375rem',
                   lineHeight: 1.7,
-                  borderBottom: '1px solid rgba(229,220,196,0.25)',
+                  borderBottom: '1px solid rgba(227,217,189,0.25)',
                   padding: '0.5rem 0',
                   outline: 'none',
                 }}
@@ -101,7 +101,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
                 style={{
                   fontSize: '0.9375rem',
                   lineHeight: 1.7,
-                  borderBottom: '1px solid rgba(229,220,196,0.25)',
+                  borderBottom: '1px solid rgba(227,217,189,0.25)',
                   padding: '0.5rem 0',
                   outline: 'none',
                 }}
@@ -129,7 +129,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
             opacity: status === 'sending' ? 0.4 : 1,
             background: 'none',
             border: 'none',
-            borderBottom: '1px solid rgba(229,220,196,0.35)',
+            borderBottom: '1px solid rgba(227,217,189,0.35)',
             cursor: status === 'sending' ? 'wait' : 'pointer',
             letterSpacing: '0.24em',
           }}

@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: '#1A1F1C',
-        birch: '#E5DCC4',
+        surface: '#0F0F11',
+        birch: '#E3D9BD',
         amber: '#B8853A',
       },
       fontFamily: {

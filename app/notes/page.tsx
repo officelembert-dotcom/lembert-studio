@@ -62,8 +62,8 @@ export default function Notes() {
             <li
               key={note.slug}
               style={{
-                borderTop: i === 0 ? '1px solid rgba(229,220,196,0.12)' : undefined,
-                borderBottom: '1px solid rgba(229,220,196,0.12)',
+                borderTop: i === 0 ? '1px solid rgba(227,217,189,0.12)' : undefined,
+                borderBottom: '1px solid rgba(227,217,189,0.12)',
               }}
             >
               <Link

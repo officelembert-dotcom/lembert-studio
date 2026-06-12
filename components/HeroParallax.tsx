@@ -49,7 +49,7 @@ export default function HeroParallax({ src, headline, subheadline }: Props) {
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(180deg, #0e1410 0%, #182018 30%, #1e2820 55%, #16201a 80%, #111711 100%)',
+                'linear-gradient(180deg, #080808 0%, #0d0d10 30%, #111115 55%, #0d0d10 80%, #080808 100%)',
             }}
           />
         )}

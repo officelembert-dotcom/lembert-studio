@@ -1,8 +1,19 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { getWorkPage } from '@/lib/pages'
 
 export const metadata = {
   title: 'Work — Lembert Studio',
+}
+
+const offerSlugs: Record<string, string> = {
+  'retained advisory':         '/work/retained-advisory',
+  'deep day':                  '/work/deep-day',
+  'retreats in the rheintal':  '/work/retreats',
+}
+
+function getOfferHref(title: string): string {
+  return offerSlugs[title.toLowerCase()] ?? '/work'
 }
 
 export default function Work() {
@@ -11,9 +22,35 @@ export default function Work() {
   return (
     <div className="page-enter">
 
-      {/* Header */}
+      {/* Atmospheric header image */}
+      <div
+        className="w-full relative overflow-hidden"
+        style={{ height: '50vh', minHeight: '260px', maxHeight: '520px' }}
+        aria-hidden="true"
+      >
+        {page.image ? (
+          <Image
+            src={page.image}
+            alt="Alpstein region, Switzerland"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
+        ) : (
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(160deg, #0a0a0d 0%, #111115 40%, #0d0d12 100%)' }}
+          />
+        )}
+        <div
+          className="absolute inset-x-0 bottom-0 pointer-events-none"
+          style={{ height: '40%', background: 'linear-gradient(to bottom, transparent, #0F0F11)' }}
+        />
+      </div>
+
       <div className="mx-auto max-w-page px-6 md:px-10">
-        <div style={{ height: "6rem" }} />
+        <div style={{ height: '4rem' }} />
 
         <p
           className="font-inter font-medium uppercase tracking-label mb-10"
@@ -23,47 +60,11 @@ export default function Work() {
         </p>
 
         <h1
-          className="font-fraunces font-normal text-birch"
-          style={{
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.1,
-            letterSpacing: '-0.025em',
-          }}
+          className="font-fraunces font-normal text-birch mb-16"
+          style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 1.1, letterSpacing: '-0.025em' }}
         >
           {page.headline}
         </h1>
-
-        <div style={{ height: '4rem' }} />
-      </div>
-
-      {/* Atmospheric image */}
-      {page.image && (
-        <div
-          className="w-full relative overflow-hidden"
-          style={{ height: '50vh', minHeight: '280px', maxHeight: '560px' }}
-        >
-          <Image
-            src={page.image}
-            alt="Alpstein region, Rheintal — Switzerland"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
-          <div
-            className="absolute inset-x-0 bottom-0"
-            style={{
-              height: '40%',
-              background: 'linear-gradient(to bottom, transparent, #1A1F1C)',
-              pointerEvents: 'none',
-            }}
-          />
-        </div>
-      )}
-
-      {/* Offers */}
-      <div className="mx-auto max-w-page px-6 md:px-10">
-        <div style={{ height: page.image ? '5rem' : '0' }} />
 
         <div className="max-w-[680px]">
           {page.offers.map((offer, i) => (
@@ -72,19 +73,21 @@ export default function Work() {
               style={{
                 paddingTop: '2.5rem',
                 paddingBottom: '2.5rem',
-                borderTop: i === 0 ? '1px solid rgba(229,220,196,0.12)' : undefined,
-                borderBottom: '1px solid rgba(229,220,196,0.12)',
+                borderTop: i === 0 ? '1px solid rgba(227,217,189,0.12)' : undefined,
+                borderBottom: '1px solid rgba(227,217,189,0.12)',
               }}
             >
-              <h2
-                className="font-fraunces font-normal text-birch mb-4"
-                style={{ fontSize: '1.75rem', lineHeight: 1.2 }}
-              >
-                {offer.title}
-              </h2>
+              <Link href={getOfferHref(offer.title)} className="group block no-underline">
+                <h2
+                  className="font-fraunces font-normal text-birch mb-4 transition-opacity group-hover:opacity-100"
+                  style={{ fontSize: '1.75rem', lineHeight: 1.2, opacity: 0.85 }}
+                >
+                  {offer.title}
+                </h2>
+              </Link>
               <p
                 className="font-inter font-normal text-birch"
-                style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.75 }}
+                style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.65 }}
               >
                 {offer.body}
               </p>
@@ -92,9 +95,17 @@ export default function Work() {
           ))}
         </div>
 
+        {/* Pricing */}
         <p
-          className="font-fraunces italic mt-12"
-          style={{ fontSize: '0.9375rem', lineHeight: 1.7, opacity: 0.45 }}
+          className="font-inter text-birch mt-16 text-center"
+          style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.65, maxWidth: '620px', margin: '4rem auto 0' }}
+        >
+          Engagements range from CHF 4,500 for a Working Day to CHF 30,000+ for retained advisory. The fit and the work shape the final scope.
+        </p>
+
+        <p
+          className="font-fraunces italic mt-8 text-center"
+          style={{ fontSize: '0.9375rem', lineHeight: 1.7, opacity: 0.4 }}
         >
           {page.closing}
         </p>

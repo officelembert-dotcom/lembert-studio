@@ -16,16 +16,16 @@ export default config({
     brand: { name: 'Lembert Studio' },
     navigation: {
       Pages: ['homePage', 'aboutPage', 'workPage', 'contactPage'],
-      Content: ['notes', 'voices'],
+      Content: ['writings', 'voices'],
     },
   },
 
   collections: {
 
-    notes: collection({
-      label: 'Notes',
+    writings: collection({
+      label: 'Writings',
       slugField: 'title',
-      path: 'content/notes/*',
+      path: 'content/writings/*',
       format: { contentField: 'content' },
       entryLayout: 'content',
       schema: {

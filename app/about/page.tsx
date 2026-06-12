@@ -67,7 +67,7 @@ export default function About() {
               style={{
                 width: '100%',
                 aspectRatio: '4 / 5',
-                background: 'linear-gradient(160deg, #232b26 0%, #1a1f1c 60%, #141a16 100%)',
+                background: 'linear-gradient(160deg, #232b26 0%, #0f0f11 60%, #141a16 100%)',
               }}
             />
           )}

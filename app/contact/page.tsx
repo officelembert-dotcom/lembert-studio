@@ -62,7 +62,7 @@ export default function Contact() {
       <div
         style={{
           height: '1px',
-          backgroundColor: 'rgba(229,220,196,0.12)',
+          backgroundColor: 'rgba(227,217,189,0.12)',
           maxWidth: '520px',
           marginBottom: '3rem',
         }}

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --surface: #1A1F1C;
-  --birch: #E5DCC4;
+  --surface: #0F0F11;
+  --birch: #E3D9BD;
   --amber: #B8853A;
-  --birch-55: rgba(229, 220, 196, 0.55);
-  --birch-12: rgba(229, 220, 196, 0.12);
+  --birch-55: rgba(227, 217, 189, 0.55);
+  --birch-12: rgba(227, 217, 189, 0.12);
 }
 
 html {
