@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import './globals.css'
-import Nav from '@/components/Nav'
-import Footer from '@/components/Footer'
+import SiteChrome from '@/components/SiteChrome'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -37,11 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="bg-surface text-birch font-inter">
-        <Nav />
-        {/* Nav is fixed — main needs no top padding on home (hero fills viewport),
-            but inner pages add their own top spacing via their page components */}
-        <main>{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   )
