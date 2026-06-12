@@ -26,7 +26,7 @@ export default function Work() {
       {/* Atmospheric header image */}
       <div
         className="w-full relative overflow-hidden"
-        style={{ height: '50vh', minHeight: '260px', maxHeight: '520px' }}
+        style={{ height: 'calc(50vh + 72px)', minHeight: '330px', maxHeight: '600px' }}
         aria-hidden="true"
       >
         {page.image ? (

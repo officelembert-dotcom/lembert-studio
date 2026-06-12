@@ -14,7 +14,7 @@ export default function DeepDay() {
     <div className="page-enter">
       <div
         className="w-full relative"
-        style={{ height: '50vh', minHeight: '260px', maxHeight: '520px' }}
+        style={{ height: 'calc(50vh + 72px)', minHeight: '330px', maxHeight: '600px' }}
         aria-hidden="true"
       >
         {page.image ? (
