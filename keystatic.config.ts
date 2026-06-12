@@ -178,6 +178,13 @@ export default config({
           description: 'Quiet italic line at the bottom',
           defaultValue: 'For pricing and engagement details, please get in touch.',
         }),
+        image: fields.image({
+          label: 'Atmospheric image',
+          description: 'Nature/landscape photo — forest, mountains, Alpstein region. Shown as a full-width band.',
+          directory: 'public/images',
+          publicPath: '/images/',
+          validation: { isRequired: false },
+        }),
       },
     }),
 

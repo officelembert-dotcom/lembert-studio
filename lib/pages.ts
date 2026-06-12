@@ -31,6 +31,7 @@ export interface WorkData {
   headline: string
   offers: Offer[]
   closing: string
+  image?: string | null
 }
 
 export interface ContactQuestion {
