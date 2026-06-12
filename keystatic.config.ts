@@ -72,11 +72,9 @@ export default config({
           description: 'e.g. "Founder & CEO, Acme AG" — leave blank if not needed',
           validation: { isRequired: false },
         }),
-        photo: fields.image({
-          label: 'Photo',
-          description: 'Square photo recommended, minimum 200×200px',
-          directory: 'public/images/voices',
-          publicPath: '/images/voices/',
+        photo: fields.text({
+          label: 'Photo path',
+          description: 'Drop the photo into /public/images/voices/ on your Mac, push it, then paste the path here — e.g. /images/voices/firstname-lastname.jpg',
           validation: { isRequired: false },
         }),
         quote: fields.text({
@@ -117,11 +115,9 @@ export default config({
             itemLabel: (props) => props.value,
           }
         ),
-        heroImage: fields.image({
-          label: 'Hero image (atmospheric photo)',
-          description: 'Landscape photo, at least 1600px wide. Shown as 60vh band.',
-          directory: 'public/images',
-          publicPath: '/images/',
+        heroImage: fields.text({
+          label: 'Hero image (atmospheric photo) path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
@@ -140,11 +136,9 @@ export default config({
             itemLabel: (props) => props.value.slice(0, 60) + '…',
           }
         ),
-        portrait: fields.image({
-          label: 'Portrait photo',
-          description: 'Portrait orientation recommended, approx 400×500px or similar',
-          directory: 'public/images',
-          publicPath: '/images/',
+        portrait: fields.text({
+          label: 'Portrait photo path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
@@ -175,11 +169,9 @@ export default config({
           description: 'Quiet italic line at the bottom',
           defaultValue: 'For pricing and engagement details, please get in touch.',
         }),
-        image: fields.image({
-          label: 'Atmospheric image',
-          description: 'Nature/landscape photo — forest, mountains, Alpstein region. Shown as a full-width band.',
-          directory: 'public/images',
-          publicPath: '/images/',
+        image: fields.text({
+          label: 'Atmospheric image path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
@@ -195,11 +187,9 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Full-width atmospheric photo, 50vh tall',
-          directory: 'public/images',
-          publicPath: '/images/',
+        image: fields.text({
+          label: 'Header image path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
@@ -215,11 +205,9 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Full-width atmospheric photo, 50vh tall',
-          directory: 'public/images',
-          publicPath: '/images/',
+        image: fields.text({
+          label: 'Header image path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
@@ -235,11 +223,9 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Full-width atmospheric photo, 50vh tall',
-          directory: 'public/images',
-          publicPath: '/images/',
+        image: fields.text({
+          label: 'Header image path',
+          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
           validation: { isRequired: false },
         }),
       },
