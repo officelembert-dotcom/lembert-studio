@@ -38,6 +38,8 @@ export default function RootLayout({
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="bg-surface text-birch font-inter">
         <Nav />
+        {/* Nav is fixed — main needs no top padding on home (hero fills viewport),
+            but inner pages add their own top spacing via their page components */}
         <main>{children}</main>
         <Footer />
       </body>

@@ -19,7 +19,7 @@ export default function Notes() {
 
   return (
     <div className="page-enter mx-auto max-w-page px-6 md:px-10">
-      <div style={{ height: '5rem' }} />
+      <div style={{ height: "6rem" }} />
 
       {/* Section label */}
       <p

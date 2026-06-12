@@ -13,7 +13,7 @@ export default function Work() {
 
       {/* Header */}
       <div className="mx-auto max-w-page px-6 md:px-10">
-        <div style={{ height: '5rem' }} />
+        <div style={{ height: "6rem" }} />
 
         <p
           className="font-inter font-medium uppercase tracking-label mb-10"
