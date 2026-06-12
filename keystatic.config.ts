@@ -38,9 +38,11 @@ export default config({
           defaultValue: { kind: 'today' },
           validation: { isRequired: true },
         }),
-        coverImage: fields.text({
-          label: 'Cover image path',
-          description: 'Path to the image, e.g. /images/writings/my-photo.jpg — upload the file to /public/images/writings/ first, then paste the path here.',
+        coverImage: fields.image({
+          label: 'Cover image',
+          description: 'Shown at the top of the writing and as thumbnail in the index.',
+          directory: 'public/images/writings',
+          publicPath: '/images/writings/',
           validation: { isRequired: false },
         }),
         body: fields.mdx({
@@ -72,9 +74,11 @@ export default config({
           description: 'e.g. "Founder & CEO, Acme AG" — leave blank if not needed',
           validation: { isRequired: false },
         }),
-        photo: fields.text({
-          label: 'Photo path',
-          description: 'Drop the photo into /public/images/voices/ on your Mac, push it, then paste the path here — e.g. /images/voices/firstname-lastname.jpg',
+        photo: fields.image({
+          label: 'Photo',
+          description: 'Square photo recommended, minimum 200×200px',
+          directory: 'public/images/voices',
+          publicPath: '/images/voices/',
           validation: { isRequired: false },
         }),
         quote: fields.text({
@@ -115,9 +119,11 @@ export default config({
             itemLabel: (props) => props.value,
           }
         ),
-        heroImage: fields.text({
-          label: 'Hero image (atmospheric photo) path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        heroImage: fields.image({
+          label: 'Hero image',
+          description: 'Landscape photo, at least 1600px wide. Fills the full screen on load.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -136,9 +142,11 @@ export default config({
             itemLabel: (props) => props.value.slice(0, 60) + '…',
           }
         ),
-        portrait: fields.text({
-          label: 'Portrait photo path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        portrait: fields.image({
+          label: 'Portrait photo',
+          description: 'Portrait orientation recommended, approx 400×500px or larger.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -169,9 +177,11 @@ export default config({
           description: 'Quiet italic line at the bottom',
           defaultValue: 'For pricing and engagement details, please get in touch.',
         }),
-        image: fields.text({
-          label: 'Atmospheric image path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        image: fields.image({
+          label: 'Header image',
+          description: 'Landscape photo. Fills the top of the page like the home hero.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -187,9 +197,11 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.text({
-          label: 'Header image path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        image: fields.image({
+          label: 'Header image',
+          description: 'Atmospheric photo for the top of this page.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -205,9 +217,11 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.text({
-          label: 'Header image path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        image: fields.image({
+          label: 'Header image',
+          description: 'Atmospheric photo for the top of this page.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -223,9 +237,11 @@ export default config({
           fields.text({ label: 'Paragraph', multiline: true }),
           { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
         ),
-        image: fields.text({
-          label: 'Header image path',
-          description: 'e.g. /images/filename.jpg — drop the file in /public/images/ first, then paste the path here',
+        image: fields.image({
+          label: 'Header image',
+          description: 'Atmospheric photo for the top of this page.',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -236,10 +252,7 @@ export default config({
       path: 'content/settings/contact',
       format: { data: 'json' },
       schema: {
-        headline: fields.text({
-          label: 'Headline',
-          defaultValue: 'To begin',
-        }),
+        headline: fields.text({ label: 'Headline', defaultValue: 'To begin' }),
         intro: fields.text({
           label: 'Intro text',
           multiline: true,
