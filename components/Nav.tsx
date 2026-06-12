@@ -30,7 +30,7 @@ export default function Nav() {
   }, [])
 
   const showBackground = !isHome || scrolled
-  const links = isHome ? homeLinks : allLinks
+  const links = allLinks
 
   return (
     <header
