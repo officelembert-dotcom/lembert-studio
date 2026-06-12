@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #1A1F1C;
+  --birch: #E5DCC4;
+  --amber: #B8853A;
+  --birch-55: rgba(229, 220, 196, 0.55);
+  --birch-12: rgba(229, 220, 196, 0.12);
+}
+
+html {
+  background-color: var(--surface);
+  color: var(--birch);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--birch);
+}
+
+/* Focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--amber);
+  outline-offset: 3px;
+}
+
+/* Page fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeIn 0.55s ease forwards;
+}
+
+/* MDX prose styles */
+.prose-note h2 {
+  font-family: var(--font-fraunces);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--birch);
+}
+
+.prose-note h3 {
+  font-family: var(--font-fraunces);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--birch);
+}
+
+.prose-note p {
+  font-family: var(--font-fraunces);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--birch);
+  margin-bottom: 1.5rem;
+}
+
+.prose-note a {
+  color: var(--birch);
+  text-decoration: underline;
+  text-decoration-color: var(--amber);
+  text-underline-offset: 3px;
+}
+
+.prose-note a:hover {
+  opacity: 0.8;
+}
+
+.prose-note blockquote {
+  border-left: 1px solid var(--birch-12);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  opacity: 0.75;
+  font-style: italic;
+}
+
+.prose-note ul,
+.prose-note ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-note li {
+  font-family: var(--font-fraunces);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--birch);
+  margin-bottom: 0.5rem;
+}
+
+.prose-note hr {
+  border: none;
+  border-top: 1px solid var(--birch-12);
+  margin: 3rem 0;
+}
+
+.prose-note strong {
+  font-weight: 600;
+}
+
+.prose-note em {
+  font-style: italic;
+}

@@ -1,0 +1,32 @@
+{
+  "headline": "To begin",
+  "intro": "A first conversation, no charge. Either at the studio in Berneck or by call.",
+  "email": "moritz@lembertstudio.com",
+  "formspreeId": "https://formspree.io/f/xrevyrql",
+  "questions": [
+    {
+      "id": "name",
+      "label": "Your name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "email",
+      "label": "Email address",
+      "type": "email",
+      "required": true
+    },
+    {
+      "id": "brings_you",
+      "label": "What brings you here?",
+      "type": "textarea",
+      "required": false
+    },
+    {
+      "id": "looking_for",
+      "label": "What would you like to explore?",
+      "type": "textarea",
+      "required": false
+    }
+  ]
+}
