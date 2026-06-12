@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getWorkPage } from '@/lib/pages'
 
-
 export const metadata = {
   title: 'Work — Lembert Studio',
 }
@@ -23,11 +22,10 @@ export default function Work() {
   return (
     <div className="page-enter">
 
-      {/* Atmospheric header image */}
+      {/* Full-bleed header image — same style as home hero */}
       <div
         className="w-full relative overflow-hidden"
-        style={{ height: 'calc(50vh + 72px)', minHeight: '330px', maxHeight: '600px' }}
-        aria-hidden="true"
+        style={{ height: '70vh', minHeight: '400px' }}
       >
         {page.image ? (
           <Image
@@ -44,28 +42,41 @@ export default function Work() {
             style={{ background: 'linear-gradient(160deg, #0a0a0d 0%, #111115 40%, #0d0d12 100%)' }}
           />
         )}
+
+        {/* Bottom fade into page background */}
         <div
           className="absolute inset-x-0 bottom-0 pointer-events-none"
-          style={{ height: '40%', background: 'linear-gradient(to bottom, transparent, #0F0F11)' }}
+          style={{ height: '45%', background: 'linear-gradient(to bottom, transparent, #0F0F11)' }}
         />
+
+        {/* Page title overlaid bottom-left — same as home hero */}
+        <div
+          className="absolute inset-x-0 bottom-0 mx-auto max-w-page px-6 md:px-10"
+          style={{ paddingBottom: '4rem' }}
+        >
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-4"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            Work
+          </p>
+          <h1
+            className="font-fraunces font-normal text-birch"
+            style={{
+              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              maxWidth: '560px',
+            }}
+          >
+            {page.headline}
+          </h1>
+        </div>
       </div>
 
+      {/* Offers */}
       <div className="mx-auto max-w-page px-6 md:px-10">
-        <div style={{ height: '4rem' }} />
-
-        <p
-          className="font-inter font-medium uppercase tracking-label mb-10"
-          style={{ fontSize: '11px', opacity: 0.55 }}
-        >
-          Work
-        </p>
-
-        <h1
-          className="font-fraunces font-normal text-birch mb-16"
-          style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 1.1, letterSpacing: '-0.025em' }}
-        >
-          {page.headline}
-        </h1>
+        <div style={{ height: '5rem' }} />
 
         <div className="max-w-[680px]">
           {page.offers.map((offer, i) => (
