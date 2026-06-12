@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { getAboutPage } from '@/lib/pages'
 
-export const revalidate = 0
 
 export const metadata = {
   title: 'About — Lembert Studio',

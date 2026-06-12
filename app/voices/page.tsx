@@ -3,7 +3,6 @@ import fs from 'fs'
 import path from 'path'
 import { getAllVoices } from '@/lib/voices'
 
-export const revalidate = 0
 
 export const metadata = {
   title: 'Voices — Lembert Studio',
