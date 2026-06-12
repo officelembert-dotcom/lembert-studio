@@ -78,21 +78,21 @@ export interface WorkDetailData {
 }
 
 export const getRetainedAdvisoryPage = (): WorkDetailData =>
-  readJson('content/pages/retained-advisory.json', {
+  readJson('content/work-pages/retained-advisory.json', {
     headline: 'Retained Advisory',
     paragraphs: [],
     image: null,
   })
 
 export const getDeepDayPage = (): WorkDetailData =>
-  readJson('content/pages/deep-day.json', {
+  readJson('content/work-pages/deep-day.json', {
     headline: 'Deep Day',
     paragraphs: [],
     image: null,
   })
 
 export const getRetreatsPage = (): WorkDetailData =>
-  readJson('content/pages/retreats.json', {
+  readJson('content/work-pages/retreats.json', {
     headline: 'Retreats in the Rheintal',
     paragraphs: [],
     image: null,

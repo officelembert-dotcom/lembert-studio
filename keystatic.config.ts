@@ -15,8 +15,8 @@ export default config({
   ui: {
     brand: { name: 'Lembert Studio' },
     navigation: {
-      Pages: ['homePage', 'aboutPage', 'workPage', 'retainedAdvisoryPage', 'deepDayPage', 'retreatsPage', 'contactPage'],
-      Content: ['writings', 'voices'],
+      Pages: ['homePage', 'aboutPage', 'workPage', 'contactPage'],
+      Content: ['writings', 'voices', 'workDetailPages'],
     },
   },
 
@@ -55,6 +55,31 @@ export default config({
             link: true,
             divider: true,
           },
+        }),
+      },
+    }),
+
+    workDetailPages: collection({
+      label: 'Work — Detail pages',
+      slugField: 'title',
+      path: 'content/work-pages/*',
+      format: { data: 'json' },
+      schema: {
+        title: fields.slug({
+          name: { label: 'Page name' },
+          slug: { label: 'Slug (do not change)', description: 'retained-advisory, deep-day, or retreats' },
+        }),
+        headline: fields.text({ label: 'Headline' }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        image: fields.image({
+          label: 'Header image',
+          description: 'Each page gets its own folder — uploads will not overwrite each other.',
+          directory: 'public/images/work-pages',
+          publicPath: '/images/work-pages/',
+          validation: { isRequired: false },
         }),
       },
     }),
@@ -182,66 +207,6 @@ export default config({
           description: 'Landscape photo. Fills the top of the page like the home hero.',
           directory: 'public/images/work',
           publicPath: '/images/work/',
-          validation: { isRequired: false },
-        }),
-      },
-    }),
-
-    retainedAdvisoryPage: singleton({
-      label: 'Work — Retained Advisory',
-      path: 'content/pages/retained-advisory',
-      format: { data: 'json' },
-      schema: {
-        headline: fields.text({ label: 'Headline', defaultValue: 'Retained Advisory' }),
-        paragraphs: fields.array(
-          fields.text({ label: 'Paragraph', multiline: true }),
-          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
-        ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Atmospheric photo for the top of this page.',
-          directory: 'public/images/work/retained-advisory',
-          publicPath: '/images/work/retained-advisory/',
-          validation: { isRequired: false },
-        }),
-      },
-    }),
-
-    deepDayPage: singleton({
-      label: 'Work — Deep Day',
-      path: 'content/pages/deep-day',
-      format: { data: 'json' },
-      schema: {
-        headline: fields.text({ label: 'Headline', defaultValue: 'Deep Day' }),
-        paragraphs: fields.array(
-          fields.text({ label: 'Paragraph', multiline: true }),
-          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
-        ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Atmospheric photo for the top of this page.',
-          directory: 'public/images/work/deep-day',
-          publicPath: '/images/work/deep-day/',
-          validation: { isRequired: false },
-        }),
-      },
-    }),
-
-    retreatsPage: singleton({
-      label: 'Work — Retreats in the Rheintal',
-      path: 'content/pages/retreats',
-      format: { data: 'json' },
-      schema: {
-        headline: fields.text({ label: 'Headline', defaultValue: 'Retreats in the Rheintal' }),
-        paragraphs: fields.array(
-          fields.text({ label: 'Paragraph', multiline: true }),
-          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
-        ),
-        image: fields.image({
-          label: 'Header image',
-          description: 'Atmospheric photo for the top of this page.',
-          directory: 'public/images/work/retreats',
-          publicPath: '/images/work/retreats/',
           validation: { isRequired: false },
         }),
       },
