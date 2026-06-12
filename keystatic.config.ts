@@ -38,11 +38,9 @@ export default config({
           defaultValue: { kind: 'today' },
           validation: { isRequired: true },
         }),
-        coverImage: fields.image({
-          label: 'Cover image',
-          description: 'Shown at top of the writing and as thumbnail on the index. Landscape recommended.',
-          directory: 'public/images/writings',
-          publicPath: '/images/writings/',
+        coverImage: fields.text({
+          label: 'Cover image path',
+          description: 'Path to the image, e.g. /images/writings/my-photo.jpg — upload the file to /public/images/writings/ first, then paste the path here.',
           validation: { isRequired: false },
         }),
         body: fields.mdx({
