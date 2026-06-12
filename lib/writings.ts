@@ -8,7 +8,7 @@ export interface WritingMeta {
   title: string
   date: string
   slug: string
-  image?: string
+  coverImage?: string
 }
 
 export interface Writing extends WritingMeta {
@@ -23,11 +23,13 @@ export function getAllWritings(): WritingMeta[] {
   const writings = files.map((filename) => {
     const raw = fs.readFileSync(path.join(WRITINGS_DIR, filename), 'utf-8')
     const { data } = matter(raw)
+    const slug = (data.slug as string) ?? filename.replace(/\.mdx$/, '')
     return {
       title: data.title as string,
       date: data.date as string,
-      slug: (data.slug as string) ?? filename.replace(/\.mdx$/, ''),
-      image: (data.image as string) || undefined,
+      slug,
+      // support both 'coverImage' (new) and 'image' (old) field names
+      coverImage: (data.coverImage as string) || (data.image as string) || undefined,
     }
   })
 
@@ -45,7 +47,7 @@ export function getWritingBySlug(slug: string): Writing | null {
     title: data.title as string,
     date: data.date as string,
     slug: (data.slug as string) ?? slug,
-    image: (data.image as string) || undefined,
+    coverImage: (data.coverImage as string) || (data.image as string) || undefined,
     content,
   }
 }

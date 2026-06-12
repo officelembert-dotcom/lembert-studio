@@ -26,20 +26,27 @@ export default config({
       label: 'Writings',
       slugField: 'title',
       path: 'content/writings/*',
-      format: { contentField: 'content' },
-      entryLayout: 'content',
+      format: { contentField: 'body' },
+      entryLayout: 'form',
       schema: {
         title: fields.slug({
           name: { label: 'Title' },
-          slug: { label: 'URL slug', description: 'Auto-generated from title. Use hyphens, no spaces.' },
+          slug: { label: 'URL slug', description: 'Auto-generated from title. Do not change after publishing.' },
         }),
         date: fields.date({
           label: 'Date',
           defaultValue: { kind: 'today' },
           validation: { isRequired: true },
         }),
-        content: fields.mdx({
-          label: 'Content',
+        coverImage: fields.image({
+          label: 'Cover image',
+          description: 'Shown at top of the writing and as thumbnail on the index. Landscape recommended.',
+          directory: 'public/images/writings',
+          publicPath: '/images/writings/',
+          validation: { isRequired: false },
+        }),
+        body: fields.mdx({
+          label: 'Body',
           options: {
             bold: true,
             italic: true,

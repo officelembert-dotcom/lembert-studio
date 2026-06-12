@@ -70,9 +70,9 @@ export default function Writings() {
                     position: 'relative',
                   }}
                 >
-                  {writing.image ? (
+                  {writing.coverImage ? (
                     <Image
-                      src={writing.image}
+                      src={writing.coverImage}
                       alt={writing.title}
                       fill
                       sizes="200px"
