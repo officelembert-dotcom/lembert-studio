@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getAllWritings } from '@/lib/writings'
 
+export const revalidate = 0
+
 export const metadata = {
   title: 'Writings — Lembert Studio',
 }

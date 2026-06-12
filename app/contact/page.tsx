@@ -1,6 +1,8 @@
 import { getContactPage } from '@/lib/pages'
 import ContactForm from '@/components/ContactForm'
 
+export const revalidate = 0
+
 export const metadata = {
   title: 'Contact — Lembert Studio',
 }
