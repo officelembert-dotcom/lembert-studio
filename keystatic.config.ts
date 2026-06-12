@@ -1,7 +1,5 @@
 import { config, collection, singleton, fields } from '@keystatic/core'
 
-// Use GitHub storage when the GitHub owner env var is set (i.e. on the live Vercel site).
-// Falls back to local mode during development and during the build step.
 const githubOwner = process.env.NEXT_PUBLIC_GITHUB_OWNER
 const githubRepo  = process.env.NEXT_PUBLIC_GITHUB_REPO
 
@@ -22,11 +20,8 @@ export default config({
     },
   },
 
-  // ─── COLLECTIONS ──────────────────────────────────────────────────────────
-
   collections: {
 
-    // Blog posts / newsletter archive
     notes: collection({
       label: 'Notes',
       slugField: 'title',
@@ -57,7 +52,6 @@ export default config({
       },
     }),
 
-    // Testimonials
     voices: collection({
       label: 'Voices',
       slugField: 'name',
@@ -94,8 +88,6 @@ export default config({
       },
     }),
   },
-
-  // ─── SINGLETONS (page content) ────────────────────────────────────────────
 
   singletons: {
 
