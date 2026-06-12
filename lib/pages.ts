@@ -71,6 +71,33 @@ export const getWorkPage = (): WorkData =>
     closing: 'For pricing and engagement details, please get in touch.',
   })
 
+export interface WorkDetailData {
+  headline: string
+  paragraphs: string[]
+  image?: string | null
+}
+
+export const getRetainedAdvisoryPage = (): WorkDetailData =>
+  readJson('content/pages/retained-advisory.json', {
+    headline: 'Retained Advisory',
+    paragraphs: [],
+    image: null,
+  })
+
+export const getDeepDayPage = (): WorkDetailData =>
+  readJson('content/pages/deep-day.json', {
+    headline: 'Deep Day',
+    paragraphs: [],
+    image: null,
+  })
+
+export const getRetreatsPage = (): WorkDetailData =>
+  readJson('content/pages/retreats.json', {
+    headline: 'Retreats in the Rheintal',
+    paragraphs: [],
+    image: null,
+  })
+
 export const getContactPage = (): ContactData =>
   readJson('content/settings/contact.json', {
     headline: 'To begin',

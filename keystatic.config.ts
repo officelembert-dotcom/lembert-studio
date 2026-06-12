@@ -15,7 +15,7 @@ export default config({
   ui: {
     brand: { name: 'Lembert Studio' },
     navigation: {
-      Pages: ['homePage', 'aboutPage', 'workPage', 'contactPage'],
+      Pages: ['homePage', 'aboutPage', 'workPage', 'retainedAdvisoryPage', 'deepDayPage', 'retreatsPage', 'contactPage'],
       Content: ['writings', 'voices'],
     },
   },
@@ -173,6 +173,66 @@ export default config({
         image: fields.image({
           label: 'Atmospheric image',
           description: 'Nature/landscape photo — forest, mountains, Alpstein region. Shown as a full-width band.',
+          directory: 'public/images',
+          publicPath: '/images/',
+          validation: { isRequired: false },
+        }),
+      },
+    }),
+
+    retainedAdvisoryPage: singleton({
+      label: 'Work — Retained Advisory',
+      path: 'content/pages/retained-advisory',
+      format: { data: 'json' },
+      schema: {
+        headline: fields.text({ label: 'Headline', defaultValue: 'Retained Advisory' }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        image: fields.image({
+          label: 'Header image',
+          description: 'Full-width atmospheric photo, 50vh tall',
+          directory: 'public/images',
+          publicPath: '/images/',
+          validation: { isRequired: false },
+        }),
+      },
+    }),
+
+    deepDayPage: singleton({
+      label: 'Work — Deep Day',
+      path: 'content/pages/deep-day',
+      format: { data: 'json' },
+      schema: {
+        headline: fields.text({ label: 'Headline', defaultValue: 'Deep Day' }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        image: fields.image({
+          label: 'Header image',
+          description: 'Full-width atmospheric photo, 50vh tall',
+          directory: 'public/images',
+          publicPath: '/images/',
+          validation: { isRequired: false },
+        }),
+      },
+    }),
+
+    retreatsPage: singleton({
+      label: 'Work — Retreats in the Rheintal',
+      path: 'content/pages/retreats',
+      format: { data: 'json' },
+      schema: {
+        headline: fields.text({ label: 'Headline', defaultValue: 'Retreats in the Rheintal' }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Body paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        image: fields.image({
+          label: 'Header image',
+          description: 'Full-width atmospheric photo, 50vh tall',
           directory: 'public/images',
           publicPath: '/images/',
           validation: { isRequired: false },
