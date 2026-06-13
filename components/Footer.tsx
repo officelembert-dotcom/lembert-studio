@@ -42,12 +42,21 @@ export default function Footer() {
           >
             Lembert Studio · Berneck
           </span>
-          <span
-            className="font-fraunces italic text-[11px]"
-            style={{ opacity: 0.55 }}
-          >
-            Est. 2026 · between the Alpstein and the Bodensee
-          </span>
+          <div className="flex items-center gap-5">
+            <Link
+              href="/impressum"
+              className="font-inter font-medium uppercase text-birch hover:opacity-80 transition-opacity"
+              style={{ fontSize: '10px', letterSpacing: '0.22em', opacity: 0.35 }}
+            >
+              Impressum
+            </Link>
+            <span
+              className="font-fraunces italic text-[11px]"
+              style={{ opacity: 0.55 }}
+            >
+              Est. 2026 · between the Alpstein and the Bodensee
+            </span>
+          </div>
         </div>
 
       </div>
