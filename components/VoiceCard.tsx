@@ -39,7 +39,7 @@ export default function VoiceCard({ name, title, photo, quote, hasPhoto }: Props
             alt={`Portrait of ${name}`}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover object-top"
+            className="object-cover object-top grayscale"
           />
         ) : (
           <div
