@@ -23,10 +23,15 @@ export default function VoiceCard({ name, title, photo, quote, hasPhoto }: Props
   return (
     <div className="flex flex-col">
 
-      {/* Square photo */}
+      {/* Square photo — capped at 180px on mobile, full width on desktop */}
       <div
-        className="relative overflow-hidden mb-5 w-full"
-        style={{ aspectRatio: '1 / 1', borderRadius: '2px', background: 'rgba(227,217,189,0.06)' }}
+        className="relative overflow-hidden mb-5"
+        style={{
+          width: 'min(180px, 100%)',
+          aspectRatio: '1 / 1',
+          borderRadius: '2px',
+          background: 'rgba(227,217,189,0.06)',
+        }}
       >
         {hasPhoto && photo ? (
           <Image
