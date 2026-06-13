@@ -78,6 +78,10 @@ export const metadata: Metadata = {
     images: ['/images/heroImage.jpg'],
   },
 
+  verification: {
+    google: 'WXMLzzLSOidHlYv4JD22JP8llPy00SSqkFuqXM5SSY4',
+  },
+
   robots: {
     index: true,
     follow: true,
