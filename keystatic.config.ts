@@ -147,8 +147,8 @@ export default config({
         heroImage: fields.image({
           label: 'Hero image',
           description: 'Landscape photo, at least 1600px wide. Fills the full screen on load.',
-          directory: 'public/images/home',
-          publicPath: '/images/home/',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -170,8 +170,8 @@ export default config({
         portrait: fields.image({
           label: 'Portrait photo',
           description: 'Portrait orientation recommended, approx 400×500px or larger.',
-          directory: 'public/images/about',
-          publicPath: '/images/about/',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
@@ -205,8 +205,8 @@ export default config({
         image: fields.image({
           label: 'Header image',
           description: 'Landscape photo. Fills the top of the page like the home hero.',
-          directory: 'public/images/work',
-          publicPath: '/images/work/',
+          directory: 'public/images',
+          publicPath: '/images/',
           validation: { isRequired: false },
         }),
       },
