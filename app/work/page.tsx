@@ -112,20 +112,52 @@ export default function Work() {
           ))}
         </div>
 
-        {/* Pricing */}
-        <p
-          className="font-inter text-birch mt-16 text-center"
-          style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.65, maxWidth: '620px', margin: '4rem auto 0' }}
+        {/* Pricing + CTA */}
+        <div
+          className="max-w-[560px] mt-16"
+          style={{ paddingTop: '3rem', borderTop: '1px solid rgba(227,217,189,0.12)' }}
         >
-          Engagements range from CHF 4,500 for a Working Day to CHF 30,000+ for retained advisory. The fit and the work shape the final scope.
-        </p>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-6"
+            style={{ fontSize: '11px', opacity: 0.45 }}
+          >
+            Pricing
+          </p>
 
-        <p
-          className="font-fraunces italic mt-8 text-center"
-          style={{ fontSize: '0.9375rem', lineHeight: 1.7, opacity: 0.4 }}
-        >
-          {page.closing}
-        </p>
+          <p
+            className="font-fraunces font-normal text-birch mb-4"
+            style={{ fontSize: '1.25rem', lineHeight: 1.5 }}
+          >
+            Every engagement is custom-made.
+          </p>
+
+          <p
+            className="font-inter text-birch mb-6"
+            style={{ fontSize: '0.9375rem', lineHeight: 1.75, opacity: 0.65 }}
+          >
+            Each piece of work is individually designed around the specific situation of the business and the person leading it. There is no off-the-shelf format.
+          </p>
+
+          <p
+            className="font-inter text-birch mb-10"
+            style={{ fontSize: '0.9375rem', lineHeight: 1.75, opacity: 0.55 }}
+          >
+            Engagements start at CHF&nbsp;4,500. Retained advisory starts at CHF&nbsp;25,000 over a minimum of six months.
+          </p>
+
+          <Link
+            href="/contact"
+            className="inline-block font-inter font-medium uppercase text-birch hover:opacity-80 transition-opacity"
+            style={{
+              fontSize: '11px',
+              letterSpacing: '0.24em',
+              borderBottom: '1px solid rgba(227,217,189,0.5)',
+              paddingBottom: '3px',
+            }}
+          >
+            Get in touch
+          </Link>
+        </div>
 
         <div style={{ height: '8rem' }} />
       </div>
