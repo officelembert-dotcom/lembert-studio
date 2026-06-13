@@ -2,7 +2,7 @@
   "headline": "To begin",
   "intro": "A first conversation. Either at your office or by call.",
   "email": "moritz@lembertstudio.com",
-  "formspreeId": "https://formspree.io/f/xrevyrql",
+  "formspreeId": "xrevyrql",
   "questions": [
     {
       "id": "name",
