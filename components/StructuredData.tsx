@@ -3,7 +3,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Moritz Lembert',
-    jobTitle: 'Trusted Advisor & Executive Coach',
+    jobTitle: 'Advisor & Executive Coach to Founders & CEOs',
     url: 'https://lembertstudio.com',
     sameAs: [
       'https://www.linkedin.com/in/moritzlembert/',
@@ -28,7 +28,7 @@ export default function StructuredData() {
     ],
     knowsLanguage: ['de', 'en'],
     description:
-      'Moritz Lembert works as a trusted advisor and executive coach to founders and owners of established businesses in Switzerland and the DACH region. He works with the strategic decisions and the person making them at the same time.',
+      'Moritz Lembert works as an advisor and executive coach to founders & CEOs in Switzerland and the DACH region. He works with the strategic decisions and the person making them at the same time.',
     image: 'https://lembertstudio.com/images/portrait.jpeg',
     email: 'moritz@lembertstudio.com',
   }
@@ -79,7 +79,7 @@ export default function StructuredData() {
     name: 'Lembert Studio',
     url: 'https://lembertstudio.com',
     description:
-      'Moritz Lembert — Trusted Advisor & Executive Coach, St. Gallen region, Switzerland',
+      'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, St. Gallen region, Switzerland',
     inLanguage: ['de-CH', 'en-GB'],
     author: { '@type': 'Person', name: 'Moritz Lembert' },
   }

@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
   title: {
-    default: 'Moritz Lembert — Trusted Advisor & Executive Coach, Switzerland',
+    default: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
     template: '%s — Lembert Studio',
   },
 
   description:
-    'Moritz Lembert ist Trusted Advisor und Executive Coach für Unternehmer und Eigentümer in der Schweiz und dem DACH-Raum. Begleitung bei strategischen Entscheidungen, Führung und dem, was dahinter steht.',
+    'Moritz Lembert works as an advisor and executive coach to founders & CEOs in Switzerland and the DACH region. Strategic decisions and the person making them — both at the same time.',
 
   keywords: [
     'trusted advisor Switzerland',
@@ -57,24 +57,24 @@ export const metadata: Metadata = {
     alternateLocale: ['en_GB'],
     url: baseUrl,
     siteName: 'Lembert Studio',
-    title: 'Moritz Lembert — Trusted Advisor & Executive Coach, Switzerland',
+    title: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
     description:
-      'Advisory für Unternehmer und Eigentümer im DACH-Raum. Strategische Begleitung für die Entscheidungen, die wirklich zählen.',
+      'Advisory and executive coaching for founders & CEOs in Switzerland and the DACH region. For the decisions that matter — and the person making them.',
     images: [
       {
         url: '/images/heroImage.jpg',
         width: 1600,
         height: 900,
-        alt: 'Lembert Studio — Moritz Lembert, Trusted Advisor, Switzerland',
+        alt: 'Lembert Studio — Moritz Lembert, Advisor & Executive Coach, Switzerland',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Moritz Lembert — Trusted Advisor & Executive Coach, Switzerland',
+    title: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
     description:
-      'Advisory für Unternehmer und Eigentümer im DACH-Raum.',
+      'Advisory and executive coaching for founders & CEOs in Switzerland and the DACH region.',
     images: ['/images/heroImage.jpg'],
   },
 
