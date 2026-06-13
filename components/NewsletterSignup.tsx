@@ -2,28 +2,32 @@
 
 import { useState } from 'react'
 
-// ─── TO ACTIVATE ─────────────────────────────────────────────────────────────
-// 1. Log into MailerLite → Forms → copy your form's "Action URL"
-//    It looks like: https://assets.mailerlite.com/jsonp/XXXXXX/forms/YYYYYY/subscribe
-// 2. Paste it below as MAILERLITE_URL
-// 3. The form will work immediately — no other changes needed
-const MAILERLITE_URL = process.env.NEXT_PUBLIC_MAILERLITE_URL ?? ''
+interface Props {
+  label?: string
+  placeholder?: string
+  language?: 'en' | 'de'
+}
 
-export default function NewsletterSignup() {
+export default function NewsletterSignup({
+  label = 'Receive writings by email',
+  placeholder = 'your@email.com',
+  language = 'en',
+}: Props) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!MAILERLITE_URL || !email) return
-
+    if (!email) return
     setStatus('sending')
+
     try {
-      const res = await fetch(MAILERLITE_URL, {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fields: { email } }),
+        body: JSON.stringify({ email, language }),
       })
+
       if (res.ok) {
         setStatus('success')
         setEmail('')
@@ -49,21 +53,21 @@ export default function NewsletterSignup() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4" style={{ maxWidth: '360px' }}>
       <label
-        htmlFor="newsletter-email"
+        htmlFor={`newsletter-email-${language}`}
         className="font-inter font-medium uppercase tracking-label"
         style={{ fontSize: '10px', opacity: 0.55 }}
       >
-        Receive notes by email
+        {label}
       </label>
 
       <div className="flex items-end gap-5">
         <input
-          id="newsletter-email"
+          id={`newsletter-email-${language}`}
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder="your@email.com"
+          placeholder={placeholder}
           className="font-inter text-birch bg-transparent flex-1"
           style={{
             fontSize: '0.9375rem',
@@ -74,7 +78,7 @@ export default function NewsletterSignup() {
         />
         <button
           type="submit"
-          disabled={status === 'sending' || !MAILERLITE_URL}
+          disabled={status === 'sending'}
           className="font-inter font-medium uppercase tracking-label text-birch shrink-0"
           style={{
             fontSize: '10px',
@@ -82,8 +86,8 @@ export default function NewsletterSignup() {
             borderBottom: '1px solid rgba(227,217,189,0.35)',
             paddingBottom: '2px',
             background: 'none',
-            cursor: 'pointer',
-            opacity: !MAILERLITE_URL ? 0.3 : 1,
+            cursor: status === 'sending' ? 'wait' : 'pointer',
+            opacity: status === 'sending' ? 0.4 : 1,
           }}
         >
           {status === 'sending' ? '…' : 'Subscribe'}

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getAllWritings } from '@/lib/writings'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata = {
   title: 'Writings — Essays über Führung, Entscheidungen und das Leben dahinter',
@@ -39,11 +40,39 @@ export default function Writings() {
       </h1>
 
       <p
-        className="font-fraunces italic mb-14"
+        className="font-fraunces italic"
         style={{ fontSize: '1rem', lineHeight: 1.65, opacity: 0.55 }}
       >
         Occasional writing on the work.
       </p>
+
+      {/* Subscribe block */}
+      <div
+        className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 sm:gap-12 py-10 mt-8"
+        style={{ borderTop: '1px solid rgba(227,217,189,0.12)', borderBottom: '1px solid rgba(227,217,189,0.12)', marginBottom: '4rem' }}
+      >
+        <div>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{ fontSize: '1.125rem', lineHeight: 1.5 }}
+          >
+            Receive writings directly into your inbox.
+          </p>
+          <p
+            className="font-fraunces italic mt-1"
+            style={{ fontSize: '0.9375rem', opacity: 0.5 }}
+          >
+            No noise. One piece at a time.
+          </p>
+        </div>
+        <div className="shrink-0">
+          <NewsletterSignup
+            label=""
+            placeholder="your@email.com"
+            language="en"
+          />
+        </div>
+      </div>
 
       {writings.length === 0 ? (
         <p className="font-inter" style={{ fontSize: '0.9375rem', opacity: 0.45 }}>
