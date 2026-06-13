@@ -44,13 +44,14 @@ export default function Nav() {
       <div className="mx-auto max-w-page px-6 md:px-10 flex items-center justify-between py-7">
         <Link
           href="/"
-          className="font-inter font-medium text-[11px] tracking-label uppercase text-birch hover:opacity-80 transition-opacity"
+          className="font-inter font-medium tracking-label uppercase text-birch hover:opacity-80 transition-opacity"
+          style={{ fontSize: '13px' }}
         >
           Lembert Studio
         </Link>
 
         <nav aria-label="Main navigation">
-          <ul className="flex items-center gap-7 md:gap-9 list-none m-0 p-0">
+          <ul className="flex items-center gap-5 md:gap-9 list-none m-0 p-0 ml-6 md:ml-0">
             {links.map(({ href, label }) => {
               const isActive =
                 pathname === href || pathname.startsWith(href + '/')
