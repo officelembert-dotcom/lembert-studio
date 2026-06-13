@@ -4,7 +4,12 @@ import { getRetainedAdvisoryPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Retained Advisory — Lembert Studio',
+  title: 'Retained Advisory — Langfristige Begleitung für Unternehmer',
+  description: 'Eine nachhaltige Advisory-Beziehung über sechs Monate. Strategische Entscheidungen und die Person, die sie trifft — beides gleichzeitig. Für Gründer und Eigentümer in der Schweiz.',
+  openGraph: {
+    title: 'Retained Advisory — Lembert Studio',
+    description: 'Sechs Monate. Entscheidungen, wie sie kommen. Die Person dahinter.',
+  },
 }
 
 export default function RetainedAdvisory() {

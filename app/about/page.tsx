@@ -3,7 +3,12 @@ import { getAboutPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'About — Lembert Studio',
+  title: 'Über Moritz Lembert — Trusted Advisor & Executive Coach',
+  description: 'Moritz Lembert: ICF PCC-zertifizierter Coach und Trusted Advisor für Unternehmer in der Schweiz und dem DACH-Raum. 10+ Jahre als Tänzer, Tausende Stunden Meditationspraxis. Beratung, die den ganzen Menschen einbezieht.',
+  openGraph: {
+    title: 'Moritz Lembert — Advisor & Coach, St. Gallen, Schweiz',
+    description: 'Strategie und die Person dahinter — beides gehört zusammen.',
+  },
 }
 
 export default function About() {

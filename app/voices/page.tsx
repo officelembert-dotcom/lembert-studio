@@ -5,7 +5,12 @@ import { getAllVoices } from '@/lib/voices'
 
 
 export const metadata = {
-  title: 'Voices — Lembert Studio',
+  title: 'Stimmen von Klienten — Was Unternehmer über die Arbeit sagen',
+  description: 'Erfahrungen von Gründern, Coaches und Führungspersönlichkeiten, die mit Moritz Lembert zusammengearbeitet haben. Aus der Schweiz, Deutschland und den Niederlanden.',
+  openGraph: {
+    title: 'Klientenstimmen — Lembert Studio',
+    description: 'Was Unternehmer und Führungspersönlichkeiten über die Zusammenarbeit sagen.',
+  },
 }
 
 function photoExists(photoPath: string) {

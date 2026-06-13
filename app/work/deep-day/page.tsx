@@ -4,7 +4,12 @@ import { getDeepDayPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Deep Day — Lembert Studio',
+  title: 'Deep Day — Ein Tag für eine entscheidende Frage',
+  description: 'Ein fokussierter Arbeitstag mit einer einzigen bedeutsamen Entscheidung oder Transition. Du gehst mit Klarheit über die Frage und den nächsten Schritt. In Berneck oder nach Absprache.',
+  openGraph: {
+    title: 'Deep Day — Lembert Studio',
+    description: 'Ein Tag. Eine Frage. Klarheit darüber, was als Nächstes kommt.',
+  },
 }
 
 export default function DeepDay() {

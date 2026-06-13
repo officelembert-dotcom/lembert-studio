@@ -4,7 +4,12 @@ import { getRetreatsPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Retreats in the Rheintal — Lembert Studio',
+  title: 'Retreats im Rheintal — Alpstein, Ostschweiz',
+  description: 'Kleine Gruppenretreats im Alpstein, mehrmals jährlich. Abseits des Schreibtisches, in einer Landschaft, die Raum zum Denken schafft. Für Führungspersönlichkeiten in der Schweiz und dem DACH-Raum.',
+  openGraph: {
+    title: 'Retreats im Rheintal — Lembert Studio',
+    description: 'Zwischen Alpstein und Bodensee. Kleines Format, tiefe Arbeit.',
+  },
 }
 
 export default function Retreats() {

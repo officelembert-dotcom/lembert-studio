@@ -3,7 +3,12 @@ import Link from 'next/link'
 import { getAllWritings } from '@/lib/writings'
 
 export const metadata = {
-  title: 'Writings — Lembert Studio',
+  title: 'Writings — Essays über Führung, Entscheidungen und das Leben dahinter',
+  description: 'Gelegentliche Essays von Moritz Lembert über Führung, Entscheidungsfindung, Identität und das, was hinter der Arbeit steckt. Auf Deutsch und Englisch.',
+  openGraph: {
+    title: 'Writings — Lembert Studio',
+    description: 'Essays über die Arbeit und das Leben dahinter.',
+  },
 }
 
 function formatDate(dateStr: string) {

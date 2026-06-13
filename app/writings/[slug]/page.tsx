@@ -14,7 +14,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const writing = getWritingBySlug(params.slug)
   if (!writing) return {}
-  return { title: `${writing.title} — Lembert Studio` }
+  const excerpt = writing.content.replace(/#{1,6}\s/g, '').replace(/\n/g, ' ').slice(0, 155).trim()
+  return {
+    title: `${writing.title} — Moritz Lembert`,
+    description: excerpt,
+    openGraph: {
+      title: writing.title,
+      description: excerpt,
+      type: 'article',
+      publishedTime: writing.date,
+      authors: ['Moritz Lembert'],
+      ...(writing.coverImage ? { images: [{ url: writing.coverImage }] } : {}),
+    },
+  }
 }
 
 function formatDate(dateStr: string) {

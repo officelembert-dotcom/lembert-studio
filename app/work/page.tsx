@@ -3,7 +3,12 @@ import Link from 'next/link'
 import { getWorkPage } from '@/lib/pages'
 
 export const metadata = {
-  title: 'Work — Lembert Studio',
+  title: 'Advisory & Coaching — Retained Advisory, Deep Day, Retreats',
+  description: 'Drei Wege zusammenzuarbeiten: Retained Advisory für 6 Monate, Deep Day für eine entscheidende Frage, und Retreats im Rheintal. Für Unternehmer in der Schweiz und dem DACH-Raum.',
+  openGraph: {
+    title: 'Zusammenarbeiten mit Moritz Lembert — Lembert Studio',
+    description: 'Retained Advisory, Deep Day und Retreats im Alpstein.',
+  },
 }
 
 const offerSlugs: Record<string, string> = {
