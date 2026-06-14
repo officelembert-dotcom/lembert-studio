@@ -85,8 +85,10 @@ export default function Work() {
 
         <div className="max-w-[680px]">
           {page.offers.map((offer, i) => (
-            <div
+            <Link
               key={offer.title}
+              href={getOfferHref(offer.title)}
+              className="group block no-underline"
               style={{
                 paddingTop: '2.5rem',
                 paddingBottom: '2.5rem',
@@ -94,21 +96,28 @@ export default function Work() {
                 borderBottom: '1px solid rgba(227,217,189,0.12)',
               }}
             >
-              <Link href={getOfferHref(offer.title)} className="group block no-underline">
+              <div className="flex items-start justify-between gap-6">
                 <h2
                   className="font-fraunces font-normal text-birch mb-4 transition-opacity group-hover:opacity-100"
                   style={{ fontSize: '1.75rem', lineHeight: 1.2, opacity: 0.85 }}
                 >
                   {offer.title}
                 </h2>
-              </Link>
+                <span
+                  className="font-inter text-birch transition-opacity group-hover:opacity-70 shrink-0 mt-1"
+                  style={{ fontSize: '1.25rem', opacity: 0.25 }}
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </div>
               <p
                 className="font-inter font-normal text-birch"
                 style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.65 }}
               >
                 {offer.body}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
