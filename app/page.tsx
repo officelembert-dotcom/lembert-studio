@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getHomePage } from '@/lib/pages'
 import { getAllVoices } from '@/lib/voices'
 import HeroParallax from '@/components/HeroParallax'
@@ -76,22 +77,43 @@ export default function Home() {
 
         <section
           aria-labelledby="newsletter-label"
+          className="flex items-center gap-12"
           style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
         >
-          <p
-            id="newsletter-label"
-            className="font-inter font-medium uppercase tracking-label mb-6"
-            style={{ fontSize: '11px', opacity: 0.55 }}
+          <div className="flex-1">
+            <p
+              id="newsletter-label"
+              className="font-inter font-medium uppercase tracking-label mb-6"
+              style={{ fontSize: '11px', opacity: 0.55 }}
+            >
+              Stay close
+            </p>
+            <p
+              className="font-fraunces font-normal text-birch mb-8"
+              style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
+            >
+              I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.
+            </p>
+            <NewsletterSignup label="" placeholder="your@email.com" />
+          </div>
+
+          {/* Portrait — fades into background via mask */}
+          <div
+            className="hidden md:block shrink-0 relative"
+            style={{ width: '200px', height: '260px' }}
           >
-            Stay close
-          </p>
-          <p
-            className="font-fraunces font-normal text-birch mb-8"
-            style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
-          >
-            I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.
-          </p>
-          <NewsletterSignup label="" placeholder="your@email.com" />
+            <Image
+              src="/images/portrait.jpeg"
+              alt="Moritz Lembert"
+              fill
+              sizes="200px"
+              className="object-cover object-top"
+              style={{
+                maskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
+                WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
+              }}
+            />
+          </div>
         </section>
 
         {/* ── One Voice ─────────────────────────────────────────── */}
