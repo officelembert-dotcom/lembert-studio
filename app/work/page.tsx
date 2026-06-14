@@ -156,7 +156,7 @@ export default function Work() {
 
           <Link
             href="/contact"
-            className="inline-block font-inter font-medium uppercase text-birch hover:opacity-80 transition-opacity"
+            className="inline-block font-inter font-medium uppercase text-birch transition-all duration-300 hover:opacity-80 hover:translate-x-2"
             style={{
               fontSize: '11px',
               letterSpacing: '0.24em',

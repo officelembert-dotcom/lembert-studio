@@ -122,7 +122,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="font-inter font-medium uppercase tracking-label text-birch self-start"
+          className="font-inter font-medium uppercase tracking-label text-birch self-start transition-all duration-300 hover:translate-x-1"
           style={{
             fontSize: '11px',
             paddingBottom: '2px',

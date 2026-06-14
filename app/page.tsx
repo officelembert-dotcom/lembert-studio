@@ -71,6 +71,29 @@ export default function Home() {
           </ul>
         </section>
 
+        {/* ── Newsletter ────────────────────────────────────────── */}
+        <div style={{ height: '5rem' }} />
+
+        <section
+          aria-labelledby="newsletter-label"
+          style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
+        >
+          <p
+            id="newsletter-label"
+            className="font-inter font-medium uppercase tracking-label mb-6"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            Stay close
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch mb-8"
+            style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
+          >
+            I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.
+          </p>
+          <NewsletterSignup label="" placeholder="your@email.com" />
+        </section>
+
         {/* ── One Voice ─────────────────────────────────────────── */}
         {featuredVoice && (
           <>
@@ -93,28 +116,6 @@ export default function Home() {
             </div>
           </>
         )}
-
-        <div style={{ height: '6rem' }} />
-
-        <section
-          aria-labelledby="newsletter-label"
-          style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
-        >
-          <p
-            id="newsletter-label"
-            className="font-inter font-medium uppercase tracking-label mb-6"
-            style={{ fontSize: '11px', opacity: 0.55 }}
-          >
-            Stay close
-          </p>
-          <p
-            className="font-fraunces font-normal text-birch mb-8"
-            style={{ fontSize: '1.125rem', lineHeight: 1.6, maxWidth: '420px', opacity: 0.85 }}
-          >
-            Occasional writing on the work. Delivered directly to your inbox.
-          </p>
-          <NewsletterSignup label="" placeholder="your@email.com" />
-        </section>
 
         <div style={{ height: '6rem' }} />
       </div>

@@ -79,7 +79,7 @@ export default function NewsletterSignup({
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="font-inter font-medium uppercase tracking-label text-birch shrink-0"
+          className="font-inter font-medium uppercase tracking-label text-birch shrink-0 transition-all duration-300 hover:translate-x-1"
           style={{
             fontSize: '10px',
             letterSpacing: '0.24em',

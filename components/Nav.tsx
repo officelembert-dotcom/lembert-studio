@@ -44,7 +44,7 @@ export default function Nav() {
       <div className="mx-auto max-w-page px-6 md:px-10 flex items-center justify-between py-7">
         <Link
           href="/"
-          className="font-inter font-medium tracking-label uppercase text-birch hover:opacity-80 transition-opacity"
+          className="font-inter font-medium tracking-label uppercase text-birch transition-all duration-300 hover:opacity-80 hover:-translate-y-px"
           style={{ fontSize: '13px' }}
         >
           Lembert Studio
@@ -59,7 +59,7 @@ export default function Nav() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`font-inter font-medium text-[11px] tracking-nav uppercase transition-opacity ${
+                    className={`font-inter font-medium text-[11px] tracking-nav uppercase transition-all duration-300 hover:-translate-y-px ${
                       isActive ? 'opacity-100' : 'opacity-40 hover:opacity-70'
                     }`}
                     aria-current={isActive ? 'page' : undefined}

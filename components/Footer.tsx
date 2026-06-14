@@ -23,7 +23,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="font-inter font-medium uppercase text-birch hover:opacity-80 transition-opacity"
+                  className="font-inter font-medium uppercase text-birch transition-all duration-300 hover:opacity-80 hover:translate-x-1"
                   style={{ fontSize: '10px', letterSpacing: '0.24em', opacity: 0.55 }}
                 >
                   {label}
@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <Link
               href="/impressum"
-              className="font-inter font-medium uppercase text-birch hover:opacity-80 transition-opacity"
+              className="font-inter font-medium uppercase text-birch transition-all duration-300 hover:opacity-80 hover:translate-x-1"
               style={{ fontSize: '10px', letterSpacing: '0.22em', opacity: 0.35 }}
             >
               Impressum

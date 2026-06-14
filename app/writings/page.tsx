@@ -125,7 +125,7 @@ export default function Writings() {
 
               {/* Title */}
               <h2
-                className="font-fraunces font-normal text-birch transition-opacity group-hover:opacity-75"
+                className="font-fraunces font-normal text-birch transition-all duration-300 group-hover:opacity-75 group-hover:translate-x-1"
                 style={{ fontSize: '1.375rem', lineHeight: 1.3 }}
               >
                 {writing.title}
