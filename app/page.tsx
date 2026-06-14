@@ -53,14 +53,14 @@ export default function Home() {
                   style={{ paddingTop: '1.25rem', paddingBottom: '1.25rem' }}
                 >
                   <span
-                    className="font-fraunces font-normal text-birch transition-opacity group-hover:opacity-100"
+                    className="font-fraunces font-normal text-birch transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2"
                     style={{ fontSize: '1.375rem', lineHeight: 1.5, opacity: 0.85 }}
                   >
                     {item}
                   </span>
                   <span
-                    className="font-inter text-birch transition-opacity group-hover:opacity-70 ml-6 shrink-0"
-                    style={{ fontSize: '1rem', opacity: 0.25 }}
+                    className="font-inter text-birch transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 ml-6 shrink-0"
+                    style={{ fontSize: '1rem', opacity: 0.45 }}
                     aria-hidden="true"
                   >
                     →

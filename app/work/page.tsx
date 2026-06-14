@@ -98,14 +98,14 @@ export default function Work() {
             >
               <div className="flex items-start justify-between gap-6">
                 <h2
-                  className="font-fraunces font-normal text-birch mb-4 transition-opacity group-hover:opacity-100"
+                  className="font-fraunces font-normal text-birch mb-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2"
                   style={{ fontSize: '1.75rem', lineHeight: 1.2, opacity: 0.85 }}
                 >
                   {offer.title}
                 </h2>
                 <span
-                  className="font-inter text-birch transition-opacity group-hover:opacity-70 shrink-0 mt-1"
-                  style={{ fontSize: '1.25rem', opacity: 0.25 }}
+                  className="font-inter text-birch transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 shrink-0 mt-1"
+                  style={{ fontSize: '1.25rem', opacity: 0.45 }}
                   aria-hidden="true"
                 >
                   →
