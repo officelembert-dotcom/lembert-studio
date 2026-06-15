@@ -54,7 +54,7 @@ export default function Footer() {
               className="font-fraunces italic text-[11px]"
               style={{ opacity: 0.55 }}
             >
-              Est. 2026 · between the Alpstein and the Bodensee
+              Est. 2019 · between the Alpstein and the Bodensee
             </span>
           </div>
         </div>
