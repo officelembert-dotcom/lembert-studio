@@ -54,7 +54,7 @@ export default function Footer() {
               className="font-fraunces italic text-[11px]"
               style={{ opacity: 0.55 }}
             >
-              Est. 2019 · between the Alpstein and the Bodensee
+              Coaching & consulting since 2019
             </span>
           </div>
         </div>
