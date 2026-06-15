@@ -12,13 +12,14 @@ export const metadata = {
 }
 
 const offerSlugs: Record<string, string> = {
-  'retained advisory':         '/work/retained-advisory',
-  'deep day':                  '/work/deep-day',
-  'retreats in the rheintal':  '/work/retreats',
+  'retained advisory':          '/work/retained-advisory',
+  'deep day':                   '/work/deep-day',
+  'retreats in the rheintal':   '/work/retreats',
+  'team trainings & workshops': '/contact',
 }
 
 function getOfferHref(title: string): string {
-  return offerSlugs[title.toLowerCase()] ?? '/work'
+  return offerSlugs[title.trim().toLowerCase()] ?? '/work'
 }
 
 export default function Work() {
