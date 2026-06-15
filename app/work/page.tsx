@@ -151,7 +151,7 @@ export default function Work() {
             className="font-inter text-birch mb-10"
             style={{ fontSize: '0.9375rem', lineHeight: 1.75, opacity: 0.55 }}
           >
-            Engagements start at CHF&nbsp;4,500. Retained advisory starts at CHF&nbsp;25,000 over a minimum of six months.
+            Engagements start at CHF&nbsp;4,500. Retained advisory starts at CHF&nbsp;18,000 over a minimum of six months.
           </p>
 
           <Link
