@@ -15,6 +15,7 @@ export interface HomeData {
   subheadline: string
   practiceItems: string[]
   heroImage?: string | null
+  newsletterIntro?: string
 }
 
 export interface AboutData {
@@ -56,6 +57,8 @@ export const getHomePage = (): HomeData =>
     subheadline: 'An advisory practice held in long form, for the moments that matter.',
     practiceItems: ['Retained advisory', 'Deep day', 'Retreats in the Rheintal'],
     heroImage: null,
+    newsletterIntro:
+      "I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.",
   })
 
 export const getAboutPage = (): AboutData =>
@@ -115,6 +118,8 @@ export const getHomePageDe = (): HomeData =>
     subheadline: 'Eine Beratungspraxis in langer Form, für die Momente, die zählen.',
     practiceItems: ['Retained Advisory', 'Deep Day', 'Retreats im Rheintal'],
     heroImage: null,
+    newsletterIntro:
+      'Ich schreibe, wenn etwas wirklich zu sagen ist — über Entscheidungen, Führung und das, was mir in der Arbeit auffällt. Lass deine E-Mail hier, wenn du es in deinem Posteingang haben möchtest.',
   })
 
 export const getAboutPageDe = (): AboutData =>

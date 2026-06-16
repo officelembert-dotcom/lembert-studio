@@ -17,8 +17,6 @@ export const dict = {
     },
     practice: 'Practice',
     stayClose: 'Stay close',
-    newsletterIntro:
-      "I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.",
     subscribe: 'Subscribe',
     subscribed: "You're on the list.",
     subscribeError: 'Something went wrong. Please try again.',
@@ -52,8 +50,6 @@ export const dict = {
     },
     practice: 'Praxis',
     stayClose: 'In Verbindung bleiben',
-    newsletterIntro:
-      'Ich schreibe, wenn etwas wirklich zu sagen ist — über Entscheidungen, Führung und das, was mir in der Arbeit auffällt. Lass deine E-Mail hier, wenn du es in deinem Posteingang haben möchtest.',
     subscribe: 'Abonnieren',
     subscribed: 'Du bist auf der Liste.',
     subscribeError: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',

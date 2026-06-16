@@ -92,7 +92,7 @@ export default function Home() {
               className="font-fraunces font-normal text-birch mb-8"
               style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
             >
-              I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.
+              {page.newsletterIntro}
             </p>
             <NewsletterSignup label="" placeholder="your@email.com" />
           </div>

@@ -111,7 +111,7 @@ export default function HomeDe() {
               className="font-fraunces font-normal text-birch mb-8"
               style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
             >
-              {t.newsletterIntro}
+              {page.newsletterIntro}
             </p>
             <NewsletterSignup label="" placeholder="deine@email.com" language="de" />
           </div>

@@ -251,6 +251,12 @@ export default config({
           publicPath: '/images/',
           validation: { isRequired: false },
         }),
+        newsletterIntro: fields.text({
+          label: 'Newsletter intro text',
+          description: 'Shown above the email field in the "Stay close" section',
+          multiline: true,
+          validation: { isRequired: false },
+        }),
       },
     }),
 
@@ -383,6 +389,12 @@ export default config({
           description: 'Querformat-Foto, mindestens 1600px breit. Füllt beim Laden den gesamten Bildschirm.',
           directory: 'public/images',
           publicPath: '/images/',
+          validation: { isRequired: false },
+        }),
+        newsletterIntro: fields.text({
+          label: 'Newsletter-Einleitungstext',
+          description: 'Wird über dem E-Mail-Feld im Abschnitt "In Verbindung bleiben" angezeigt',
+          multiline: true,
           validation: { isRequired: false },
         }),
       },
