@@ -106,3 +106,56 @@ export const getContactPage = (): ContactData =>
     formspreeId: '',
     questions: [],
   })
+
+// ── German (DE) ──────────────────────────────────────────────
+
+export const getHomePageDe = (): HomeData =>
+  readJson('content/pages/home-de.json', {
+    headline: 'Bauen, ohne das Leben zu opfern, für das du es baust.',
+    subheadline: 'Eine Beratungspraxis in langer Form, für die Momente, die zählen.',
+    practiceItems: ['Retained Advisory', 'Deep Day', 'Retreats im Rheintal'],
+    heroImage: null,
+  })
+
+export const getAboutPageDe = (): AboutData =>
+  readJson('content/pages/about-de.json', {
+    paragraphs: [],
+    portrait: null,
+  })
+
+export const getWorkPageDe = (): WorkData =>
+  readJson('content/pages/work-de.json', {
+    headline: 'Wege der Zusammenarbeit',
+    offers: [],
+    closing: 'Für Preise und Details zur Zusammenarbeit, melde dich gerne.',
+  })
+
+export const getRetainedAdvisoryPageDe = (): WorkDetailData =>
+  readJson('content/work-pages-de/retained-advisory.json', {
+    headline: 'Retained Advisory',
+    paragraphs: [],
+    image: null,
+  })
+
+export const getDeepDayPageDe = (): WorkDetailData =>
+  readJson('content/work-pages-de/deep-day.json', {
+    headline: 'Deep Day',
+    paragraphs: [],
+    image: null,
+  })
+
+export const getRetreatsPageDe = (): WorkDetailData =>
+  readJson('content/work-pages-de/retreats.json', {
+    headline: 'Retreats im Rheintal',
+    paragraphs: [],
+    image: null,
+  })
+
+export const getContactPageDe = (): ContactData =>
+  readJson('content/settings/contact-de.json', {
+    headline: 'Erster Schritt',
+    intro: 'Ein erstes Gespräch, ohne Kosten.',
+    email: 'moritz@lembertstudio.com',
+    formspreeId: '',
+    questions: [],
+  })

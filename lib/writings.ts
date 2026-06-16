@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const WRITINGS_DIR = path.join(process.cwd(), 'content', 'writings')
+function writingsDir(locale: 'en' | 'de' = 'en') {
+  return path.join(process.cwd(), 'content', locale === 'de' ? 'writings-de' : 'writings')
+}
 
 export interface WritingMeta {
   title: string
@@ -15,13 +17,14 @@ export interface Writing extends WritingMeta {
   content: string
 }
 
-export function getAllWritings(): WritingMeta[] {
-  if (!fs.existsSync(WRITINGS_DIR)) return []
+export function getAllWritings(locale: 'en' | 'de' = 'en'): WritingMeta[] {
+  const dir = writingsDir(locale)
+  if (!fs.existsSync(dir)) return []
 
-  const files = fs.readdirSync(WRITINGS_DIR).filter((f) => f.endsWith('.mdx'))
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.mdx'))
 
   const writings = files.map((filename) => {
-    const raw = fs.readFileSync(path.join(WRITINGS_DIR, filename), 'utf-8')
+    const raw = fs.readFileSync(path.join(dir, filename), 'utf-8')
     const { data } = matter(raw)
     const slug = (data.slug as string) ?? filename.replace(/\.mdx$/, '')
     return {
@@ -36,8 +39,8 @@ export function getAllWritings(): WritingMeta[] {
   return writings.sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
-export function getWritingBySlug(slug: string): Writing | null {
-  const filePath = path.join(WRITINGS_DIR, `${slug}.mdx`)
+export function getWritingBySlug(slug: string, locale: 'en' | 'de' = 'en'): Writing | null {
+  const filePath = path.join(writingsDir(locale), `${slug}.mdx`)
   if (!fs.existsSync(filePath)) return null
 
   const raw = fs.readFileSync(filePath, 'utf-8')

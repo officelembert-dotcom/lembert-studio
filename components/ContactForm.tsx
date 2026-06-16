@@ -2,13 +2,16 @@
 
 import { useState } from 'react'
 import type { ContactQuestion } from '@/lib/pages'
+import { dict, type Locale } from '@/lib/i18n'
 
 interface Props {
   formspreeId: string
   questions: ContactQuestion[]
+  locale?: Locale
 }
 
-export default function ContactForm({ formspreeId, questions }: Props) {
+export default function ContactForm({ formspreeId, questions, locale = 'en' }: Props) {
+  const t = dict[locale]
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -42,7 +45,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
         className="font-inter"
         style={{ fontSize: '0.875rem', opacity: 0.4, fontStyle: 'italic' }}
       >
-        Contact form coming soon — for now, write directly to the email above.
+        {t.formComingSoon}
       </p>
     )
   }
@@ -53,7 +56,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
         className="font-fraunces text-birch"
         style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.8 }}
       >
-        Thank you. I'll be in touch shortly.
+        {t.sendSuccess}
       </p>
     )
   }
@@ -115,7 +118,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
             className="font-inter"
             style={{ fontSize: '0.875rem', opacity: 0.5 }}
           >
-            Something went wrong. Please try again or write directly to the email above.
+            {t.sendError}
           </p>
         )}
 
@@ -134,7 +137,7 @@ export default function ContactForm({ formspreeId, questions }: Props) {
             letterSpacing: '0.24em',
           }}
         >
-          {status === 'sending' ? 'Sending…' : 'Send'}
+          {status === 'sending' ? t.sending : t.send}
         </button>
       </div>
     </form>

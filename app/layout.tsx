@@ -53,8 +53,8 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'website',
-    locale: 'de_CH',
-    alternateLocale: ['en_GB'],
+    locale: 'en_GB',
+    alternateLocale: ['de_CH'],
     url: baseUrl,
     siteName: 'Lembert Studio',
     title: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
@@ -97,8 +97,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl,
     languages: {
-      'de-CH': baseUrl,
       'en-GB': baseUrl,
+      'de-CH': `${baseUrl}/de`,
+      'x-default': baseUrl,
     },
   },
 
@@ -111,7 +112,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <head>
         <StructuredData />
       </head>

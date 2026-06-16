@@ -1,14 +1,27 @@
-import Link from 'next/link'
+'use client'
 
-const footerLinks = [
-  { href: '/work',     label: 'Work'     },
-  { href: '/writings', label: 'Writings' },
-  { href: '/about',    label: 'About'    },
-  { href: '/voices',   label: 'Voices'   },
-  { href: '/contact',  label: 'Contact'  },
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { dict, type Locale } from '@/lib/i18n'
+
+const baseLinks = [
+  { href: '/work',     key: 'work'     as const },
+  { href: '/writings', key: 'writings' as const },
+  { href: '/about',    key: 'about'    as const },
+  { href: '/voices',   key: 'voices'   as const },
+  { href: '/contact',  key: 'contact'  as const },
 ]
 
+function withLocale(href: string, locale: Locale) {
+  if (locale === 'en') return href
+  return href === '/' ? '/de' : `/de${href}`
+}
+
 export default function Footer() {
+  const pathname = usePathname()
+  const locale: Locale = pathname.startsWith('/de') ? 'de' : 'en'
+  const t = dict[locale]
+
   return (
     <footer
       className="w-full mt-auto"
@@ -19,14 +32,14 @@ export default function Footer() {
         {/* Nav links */}
         <nav aria-label="Footer navigation">
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 list-none m-0 p-0">
-            {footerLinks.map(({ href, label }) => (
+            {baseLinks.map(({ href, key }) => (
               <li key={href}>
                 <Link
-                  href={href}
+                  href={withLocale(href, locale)}
                   className="font-inter font-medium uppercase text-birch transition-all duration-300 hover:opacity-80 hover:translate-x-1"
                   style={{ fontSize: '10px', letterSpacing: '0.24em', opacity: 0.55 }}
                 >
-                  {label}
+                  {t.nav[key]}
                 </Link>
               </li>
             ))}
@@ -40,7 +53,7 @@ export default function Footer() {
             className="font-inter font-medium text-[10px] tracking-label uppercase"
             style={{ opacity: 0.55 }}
           >
-            Lembert Studio · Berneck
+            {t.footer.location}
           </span>
           <div className="flex items-center gap-5">
             <Link
@@ -48,13 +61,13 @@ export default function Footer() {
               className="font-inter font-medium uppercase text-birch transition-all duration-300 hover:opacity-80 hover:translate-x-1"
               style={{ fontSize: '10px', letterSpacing: '0.22em', opacity: 0.35 }}
             >
-              Impressum
+              {t.footer.impressum}
             </Link>
             <span
               className="font-fraunces italic text-[11px]"
               style={{ opacity: 0.55 }}
             >
-              Coaching & consulting since 2019
+              {t.footer.tagline}
             </span>
           </div>
         </div>

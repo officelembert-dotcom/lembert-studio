@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import fs from 'fs'
 import path from 'path'
+import { dict, type Locale } from '@/lib/i18n'
 
 interface Props {
   name: string
@@ -11,11 +12,13 @@ interface Props {
   photo?: string
   quote: string
   hasPhoto: boolean
+  locale?: Locale
 }
 
 const PREVIEW_LENGTH = 140
 
-export default function VoiceCard({ name, title, photo, quote, hasPhoto }: Props) {
+export default function VoiceCard({ name, title, photo, quote, hasPhoto, locale = 'en' }: Props) {
+  const t = dict[locale]
   const [expanded, setExpanded] = useState(false)
   const isLong = quote.length > PREVIEW_LENGTH
   const preview = isLong ? quote.slice(0, PREVIEW_LENGTH).trimEnd() + '…' : quote
@@ -94,7 +97,7 @@ export default function VoiceCard({ name, title, photo, quote, hasPhoto }: Props
             paddingBottom: '1px',
           }}
         >
-          {expanded ? 'Read less' : 'Read more'}
+          {expanded ? t.readLess : t.readMore}
         </button>
       )}
     </div>

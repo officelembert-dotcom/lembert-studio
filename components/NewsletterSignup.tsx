@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { dict } from '@/lib/i18n'
 
 interface Props {
   label?: string
@@ -13,6 +14,7 @@ export default function NewsletterSignup({
   placeholder = 'your@email.com',
   language = 'en',
 }: Props) {
+  const t = dict[language]
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
@@ -45,7 +47,7 @@ export default function NewsletterSignup({
         className="font-fraunces italic text-birch"
         style={{ fontSize: '0.9375rem', opacity: 0.65 }}
       >
-        You're on the list.
+        {t.subscribed}
       </p>
     )
   }
@@ -90,13 +92,13 @@ export default function NewsletterSignup({
             opacity: status === 'sending' ? 0.4 : 1,
           }}
         >
-          {status === 'sending' ? '…' : 'Subscribe'}
+          {status === 'sending' ? '…' : t.subscribe}
         </button>
       </div>
 
       {status === 'error' && (
         <p className="font-inter" style={{ fontSize: '0.8rem', opacity: 0.45 }}>
-          Something went wrong. Please try again.
+          {t.subscribeError}
         </p>
       )}
     </form>

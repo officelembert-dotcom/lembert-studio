@@ -1,0 +1,32 @@
+{
+  "headline": "Erster Schritt",
+  "intro": "Ein erstes Gespräch. Entweder bei dir vor Ort oder per Anruf.",
+  "email": "moritz@lembertstudio.com",
+  "formspreeId": "xrevyrql",
+  "questions": [
+    {
+      "id": "name",
+      "label": "Dein Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "email",
+      "label": "E-Mail-Adresse",
+      "type": "email",
+      "required": true
+    },
+    {
+      "id": "brings_you",
+      "label": "Was führt dich hierher?",
+      "type": "textarea",
+      "required": false
+    },
+    {
+      "id": "looking_for",
+      "label": "Was möchtest du gerne erkunden?",
+      "type": "textarea",
+      "required": false
+    }
+  ]
+}

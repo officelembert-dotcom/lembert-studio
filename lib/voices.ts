@@ -1,7 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 
-const VOICES_DIR = path.join(process.cwd(), 'content', 'voices')
+function voicesDir(locale: 'en' | 'de' = 'en') {
+  return path.join(process.cwd(), 'content', locale === 'de' ? 'voices-de' : 'voices')
+}
 
 export interface Voice {
   slug: string
@@ -12,13 +14,14 @@ export interface Voice {
   order?: number
 }
 
-export function getAllVoices(): Voice[] {
-  if (!fs.existsSync(VOICES_DIR)) return []
+export function getAllVoices(locale: 'en' | 'de' = 'en'): Voice[] {
+  const dir = voicesDir(locale)
+  if (!fs.existsSync(dir)) return []
 
-  const files = fs.readdirSync(VOICES_DIR).filter((f) => f.endsWith('.json'))
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'))
 
   const voices = files.map((filename) => {
-    const raw = fs.readFileSync(path.join(VOICES_DIR, filename), 'utf-8')
+    const raw = fs.readFileSync(path.join(dir, filename), 'utf-8')
     const data = JSON.parse(raw)
     return {
       slug: filename.replace(/\.json$/, ''),
