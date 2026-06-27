@@ -327,28 +327,14 @@ export default function ProgramPage() {
           >
             How it runs
           </p>
-          <ul className="list-none m-0 p-0 space-y-4">
-            {[
-              'Six Tuesdays, 19:00–20:30, live. Starting 23 September.',
-              "One assignment each week — outreach, conversations, and stopping what doesn't work.",
-              'Tracking and accountability between calls.',
-              'A group thread for momentum.',
-              'Every call is recorded.',
-              'Limited to 12 people, to keep it personal.',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-4">
-                <span style={{ color: 'var(--amber)', marginTop: '0.35rem', flexShrink: 0 }}>
-                  —
-                </span>
-                <span
-                  className="font-fraunces font-normal text-birch"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.85 }}
-                >
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+          >
+            Six Tuesdays, 19:00–20:30, live, starting 23 September; one assignment each week;
+            tracking and accountability between calls; a group thread for momentum; every call
+            recorded; limited to 12 people, to keep it personal.
+          </p>
         </section>
 
         {/* ── The guarantee ─────────────────────────────────────── */}
@@ -392,25 +378,15 @@ export default function ProgramPage() {
               >
                 Who this is for
               </p>
-              <ul className="list-none m-0 p-0 space-y-5">
-                {[
-                  'You are earning between CHF 35–120k and are ready to grow.',
-                  'You are early in your practice — determined and want to fast-track your learning and get a working system in place.',
-                  'You are already experienced and want to master the art of client creation. A master has mastered the basics and never stops doing the basics.',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '0.3rem' }}>
-                      —
-                    </span>
-                    <span
-                      className="font-fraunces font-normal text-birch"
-                      style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.85 }}
-                    >
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <p
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '1rem', lineHeight: 1.8, opacity: 0.85 }}
+              >
+                You are earning between CHF 35–120k and are ready to grow; you are early in your
+                practice, determined, and want to fast-track your learning and get a working system
+                in place; or you are already experienced and want to master the art of client
+                creation. A master has mastered the basics and never stops doing the basics.
+              </p>
             </div>
             <div>
               <p
@@ -419,28 +395,14 @@ export default function ProgramPage() {
               >
                 Who it isn't for
               </p>
-              <ul className="list-none m-0 p-0 space-y-5">
-                {[
-                  'People looking for a passive marketing system that works without your personal input.',
-                  "Those who won't make time for the weekly calls and assignments.",
-                  'Anyone looking for fast hacks rather than a practice that works over time.',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span
-                      className="font-inter"
-                      style={{ opacity: 0.25, flexShrink: 0, marginTop: '0.3rem' }}
-                    >
-                      —
-                    </span>
-                    <span
-                      className="font-fraunces font-normal text-birch"
-                      style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.45 }}
-                    >
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <p
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '1rem', lineHeight: 1.8, opacity: 0.45 }}
+              >
+                People looking for a passive marketing system that works without your personal
+                input; those who won't make time for the weekly calls and assignments; anyone
+                looking for fast hacks rather than a practice that works over time.
+              </p>
             </div>
           </div>
         </section>
