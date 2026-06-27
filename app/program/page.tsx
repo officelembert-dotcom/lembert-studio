@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Practitioners Programme — Lembert Studio',
@@ -138,15 +139,26 @@ export default function ProgramPage() {
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              [PLACEHOLDER — describe the painful status quo: good at your craft, inconsistent at
-              creating clients. Up-and-down income. Busy but not growing. Months not knowing where
-              the next client comes from.]
+              Here is what most practitioners do: they need a client, so they reach out. They land
+              the client. They serve that client well — because that is what they are trained to do.
+              And in serving them, they stop doing what created them. Then the client ends. And the
+              scramble begins again.
             </p>
             <p
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              [PLACEHOLDER — second paragraph if needed.]
+              This is not a discipline problem. It is a structural one. You never built a practice —
+              you built a series of individual clients. The work is excellent. The system does not
+              exist.
+            </p>
+            <p
+              className="font-fraunces font-normal text-birch"
+              style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+            >
+              Meanwhile, income swings. Some months are full. Others are quiet in a way that is hard
+              to explain to people who don't run their own thing. You are good at what you do. You
+              just don't have a reliable way to do it continuously.
             </p>
           </div>
         </section>
@@ -165,9 +177,18 @@ export default function ProgramPage() {
             className="font-fraunces font-normal text-birch mb-5"
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
-            You learn exactly what I did to grow my practice past six figures — and what my clients
-            have done to do the same. Not theory borrowed from marketing books. The actual practice,
-            done together, until it works.
+            Everything in this programme comes down to one thing: conversations. New clients come
+            from conversations. Trust is built in conversations. The question "can I help this
+            person?" is answered in a conversation.
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch mb-5"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+          >
+            What we build here is not a marketing funnel. It is a practice — a small number of
+            things you do consistently, that create the conditions for clients to come. You learn
+            exactly what I did to grow my practice past six figures, and what my clients have done
+            to do the same.
           </p>
           <p
             className="font-fraunces font-normal text-birch"
@@ -282,8 +303,7 @@ export default function ProgramPage() {
             }}
           >
             Show up to the calls, do the assignments, and do the outreach — and if you don't create
-            at least one new client within the six weeks, I'll keep working with you one-to-one
-            until you do.
+            at least one new client within the six weeks, I will refund you in full. No questions.
           </p>
         </section>
 
@@ -439,25 +459,36 @@ export default function ProgramPage() {
           </p>
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div
-              className="shrink-0 flex items-center justify-center"
-              style={{
-                width: '120px',
-                height: '150px',
-                background: 'rgba(227,217,189,0.06)',
-                border: '1px solid rgba(227,217,189,0.12)',
-              }}
+              className="shrink-0 relative"
+              style={{ width: '120px', height: '150px' }}
             >
-              <span className="font-inter text-birch" style={{ fontSize: '10px', opacity: 0.3 }}>
-                Photo
-              </span>
+              <Image
+                src="/images/portrait.jpeg"
+                alt="Moritz Lembert"
+                fill
+                sizes="120px"
+                className="object-cover object-top grayscale"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+                }}
+              />
             </div>
             <div style={{ maxWidth: '520px' }}>
+              <p
+                className="font-fraunces font-normal text-birch mb-4"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+              >
+                I built my own practice from near-zero to six figures. Before that: professional
+                dancer and choreographer across Europe, somatic teacher, martial artist, several
+                thousand hours of meditation. I am ICF PCC-certified and have worked alongside
+                coaches, consultants, therapists, and founders for over seven years.
+              </p>
               <p
                 className="font-fraunces font-normal text-birch"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                [PLACEHOLDER — first-person bio. Former professional dancer, ICF PCC, built my own
-                practice from near-zero to six figures. Now I help practitioners do the same.]
+                What I teach here is what I did, and what I have watched my clients do.
               </p>
             </div>
           </div>
