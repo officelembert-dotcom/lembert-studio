@@ -83,7 +83,7 @@ function GuideBlock() {
           className="font-inter font-medium uppercase tracking-label mb-3"
           style={{ fontSize: '11px', opacity: 0.45 }}
         >
-          Free guide
+          Free guidebook
         </p>
         <p
           className="font-fraunces font-normal text-birch mb-2"
@@ -95,7 +95,7 @@ function GuideBlock() {
           className="font-fraunces font-normal text-birch"
           style={{ fontSize: '0.9375rem', lineHeight: 1.6, opacity: 0.6 }}
         >
-          Not ready to join yet? Start here — the guide behind the programme.
+          Want to start already?
         </p>
       </div>
       <a
@@ -113,7 +113,7 @@ function GuideBlock() {
           whiteSpace: 'nowrap',
         }}
       >
-        Get the guide
+        Get the free guidebook
       </a>
     </div>
   )
