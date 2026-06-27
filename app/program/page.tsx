@@ -18,6 +18,36 @@ const weeks = [
 const CTA_HREF =
   'mailto:moritz@lembertstudio.com?subject=Programme%20%E2%80%94%20I%E2%80%99d%20like%20to%20join'
 
+const GUIDE_HREF =
+  'https://docs.google.com/document/d/1HePBs6Epah2c-Rc3A_piF9KgVmRlKwnA7VRqOrL62-k/preview'
+
+const testimonials = [
+  {
+    quote:
+      'My practice is full. Instead of teaching scattered 6 days a week, I now teach 3 complete days — and doubled my income without working more. I even have more time for the projects that are close to my heart.',
+    name: 'Alina Jacobs',
+    role: 'Dance artist & pedagogue (LPDC®), Gyrotonic & Gyrokinesis trainer',
+  },
+  {
+    quote:
+      'I was a bodywork practitioner scrambling for a mediocre hourly rate. Fear of money and not having enough was for 30 years my biggest concern. I got tenfold out of the investment — and I\'m still running.',
+    name: 'Bart Vanderbruggen',
+    role: 'Neuro Bodywork educator, Founder WOBA Academie',
+  },
+  {
+    quote:
+      'If you are looking for a powerful coach who is grounded in Being and helps you achieve your goals, look no further. He takes a stand for his clients to be the best version of themselves. He holds you accountable. He helps you get results. He serves powerfully.',
+    name: 'Rani Bora',
+    role: 'Consultant Psychiatrist (FRCPsych), Co-Founder Holistic Psychiatry Clinic',
+  },
+  {
+    quote:
+      'In 4 months, with Moritz\'s help, I achieved most goals I had planned for a full year. There are very few people in my life with a level of commitment to continuous growth this man has.',
+    name: 'Felipe Bernardo',
+    role: 'Leadership Coach & Founder, Servify Studios',
+  },
+]
+
 export default function ProgramPage() {
   return (
     <div className="page-enter">
@@ -63,11 +93,11 @@ export default function ProgramPage() {
               className="font-fraunces italic text-birch mb-3"
               style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.9 }}
             >
-              "[PLACEHOLDER TESTIMONIAL — e.g. I signed two new clients during the programme
-              itself. I had been stuck for months before that.]"
+              "My practice is full. Instead of teaching scattered 6 days a week, I now teach 3
+              complete days — and doubled my income without working more."
             </p>
             <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
-              — Placeholder Name, Role
+              — Alina Jacobs, Gyrotonic & Gyrokinesis trainer
             </p>
           </div>
 
@@ -135,8 +165,9 @@ export default function ProgramPage() {
             className="font-fraunces font-normal text-birch mb-5"
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
-            What you learn here is what I and my most successful clients apply ourselves. The
-            practice of creating clients, done together, until it works.
+            You learn exactly what I did to grow my practice past six figures — and what my clients
+            have done to do the same. Not theory borrowed from marketing books. The actual practice,
+            done together, until it works.
           </p>
           <p
             className="font-fraunces font-normal text-birch"
@@ -334,19 +365,19 @@ export default function ProgramPage() {
             What participants have said
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((n) => (
+            {testimonials.map((t) => (
               <div
-                key={n}
+                key={t.name}
                 style={{ padding: '2rem', border: '1px solid rgba(227,217,189,0.12)' }}
               >
                 <p
                   className="font-fraunces italic text-birch mb-6"
                   style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.85 }}
                 >
-                  "[PLACEHOLDER TESTIMONIAL {n} — a specific result, in their own words.]"
+                  "{t.quote}"
                 </p>
                 <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.45 }}>
-                  — Placeholder Name {n}, Role
+                  — {t.name}, {t.role}
                 </p>
               </div>
             ))}
@@ -429,6 +460,59 @@ export default function ProgramPage() {
                 practice from near-zero to six figures. Now I help practitioners do the same.]
               </p>
             </div>
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── Lead magnet ───────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div
+            className="flex flex-col md:flex-row md:items-center justify-between gap-8"
+            style={{
+              padding: '3rem',
+              background: 'rgba(227,217,189,0.04)',
+              border: '1px solid rgba(227,217,189,0.12)',
+              maxWidth: '720px',
+            }}
+          >
+            <div>
+              <p
+                className="font-inter font-medium uppercase tracking-label mb-3"
+                style={{ fontSize: '11px', opacity: 0.45 }}
+              >
+                Free guide
+              </p>
+              <p
+                className="font-fraunces font-normal text-birch mb-2"
+                style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
+              >
+                Always Have Clients
+              </p>
+              <p
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '0.9375rem', lineHeight: 1.6, opacity: 0.6 }}
+              >
+                Not ready to join yet? Start here — the guide behind the programme.
+              </p>
+            </div>
+            <a
+              href={GUIDE_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-inter font-medium no-underline shrink-0"
+              style={{
+                border: '1px solid var(--amber)',
+                color: 'var(--amber)',
+                padding: '0.75rem 1.75rem',
+                fontSize: '13px',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Get the guide
+            </a>
           </div>
         </section>
 
