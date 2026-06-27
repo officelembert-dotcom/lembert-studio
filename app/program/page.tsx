@@ -301,9 +301,9 @@ export default function ProgramPage() {
               </p>
               <ul className="list-none m-0 p-0 space-y-5">
                 {[
-                  'Coaches, consultants, and therapists earning roughly CHF 35–120k who are serious about growing.',
-                  'People who will do the work — the actual outreach, not just the thinking.',
-                  'Practitioners who are good at what they do and ready to become equally good at creating clients.',
+                  'You are earning between CHF 35–120k and ready to grow.',
+                  'You are early in your practice — determined, and want to fast-track your learning.',
+                  'You are already experienced and want to master the art of client creation. A master has mastered the basics.',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span
