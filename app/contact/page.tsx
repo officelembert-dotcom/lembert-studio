@@ -3,11 +3,11 @@ import ContactForm from '@/components/ContactForm'
 
 
 export const metadata = {
-  title: 'Kontakt — Erstes Gespräch, kein Honorar',
-  description: 'Ein erstes Gespräch, ohne Kosten. Entweder im Studio in Berneck oder per Telefon. Für Gründer und Unternehmer, die herausfinden möchten, ob eine Zusammenarbeit sinnvoll ist.',
+  title: 'Contact — Lembert Studio',
+  description: 'A first conversation to understand what you\'re navigating, and whether I\'m the right person for it.',
   openGraph: {
-    title: 'Kontakt — Lembert Studio',
-    description: 'Ein erstes Gespräch. Kein Honorar. Im Studio in Berneck oder per Anruf.',
+    title: 'Contact — Lembert Studio',
+    description: 'A conversation, not a sales call.',
   },
 }
 

@@ -4,11 +4,11 @@ import { getDeepDayPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Deep Day — Ein Tag für eine entscheidende Frage',
-  description: 'Ein fokussierter Arbeitstag mit einer einzigen bedeutsamen Entscheidung oder Transition. Du gehst mit Klarheit über die Frage und den nächsten Schritt. In Berneck oder nach Absprache.',
+  title: 'Deep Day — Lembert Studio',
+  description: 'A full day on one decision. See it from the inside and the outside, and leave knowing your move.',
   openGraph: {
     title: 'Deep Day — Lembert Studio',
-    description: 'Ein Tag. Eine Frage. Klarheit darüber, was als Nächstes kommt.',
+    description: 'One day. One decision. Your move.',
   },
 }
 
@@ -53,9 +53,9 @@ export default function DeepDay() {
         <div style={{ height: '5rem' }} />
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '2.5rem' }}>
           <p className="font-fraunces font-normal text-birch" style={{ fontSize: '1.0625rem' }}>
-            To begin,{' '}
+            If this is the work you're looking for,{' '}
             <Link href="/contact" className="text-birch" style={{ textDecoration: 'underline', textDecorationColor: 'var(--amber)', textUnderlineOffset: '3px' }}>
-              please get in touch.
+              the next step is a conversation.
             </Link>
           </p>
         </div>

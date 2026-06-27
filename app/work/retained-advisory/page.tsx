@@ -4,11 +4,11 @@ import { getRetainedAdvisoryPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Retained Advisory — Langfristige Begleitung für Unternehmer',
-  description: 'Eine nachhaltige Advisory-Beziehung über sechs Monate. Strategische Entscheidungen und die Person, die sie trifft — beides gleichzeitig. Für Gründer und Eigentümer in der Schweiz.',
+  title: 'Retained Advisory — Lembert Studio',
+  description: 'A sustained advisory relationship over months. Strategic decisions and the person making them — both at once.',
   openGraph: {
     title: 'Retained Advisory — Lembert Studio',
-    description: 'Sechs Monate. Entscheidungen, wie sie kommen. Die Person dahinter.',
+    description: 'The question that doesn\'t resolve in a quarter, held over months.',
   },
 }
 
@@ -53,9 +53,9 @@ export default function RetainedAdvisory() {
         <div style={{ height: '5rem' }} />
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '2.5rem' }}>
           <p className="font-fraunces font-normal text-birch" style={{ fontSize: '1.0625rem' }}>
-            To begin,{' '}
+            If this is the work you're looking for,{' '}
             <Link href="/contact" className="text-birch" style={{ textDecoration: 'underline', textDecorationColor: 'var(--amber)', textUnderlineOffset: '3px' }}>
-              please get in touch.
+              the next step is a conversation.
             </Link>
           </p>
         </div>

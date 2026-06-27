@@ -4,11 +4,11 @@ import { getRetreatsPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Retreats im Rheintal — Alpstein, Ostschweiz',
-  description: 'Kleine Gruppenretreats im Alpstein, mehrmals jährlich. Abseits des Schreibtisches, in einer Landschaft, die Raum zum Denken schafft. Für Führungspersönlichkeiten in der Schweiz und dem DACH-Raum.',
+  title: 'Retreats in the Rheintal — Lembert Studio',
+  description: 'Small group retreats in the Alpstein, a few times each year. Away from the desk, in landscape that makes space for thinking differently.',
   openGraph: {
-    title: 'Retreats im Rheintal — Lembert Studio',
-    description: 'Zwischen Alpstein und Bodensee. Kleines Format, tiefe Arbeit.',
+    title: 'Retreats in the Rheintal — Lembert Studio',
+    description: 'Between the Alpstein and the Bodensee. Small group, deep work.',
   },
 }
 
@@ -53,9 +53,9 @@ export default function Retreats() {
         <div style={{ height: '5rem' }} />
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '2.5rem' }}>
           <p className="font-fraunces font-normal text-birch" style={{ fontSize: '1.0625rem' }}>
-            To begin,{' '}
+            If this is the work you're looking for,{' '}
             <Link href="/contact" className="text-birch" style={{ textDecoration: 'underline', textDecorationColor: 'var(--amber)', textUnderlineOffset: '3px' }}>
-              please get in touch.
+              the next step is a conversation.
             </Link>
           </p>
         </div>
