@@ -1,0 +1,476 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Practitioners Programme — Lembert Studio',
+  description: 'A 6-week group programme for coaches, consultants, and therapists ready to build a system that creates clients continuously.',
+  robots: { index: false, follow: false },
+}
+
+const weeks = [
+  { n: 1, title: 'The two numbers that predict your income, and how to move them.' },
+  { n: 2, title: 'Reaching out: who to contact, what to say, how to do it from service.' },
+  { n: 3, title: 'Context: the idea that changed my earning more than any other.' },
+  { n: 4, title: 'The conversation: trust, help, and turning interest into clients.' },
+  { n: 5, title: 'The daily practice that keeps clients coming.' },
+  { n: 6, title: "Sustaining it. You leave with a system you've already proven works for you." },
+]
+
+const CTA_HREF =
+  'mailto:moritz@lembertstudio.com?subject=Programme%20%E2%80%94%20I%E2%80%99d%20like%20to%20join'
+
+export default function ProgramPage() {
+  return (
+    <div className="page-enter">
+      <div className="mx-auto max-w-page px-6 md:px-10">
+
+        {/* ── Hero ──────────────────────────────────────────────── */}
+        <div style={{ paddingTop: '7rem', paddingBottom: '5rem' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            Six weeks · Starting 23 September
+          </p>
+          <h1
+            className="font-fraunces font-normal text-birch mb-6"
+            style={{
+              fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              maxWidth: '760px',
+            }}
+          >
+            Build a system that creates clients — continuously.
+          </h1>
+          <p
+            className="font-fraunces font-normal text-birch mb-12"
+            style={{ fontSize: '1.1875rem', lineHeight: 1.7, maxWidth: '560px', opacity: 0.75 }}
+          >
+            This is the actual practice I and my most successful clients apply ourselves. Not
+            marketing theory. The work, done together, until it works.
+          </p>
+
+          {/* Hero testimonial */}
+          <div
+            className="mb-12"
+            style={{
+              borderLeft: '2px solid var(--amber)',
+              paddingLeft: '1.5rem',
+              maxWidth: '520px',
+            }}
+          >
+            <p
+              className="font-fraunces italic text-birch mb-3"
+              style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.9 }}
+            >
+              "[PLACEHOLDER TESTIMONIAL — e.g. I signed two new clients during the programme
+              itself. I had been stuck for months before that.]"
+            </p>
+            <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
+              — Placeholder Name, Role
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <a
+              href={CTA_HREF}
+              className="inline-block font-inter font-medium no-underline"
+              style={{
+                backgroundColor: 'var(--amber)',
+                color: 'var(--surface)',
+                padding: '0.875rem 2rem',
+                fontSize: '13px',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Write to me to join
+            </a>
+            <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
+              Limited to 12 places
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── The cost of staying where you are ─────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem', maxWidth: '620px' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            The cost of staying where you are
+          </p>
+          <div className="space-y-5">
+            <p
+              className="font-fraunces font-normal text-birch"
+              style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+            >
+              [PLACEHOLDER — describe the painful status quo: good at your craft, inconsistent at
+              creating clients. Up-and-down income. Busy but not growing. Months not knowing where
+              the next client comes from.]
+            </p>
+            <p
+              className="font-fraunces font-normal text-birch"
+              style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+            >
+              [PLACEHOLDER — second paragraph if needed.]
+            </p>
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── What this is ──────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem', maxWidth: '620px' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            What this is
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch mb-5"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+          >
+            What you learn here is what I and my most successful clients apply ourselves. The
+            practice of creating clients, done together, until it works.
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+          >
+            Every cohort I've run, participants created new clients before the six weeks were out.
+          </p>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── What we cover ─────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-10"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            What we cover
+          </p>
+          <ul className="list-none m-0 p-0">
+            {weeks.map((week, i) => (
+              <li
+                key={week.n}
+                style={{
+                  borderTop: i === 0 ? '1px solid rgba(227,217,189,0.12)' : undefined,
+                  borderBottom: '1px solid rgba(227,217,189,0.12)',
+                  padding: '1.5rem 0',
+                  display: 'flex',
+                  gap: '2rem',
+                  alignItems: 'flex-start',
+                }}
+              >
+                <span
+                  className="font-inter font-medium shrink-0"
+                  style={{
+                    fontSize: '11px',
+                    opacity: 0.4,
+                    paddingTop: '0.2rem',
+                    minWidth: '4.5rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.2em',
+                  }}
+                >
+                  Week {week.n}
+                </span>
+                <span
+                  className="font-fraunces font-normal text-birch"
+                  style={{ fontSize: '1.0625rem', lineHeight: 1.6, opacity: 0.9 }}
+                >
+                  {week.title}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── How it runs ───────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem', maxWidth: '620px' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            How it runs
+          </p>
+          <ul className="list-none m-0 p-0 space-y-4">
+            {[
+              'Six Tuesdays, 19:00–20:30, live. Starting 23 September.',
+              'One assignment each week — real outreach, not busywork.',
+              'Tracking and accountability between calls.',
+              'A group thread for momentum.',
+              'Every call recorded.',
+              'Limited to 12 people, to keep it personal.',
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-4">
+                <span style={{ color: 'var(--amber)', marginTop: '0.35rem', flexShrink: 0 }}>
+                  —
+                </span>
+                <span
+                  className="font-fraunces font-normal text-birch"
+                  style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.85 }}
+                >
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ── The guarantee ─────────────────────────────────────── */}
+        <section
+          style={{
+            marginBottom: '5rem',
+            padding: '3rem',
+            border: '1px solid var(--amber)',
+            maxWidth: '720px',
+          }}
+        >
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-6"
+            style={{ fontSize: '11px', color: 'var(--amber)' }}
+          >
+            The guarantee
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{
+              fontSize: 'clamp(1.125rem, 2.5vw, 1.375rem)',
+              lineHeight: 1.65,
+              opacity: 0.95,
+            }}
+          >
+            Show up to the calls, do the assignments, and do the outreach — and if you don't create
+            at least one new client within the six weeks, I'll keep working with you one-to-one
+            until you do.
+          </p>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── Who it's for / who it isn't ───────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+              <p
+                className="font-inter font-medium uppercase tracking-label mb-8"
+                style={{ fontSize: '11px', opacity: 0.55 }}
+              >
+                Who this is for
+              </p>
+              <ul className="list-none m-0 p-0 space-y-5">
+                {[
+                  'Coaches, consultants, and therapists earning roughly CHF 35–120k who are serious about growing.',
+                  'People who will do the work — the actual outreach, not just the thinking.',
+                  'Practitioners who are good at what they do and ready to become equally good at creating clients.',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '0.3rem' }}
+                    >
+                      —
+                    </span>
+                    <span
+                      className="font-fraunces font-normal text-birch"
+                      style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.85 }}
+                    >
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p
+                className="font-inter font-medium uppercase tracking-label mb-8"
+                style={{ fontSize: '11px', opacity: 0.55 }}
+              >
+                Who it isn't for
+              </p>
+              <ul className="list-none m-0 p-0 space-y-5">
+                {[
+                  'People looking for a passive marketing system that works without personal outreach.',
+                  "Those who won't make time for the weekly calls and assignments.",
+                  'Anyone looking for fast hacks rather than a practice that holds over time.',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      className="font-inter"
+                      style={{ opacity: 0.25, flexShrink: 0, marginTop: '0.3rem' }}
+                    >
+                      —
+                    </span>
+                    <span
+                      className="font-fraunces font-normal text-birch"
+                      style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.45 }}
+                    >
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── Testimonials ──────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-10"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            What participants have said
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((n) => (
+              <div
+                key={n}
+                style={{ padding: '2rem', border: '1px solid rgba(227,217,189,0.12)' }}
+              >
+                <p
+                  className="font-fraunces italic text-birch mb-6"
+                  style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.85 }}
+                >
+                  "[PLACEHOLDER TESTIMONIAL {n} — a specific result, in their own words.]"
+                </p>
+                <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.45 }}>
+                  — Placeholder Name {n}, Role
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── Pricing ───────────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-10"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            Investment
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {[
+              { label: 'Solo', price: 'CHF 690' },
+              { label: 'With a partner', price: 'CHF 550 each' },
+              { label: 'Group of three or more', price: 'CHF 450 each' },
+            ].map((tier, i) => (
+              <div
+                key={tier.label}
+                style={{
+                  padding: '2.5rem 2rem',
+                  borderTop: '1px solid rgba(227,217,189,0.12)',
+                  borderBottom: '1px solid rgba(227,217,189,0.12)',
+                  borderLeft: i === 0 ? '1px solid rgba(227,217,189,0.12)' : undefined,
+                  borderRight: '1px solid rgba(227,217,189,0.12)',
+                }}
+              >
+                <p
+                  className="font-inter font-medium uppercase tracking-label mb-4 text-birch"
+                  style={{ fontSize: '10px', opacity: 0.45 }}
+                >
+                  {tier.label}
+                </p>
+                <p
+                  className="font-fraunces font-normal text-birch"
+                  style={{ fontSize: '1.75rem', lineHeight: 1.2 }}
+                >
+                  {tier.price}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── About ─────────────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            About Moritz
+          </p>
+          <div className="flex flex-col md:flex-row gap-10 items-start">
+            <div
+              className="shrink-0 flex items-center justify-center"
+              style={{
+                width: '120px',
+                height: '150px',
+                background: 'rgba(227,217,189,0.06)',
+                border: '1px solid rgba(227,217,189,0.12)',
+              }}
+            >
+              <span className="font-inter text-birch" style={{ fontSize: '10px', opacity: 0.3 }}>
+                Photo
+              </span>
+            </div>
+            <div style={{ maxWidth: '520px' }}>
+              <p
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+              >
+                [PLACEHOLDER — first-person bio. Former professional dancer, ICF PCC, built my own
+                practice from near-zero to six figures. Now I help practitioners do the same.]
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
+        {/* ── Final CTA ─────────────────────────────────────────── */}
+        <section
+          style={{ paddingTop: '6rem', paddingBottom: '9rem', textAlign: 'center' }}
+        >
+          <h2
+            className="font-fraunces font-normal text-birch mb-4"
+            style={{
+              fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+              lineHeight: 1.15,
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Six weeks. Starting 23 September.
+          </h2>
+          <p
+            className="font-fraunces font-normal text-birch mb-10"
+            style={{ fontSize: '1.0625rem', opacity: 0.5 }}
+          >
+            Limited to 12 places.
+          </p>
+          <a
+            href={CTA_HREF}
+            className="inline-block font-inter font-medium no-underline"
+            style={{
+              backgroundColor: 'var(--amber)',
+              color: 'var(--surface)',
+              padding: '0.875rem 2.5rem',
+              fontSize: '13px',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Write to me to join
+          </a>
+        </section>
+
+      </div>
+    </div>
+  )
+}
