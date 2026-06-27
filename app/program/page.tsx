@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 const weeks = [
   { n: 1, title: 'The two numbers that predict your income, and how to move them.' },
   { n: 2, title: 'Reaching out: who to contact, what to say, how to do it from service.' },
-  { n: 3, title: 'Context: the idea that changed my earning more than any other.' },
+  { n: 3, title: 'Context: the idea that changed my earnings more than any other.' },
   { n: 4, title: 'The conversation: trust, help, and turning interest into clients.' },
-  { n: 5, title: 'The daily practice that keeps clients coming.' },
+  { n: 5, title: 'The daily practice that keeps creating clients.' },
   { n: 6, title: "Sustaining it. You leave with a system you've already proven works for you." },
 ]
 
@@ -31,7 +31,7 @@ const testimonials = [
   },
   {
     quote:
-      'I was a bodywork practitioner scrambling for a mediocre hourly rate. Fear of money and not having enough was for 30 years my biggest concern. I got tenfold out of the investment — and I\'m still running.',
+      "I was a bodywork practitioner scrambling for a mediocre hourly rate. Fear of money and not having enough was, for 30 years, my biggest concern. I got tenfold out of the investment — and I'm still running.",
     name: 'Bart Vanderbruggen',
     role: 'Neuro Bodywork educator, Founder WOBA Academie',
   },
@@ -43,11 +43,81 @@ const testimonials = [
   },
   {
     quote:
-      'In 4 months, with Moritz\'s help, I achieved most goals I had planned for a full year. There are very few people in my life with a level of commitment to continuous growth this man has.',
+      "In 4 months, with Moritz's help, I achieved most goals I had planned for a full year. There are very few people in my life with a level of commitment to continuous growth that this man has.",
     name: 'Felipe Bernardo',
     role: 'Leadership Coach & Founder, Servify Studios',
   },
 ]
+
+const pricing = [
+  {
+    label: 'Solo',
+    price: 'CHF 690',
+    description: null,
+  },
+  {
+    label: 'With a partner',
+    price: 'CHF 550 each',
+    description: 'Bring a friend — you both pay only 550.',
+  },
+  {
+    label: 'Group of three or more',
+    price: 'CHF 450 each',
+    description: 'Bring colleagues so you can practice together long after.',
+  },
+]
+
+function GuideBlock() {
+  return (
+    <div
+      className="flex flex-col md:flex-row md:items-center justify-between gap-8"
+      style={{
+        padding: '2.5rem 3rem',
+        background: 'rgba(227,217,189,0.04)',
+        border: '1px solid rgba(227,217,189,0.12)',
+        maxWidth: '720px',
+      }}
+    >
+      <div>
+        <p
+          className="font-inter font-medium uppercase tracking-label mb-3"
+          style={{ fontSize: '11px', opacity: 0.45 }}
+        >
+          Free guide
+        </p>
+        <p
+          className="font-fraunces font-normal text-birch mb-2"
+          style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
+        >
+          Always Have Clients
+        </p>
+        <p
+          className="font-fraunces font-normal text-birch"
+          style={{ fontSize: '0.9375rem', lineHeight: 1.6, opacity: 0.6 }}
+        >
+          Not ready to join yet? Start here — the guide behind the programme.
+        </p>
+      </div>
+      <a
+        href={GUIDE_HREF}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block font-inter font-medium no-underline shrink-0"
+        style={{
+          border: '1px solid var(--amber)',
+          color: 'var(--amber)',
+          padding: '0.75rem 1.75rem',
+          fontSize: '13px',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        Get the guide
+      </a>
+    </div>
+  )
+}
 
 export default function ProgramPage() {
   return (
@@ -55,7 +125,7 @@ export default function ProgramPage() {
       <div className="mx-auto max-w-page px-6 md:px-10">
 
         {/* ── Hero ──────────────────────────────────────────────── */}
-        <div style={{ paddingTop: '7rem', paddingBottom: '5rem' }}>
+        <div style={{ paddingTop: '7rem', paddingBottom: '4rem' }}>
           <p
             className="font-inter font-medium uppercase tracking-label mb-8"
             style={{ fontSize: '11px', opacity: 0.55 }}
@@ -103,7 +173,7 @@ export default function ProgramPage() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-12">
             <a
               href={CTA_HREF}
               className="inline-block font-inter font-medium no-underline"
@@ -122,6 +192,9 @@ export default function ProgramPage() {
               Limited to 12 places
             </p>
           </div>
+
+          {/* Guide — top */}
+          <GuideBlock />
         </div>
 
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
@@ -139,26 +212,25 @@ export default function ProgramPage() {
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              Here is what most practitioners do: they need a client, so they reach out. They land
-              the client. They serve that client well — because that is what they are trained to do.
-              And in serving them, they stop doing what created them. Then the client ends. And the
-              scramble begins again.
+              Here is what most practitioners do: they need a client, so they reach out, get in
+              communication, share their service. They land the client. They serve that client well
+              — because that is what they are trained to do. And in serving them, they stop doing
+              what created them. Then the client ends. And the scramble begins again.
             </p>
             <p
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              This is not a discipline problem. It is a structural one. You never built a practice —
-              you built a series of individual clients. The work is excellent. The system does not
-              exist.
+              This is not a discipline problem. It is a structural one. You never built a practice
+              and system — you built a series of individual clients. And it somehow seems mysterious
+              how you ever got that client, and why now they aren't flowing in.
             </p>
             <p
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              Meanwhile, income swings. Some months are full. Others are quiet in a way that is hard
-              to explain to people who don't run their own thing. You are good at what you do. You
-              just don't have a reliable way to do it continuously.
+              Meanwhile, income swings. Some months are full. You are good at what you do. You
+              genuinely want to help. You just don't have a reliable way to do it continuously.
             </p>
           </div>
         </section>
@@ -178,17 +250,17 @@ export default function ProgramPage() {
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
             Everything in this programme comes down to one thing: conversations. New clients come
-            from conversations. Trust is built in conversations. The question "can I help this
+            from conversations. Trust is built in conversations. The question "Can I help this
             person?" is answered in a conversation.
           </p>
           <p
             className="font-fraunces font-normal text-birch mb-5"
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
-            What we build here is not a marketing funnel. It is a practice — a small number of
-            things you do consistently, that create the conditions for clients to come. You learn
-            exactly what I did to grow my practice past six figures, and what my clients have done
-            to do the same.
+            What we build here is not a marketing funnel, 15 webpages, a secret system. It is a
+            practice — a small number of things you do consistently, that create the conditions for
+            clients to come. You learn exactly what I did to grow my practice past six figures, and
+            what my clients have done to do the same.
           </p>
           <p
             className="font-fraunces font-normal text-birch"
@@ -258,10 +330,10 @@ export default function ProgramPage() {
           <ul className="list-none m-0 p-0 space-y-4">
             {[
               'Six Tuesdays, 19:00–20:30, live. Starting 23 September.',
-              'One assignment each week — real outreach, not busywork.',
+              "One assignment each week — outreach, conversations, and stopping what doesn't work.",
               'Tracking and accountability between calls.',
               'A group thread for momentum.',
-              'Every call recorded.',
+              'Every call is recorded.',
               'Limited to 12 people, to keep it personal.',
             ].map((item) => (
               <li key={item} className="flex items-start gap-4">
@@ -303,7 +375,8 @@ export default function ProgramPage() {
             }}
           >
             Show up to the calls, do the assignments, and do the outreach — and if you don't create
-            at least one new client within the six weeks, I will refund you in full. No questions.
+            at least one new client within the six weeks, I will refund you in full. No questions
+            asked.
           </p>
         </section>
 
@@ -321,14 +394,12 @@ export default function ProgramPage() {
               </p>
               <ul className="list-none m-0 p-0 space-y-5">
                 {[
-                  'You are earning between CHF 35–120k and ready to grow.',
-                  'You are early in your practice — determined, and want to fast-track your learning.',
-                  'You are already experienced and want to master the art of client creation. A master has mastered the basics.',
+                  'You are earning between CHF 35–120k and are ready to grow.',
+                  'You are early in your practice — determined and want to fast-track your learning and get a working system in place.',
+                  'You are already experienced and want to master the art of client creation. A master has mastered the basics and never stops doing the basics.',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span
-                      style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '0.3rem' }}
-                    >
+                    <span style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '0.3rem' }}>
                       —
                     </span>
                     <span
@@ -350,9 +421,9 @@ export default function ProgramPage() {
               </p>
               <ul className="list-none m-0 p-0 space-y-5">
                 {[
-                  'People looking for a passive marketing system that works without personal outreach.',
+                  'People looking for a passive marketing system that works without your personal input.',
                   "Those who won't make time for the weekly calls and assignments.",
-                  'Anyone looking for fast hacks rather than a practice that holds over time.',
+                  'Anyone looking for fast hacks rather than a practice that works over time.',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span
@@ -415,11 +486,7 @@ export default function ProgramPage() {
             Investment
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3">
-            {[
-              { label: 'Solo', price: 'CHF 690' },
-              { label: 'With a partner', price: 'CHF 550 each' },
-              { label: 'Group of three or more', price: 'CHF 450 each' },
-            ].map((tier, i) => (
+            {pricing.map((tier, i) => (
               <div
                 key={tier.label}
                 style={{
@@ -437,11 +504,19 @@ export default function ProgramPage() {
                   {tier.label}
                 </p>
                 <p
-                  className="font-fraunces font-normal text-birch"
+                  className="font-fraunces font-normal text-birch mb-3"
                   style={{ fontSize: '1.75rem', lineHeight: 1.2 }}
                 >
                   {tier.price}
                 </p>
+                {tier.description && (
+                  <p
+                    className="font-fraunces font-normal text-birch"
+                    style={{ fontSize: '0.875rem', lineHeight: 1.6, opacity: 0.5 }}
+                  >
+                    {tier.description}
+                  </p>
+                )}
               </div>
             ))}
           </div>
@@ -458,10 +533,7 @@ export default function ProgramPage() {
             About Moritz
           </p>
           <div className="flex flex-col md:flex-row gap-10 items-start">
-            <div
-              className="shrink-0 relative"
-              style={{ width: '120px', height: '150px' }}
-            >
+            <div className="shrink-0 relative" style={{ width: '120px', height: '150px' }}>
               <Image
                 src="/images/portrait.jpeg"
                 alt="Moritz Lembert"
@@ -469,8 +541,10 @@ export default function ProgramPage() {
                 sizes="120px"
                 className="object-cover object-top grayscale"
                 style={{
-                  maskImage: 'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+                  maskImage:
+                    'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+                  WebkitMaskImage:
+                    'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
                 }}
               />
             </div>
@@ -480,7 +554,7 @@ export default function ProgramPage() {
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
                 I built my own practice from near-zero to six figures. Before that: professional
-                dancer and choreographer across Europe, somatic teacher, martial artist, several
+                dancer and choreographer across Europe, somatic teacher, martial artist, and several
                 thousand hours of meditation. I am ICF PCC-certified and have worked alongside
                 coaches, consultants, therapists, and founders for over seven years.
               </p>
@@ -488,7 +562,7 @@ export default function ProgramPage() {
                 className="font-fraunces font-normal text-birch"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                What I teach here is what I did, and what I have watched my clients do.
+                What I teach here is what I did and what I have watched my clients do.
               </p>
             </div>
           </div>
@@ -496,63 +570,15 @@ export default function ProgramPage() {
 
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
 
-        {/* ── Lead magnet ───────────────────────────────────────── */}
-        <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div
-            className="flex flex-col md:flex-row md:items-center justify-between gap-8"
-            style={{
-              padding: '3rem',
-              background: 'rgba(227,217,189,0.04)',
-              border: '1px solid rgba(227,217,189,0.12)',
-              maxWidth: '720px',
-            }}
-          >
-            <div>
-              <p
-                className="font-inter font-medium uppercase tracking-label mb-3"
-                style={{ fontSize: '11px', opacity: 0.45 }}
-              >
-                Free guide
-              </p>
-              <p
-                className="font-fraunces font-normal text-birch mb-2"
-                style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
-              >
-                Always Have Clients
-              </p>
-              <p
-                className="font-fraunces font-normal text-birch"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.6, opacity: 0.6 }}
-              >
-                Not ready to join yet? Start here — the guide behind the programme.
-              </p>
-            </div>
-            <a
-              href={GUIDE_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-inter font-medium no-underline shrink-0"
-              style={{
-                border: '1px solid var(--amber)',
-                color: 'var(--amber)',
-                padding: '0.75rem 1.75rem',
-                fontSize: '13px',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              Get the guide
-            </a>
-          </div>
+        {/* ── Guide — bottom ────────────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '3rem' }}>
+          <GuideBlock />
         </section>
 
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
 
         {/* ── Final CTA ─────────────────────────────────────────── */}
-        <section
-          style={{ paddingTop: '6rem', paddingBottom: '9rem', textAlign: 'center' }}
-        >
+        <section style={{ paddingTop: '6rem', paddingBottom: '9rem', textAlign: 'center' }}>
           <h2
             className="font-fraunces font-normal text-birch mb-4"
             style={{
