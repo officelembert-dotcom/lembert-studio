@@ -32,7 +32,7 @@ const practiceLinks: Record<string, string> = {
 export default function HomeDe() {
   const page = getHomePageDe()
   const voices = getAllVoices('de')
-  const featuredVoice = voices[0] ?? null
+  const highlightVoices = voices.filter((v) => v.highlight).slice(0, 2)
   const t = dict.de
 
   return (
@@ -136,23 +136,27 @@ export default function HomeDe() {
         </section>
 
         {/* ── One Voice ─────────────────────────────────────────── */}
-        {featuredVoice && (
+        {highlightVoices.length > 0 && (
           <>
             <div style={{ height: '6rem' }} />
             <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '6rem' }}>
-              <div className="flex flex-col items-center text-center mx-auto" style={{ maxWidth: '600px' }}>
-                <p
-                  className="font-fraunces italic text-birch"
-                  style={{ fontSize: '1.375rem', lineHeight: 1.7 }}
-                >
-                  {featuredVoice.quote}
-                </p>
-                <p
-                  className="font-inter mt-6 text-birch"
-                  style={{ fontSize: '13px', opacity: 0.55 }}
-                >
-                  — {featuredVoice.name}{featuredVoice.title ? `, ${featuredVoice.title}` : ''}
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16">
+                {highlightVoices.map((voice) => (
+                  <div key={voice.slug} className="flex flex-col">
+                    <p
+                      className="font-fraunces italic text-birch"
+                      style={{ fontSize: '1.25rem', lineHeight: 1.7 }}
+                    >
+                      "{voice.highlight}"
+                    </p>
+                    <p
+                      className="font-inter mt-6 text-birch"
+                      style={{ fontSize: '13px', opacity: 0.55 }}
+                    >
+                      — {voice.name}{voice.title ? `, ${voice.title}` : ''}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </>

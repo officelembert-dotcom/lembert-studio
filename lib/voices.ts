@@ -11,6 +11,7 @@ export interface Voice {
   title?: string
   photo?: string
   quote: string
+  highlight?: string
   order?: number
 }
 
@@ -29,6 +30,7 @@ export function getAllVoices(locale: 'en' | 'de' = 'en'): Voice[] {
       title: data.title as string | undefined,
       photo: data.photo as string | undefined,
       quote: data.quote as string,
+      highlight: data.highlight as string | undefined,
       order: (data.order as number) ?? 99,
     }
   })

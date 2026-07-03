@@ -113,6 +113,12 @@ export default config({
           multiline: true,
           validation: { isRequired: true },
         }),
+        highlight: fields.text({
+          label: 'Homepage highlight',
+          description: 'Short, strong excerpt shown on the homepage. Leave blank to not feature this voice there.',
+          multiline: true,
+          validation: { isRequired: false },
+        }),
         order: fields.integer({
           label: 'Display order',
           description: 'Lower number = shown first. 1, 2, 3…',
@@ -210,6 +216,12 @@ export default config({
           label: 'Zitat',
           multiline: true,
           validation: { isRequired: true },
+        }),
+        highlight: fields.text({
+          label: 'Startseiten-Highlight',
+          description: 'Kurzer, starker Auszug für die Startseite. Leer lassen, um diese Stimme dort nicht zu zeigen.',
+          multiline: true,
+          validation: { isRequired: false },
         }),
         order: fields.integer({
           label: 'Anzeigereihenfolge',
