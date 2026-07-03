@@ -26,11 +26,65 @@ export default function Home() {
         subheadline={page.subheadline}
       />
 
-      {/* ── Practice ──────────────────────────────────────────── */}
+      {/* ── Newsletter + portrait ─────────────────────────────── */}
       <div className="mx-auto max-w-page px-6 md:px-10">
         <div style={{ height: '6rem' }} />
 
-        <section aria-labelledby="practice-label">
+        <section
+          aria-labelledby="newsletter-label"
+          className="flex items-center gap-12"
+        >
+          <div className="flex-1">
+            <p
+              id="newsletter-label"
+              className="font-inter font-medium uppercase tracking-label mb-6"
+              style={{ fontSize: '11px', opacity: 0.55 }}
+            >
+              Stay close
+            </p>
+            <p
+              className="font-fraunces font-normal text-birch mb-8"
+              style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
+            >
+              {page.newsletterIntro}
+            </p>
+            <NewsletterSignup label="" placeholder="your@email.com" />
+          </div>
+
+          {/* Portrait — fades into background via mask, links to About */}
+          <Link
+            href="/about"
+            className="hidden md:block shrink-0 no-underline group"
+          >
+            <span className="block relative" style={{ width: '200px', height: '260px' }}>
+              <Image
+                src="/images/portrait.jpeg"
+                alt="Moritz Lembert"
+                fill
+                sizes="200px"
+                className="object-cover object-top"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
+                }}
+              />
+            </span>
+            <span
+              className="block text-center font-fraunces font-normal text-birch transition-all duration-300 group-hover:opacity-100"
+              style={{ fontSize: '1rem', opacity: 0.7, marginTop: '-0.5rem' }}
+            >
+              Moritz Lembert
+            </span>
+          </Link>
+        </section>
+
+        {/* ── Practice ──────────────────────────────────────────── */}
+        <div style={{ height: '5rem' }} />
+
+        <section
+          aria-labelledby="practice-label"
+          style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
+        >
           <p
             id="practice-label"
             className="font-inter font-medium uppercase tracking-label mb-8"
@@ -70,50 +124,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </section>
-
-        {/* ── Newsletter ────────────────────────────────────────── */}
-        <div style={{ height: '5rem' }} />
-
-        <section
-          aria-labelledby="newsletter-label"
-          className="flex items-center gap-12"
-          style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
-        >
-          <div className="flex-1">
-            <p
-              id="newsletter-label"
-              className="font-inter font-medium uppercase tracking-label mb-6"
-              style={{ fontSize: '11px', opacity: 0.55 }}
-            >
-              Stay close
-            </p>
-            <p
-              className="font-fraunces font-normal text-birch mb-8"
-              style={{ fontSize: '1.125rem', lineHeight: 1.65, maxWidth: '460px', opacity: 0.85 }}
-            >
-              {page.newsletterIntro}
-            </p>
-            <NewsletterSignup label="" placeholder="your@email.com" />
-          </div>
-
-          {/* Portrait — fades into background via mask */}
-          <div
-            className="hidden md:block shrink-0 relative"
-            style={{ width: '200px', height: '260px' }}
-          >
-            <Image
-              src="/images/portrait.jpeg"
-              alt="Moritz Lembert"
-              fill
-              sizes="200px"
-              className="object-cover object-top"
-              style={{
-                maskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
-                WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 50% 45%, black 30%, transparent 75%)',
-              }}
-            />
-          </div>
         </section>
 
         {/* ── Voice highlights ──────────────────────────────────── */}
