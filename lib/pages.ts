@@ -71,7 +71,7 @@ export const getWorkPage = (): WorkData =>
   readJson('content/pages/work.json', {
     headline: 'Ways to work together',
     offers: [],
-    closing: 'For pricing and engagement details, please get in touch.',
+    closing: 'Engagements are scoped to the situation and what is most important to you. We agree on that together before any proposal.',
   })
 
 export interface WorkDetailData {
@@ -79,6 +79,13 @@ export interface WorkDetailData {
   paragraphs: string[]
   image?: string | null
 }
+
+export const getOutcomeBasedCoachingPage = (): WorkDetailData =>
+  readJson('content/work-pages/outcome-based-coaching.json', {
+    headline: 'We agree on outcomes. Then we build your program around them.',
+    paragraphs: [],
+    image: null,
+  })
 
 export const getRetainedAdvisoryPage = (): WorkDetailData =>
   readJson('content/work-pages/retained-advisory.json', {
@@ -132,7 +139,14 @@ export const getWorkPageDe = (): WorkData =>
   readJson('content/pages/work-de.json', {
     headline: 'Wege der Zusammenarbeit',
     offers: [],
-    closing: 'Für Preise und Details zur Zusammenarbeit, melde dich gerne.',
+    closing: 'Der Umfang einer Zusammenarbeit richtet sich nach deiner Situation und dem, was dir am wichtigsten ist. Das klären wir gemeinsam, bevor es ein Angebot gibt.',
+  })
+
+export const getOutcomeBasedCoachingPageDe = (): WorkDetailData =>
+  readJson('content/work-pages-de/outcome-based-coaching.json', {
+    headline: 'Wir vereinbaren Ergebnisse. Dann bauen wir dein Programm darum.',
+    paragraphs: [],
+    image: null,
   })
 
 export const getRetainedAdvisoryPageDe = (): WorkDetailData =>

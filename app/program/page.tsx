@@ -25,13 +25,13 @@ const GUIDE_HREF =
 const testimonials = [
   {
     quote:
-      'My practice is full. Instead of teaching scattered 6 days a week, I now teach 3 complete days — and doubled my income without working more. I even have more time for the projects that are close to my heart.',
+      'My practice is full. Instead of teaching scattered 6 days a week, I now teach 3 complete days, and doubled my income without working more. I even have more time for the projects that are close to my heart.',
     name: 'Alina Jacobs',
     role: 'Dance artist & pedagogue (LPDC®), Gyrotonic & Gyrokinesis trainer',
   },
   {
     quote:
-      "I was a bodywork practitioner scrambling for a mediocre hourly rate. Fear of money and not having enough was, for 30 years, my biggest concern. I got tenfold out of the investment — and I'm still running.",
+      "I was a bodywork practitioner scrambling for a mediocre hourly rate. Fear of money and not having enough was, for 30 years, my biggest concern. I got tenfold out of the investment, and I'm still running.",
     name: 'Bart Vanderbruggen',
     role: 'Neuro Bodywork educator, Founder WOBA Academie',
   },
@@ -58,7 +58,7 @@ const pricing = [
   {
     label: 'With a partner',
     price: 'CHF 550 each',
-    description: 'Bring a friend — you both pay only 550.',
+    description: 'Bring a friend; you both pay only 550.',
   },
   {
     label: 'Group of three or more',
@@ -141,7 +141,7 @@ export default function ProgramPage() {
               maxWidth: '760px',
             }}
           >
-            Build a system that creates clients — continuously.
+            Build a system that creates clients, continuously.
           </h1>
           <p
             className="font-fraunces font-normal text-birch mb-12"
@@ -165,7 +165,7 @@ export default function ProgramPage() {
               style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.9 }}
             >
               "My practice is full. Instead of teaching scattered 6 days a week, I now teach 3
-              complete days — and doubled my income without working more."
+              complete days, and doubled my income without working more."
             </p>
             <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
               — Alina Jacobs, Gyrotonic & Gyrokinesis trainer
@@ -213,8 +213,7 @@ export default function ProgramPage() {
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
               Here is what most practitioners do: they need a client, so they reach out, get in
-              communication, share their service. They land the client. They serve that client well
-              — because that is what they are trained to do. And in serving them, they stop doing
+              communication, share their service. They land the client. They serve that client well, because that is what they are trained to do. And in serving them, they stop doing
               what created them. Then the client ends. And the scramble begins again.
             </p>
             <p
@@ -222,7 +221,7 @@ export default function ProgramPage() {
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
               This is not a discipline problem. It is a structural one. You never built a practice
-              and system — you built a series of individual clients. And it somehow seems mysterious
+              and system; you built a series of individual clients. And it somehow seems mysterious
               how you ever got that client, and why now they aren't flowing in.
             </p>
             <p
@@ -258,7 +257,7 @@ export default function ProgramPage() {
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
             What we build here is not a marketing funnel, 15 webpages, a secret system. It is a
-            practice — a small number of things you do consistently, that create the conditions for
+            practice: a small number of things you do consistently, that create the conditions for
             clients to come. You learn exactly what I did to grow my practice past six figures, and
             what my clients have done to do the same.
           </p>
@@ -360,7 +359,7 @@ export default function ProgramPage() {
               opacity: 0.95,
             }}
           >
-            Show up to the calls, do the assignments, and do the outreach — and if you don't create
+            Show up to the calls, do the assignments, and do the outreach, and if you don't create
             at least one new client within the six weeks, I will refund you in full. No questions
             asked.
           </p>

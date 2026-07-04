@@ -2,22 +2,26 @@
   "headline": "Wege der Zusammenarbeit",
   "offers": [
     {
+      "title": "Outcome Based Coaching",
+      "body": "Wir vereinbaren gemeinsam die Ergebnisse, die du erreichen willst, und entwerfen ein persönliches Programm für dich. Klienten haben Coaching für alles Mögliche genutzt, vom verdoppelten Umsatz bis zu mehr Ruhe und Freude im Alltag."
+    },
+    {
       "title": "Retained Advisory",
-      "body": "Eine fortlaufende Advisory-Beziehung über mindestens 6 Monate — wir arbeiten sowohl an den strategischen Entscheidungen als auch an der Person, die sie trifft. Dir."
+      "body": "In der Regel sechs Monate. Ich bin dein Partner dabei, die Ergebnisse zu schaffen, die dir wichtig sind. Die konkrete Ausgestaltung richtet sich nach deiner aktuellen Situation und der Phase deines Unternehmens."
     },
     {
       "title": "Deep Day",
-      "body": "Ein einzelner Tag, ganz auf dich fokussiert. Du gehst mit Klarheit darüber, was als Nächstes kommt, und einem Werkzeugkasten, um auch in stürmischer See dein bestes Denken und Handeln zu erreichen."
+      "body": "Sechs bis acht Stunden, extern oder bei dir im Unternehmen. Wir lösen die größten Hindernisse für dein geschäftliches und persönliches Wachstum. Auch als Krisenintervention nutzbar."
     },
     {
-      "title": "Retreats im Rheintal",
-      "body": "Kleine Gruppenretreats finden mehrmals im Jahr im Alpsteingebiet statt, für Gründer und Führungskräfte."
+      "title": "Retreats in der Schweiz und Europa",
+      "body": "Retreats in kleinen Gruppen für Gründer, die einen kreativen Raum brauchen, um zu ihrem besten Denken zu finden, eine Zukunft zu bauen, die sich lohnt, und ihren Körper zu nähren."
     },
     {
       "title": "Team Trainings & Workshops",
       "body": "Maßgeschneiderte Trainings und Workshops zur Entwicklung zentraler Fähigkeiten und Leistungstreiber in deinem Team. Auf Anfrage. Schreib mir direkt an moritz@lembertstudio.com"
     }
   ],
-  "closing": "Für Preise und Details zur Zusammenarbeit, melde dich gerne.",
+  "closing": "Der Umfang einer Zusammenarbeit richtet sich nach deiner Situation und dem, was dir am wichtigsten ist. Das klären wir gemeinsam, bevor es ein Angebot gibt.",
   "image": "/images/image.jpg"
 }

@@ -24,9 +24,11 @@ export const metadata = {
 }
 
 const practiceLinks: Record<string, string> = {
-  'retained advisory':     '/de/work/retained-advisory',
-  'deep day':              '/de/work/deep-day',
-  'retreats im rheintal':  '/de/work/retreats',
+  'outcome based coaching':             '/de/work/outcome-based-coaching',
+  'retained advisory':                  '/de/work/retained-advisory',
+  'deep day':                           '/de/work/deep-day',
+  'retreats im rheintal':               '/de/work/retreats',
+  'retreats in der schweiz und europa': '/de/work/retreats',
 }
 
 export default function HomeDe() {

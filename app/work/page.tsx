@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { getWorkPage } from '@/lib/pages'
 
 export const metadata = {
-  title: 'Work with Moritz Lembert — Retained Advisory, Deep Day, Retreats',
-  description: 'Two depths of working together: Retained Advisory over months, and a Deep Day for one decision. For founders and CEOs navigating what matters most.',
+  title: 'Work with Moritz Lembert — Outcome Based Coaching, Retained Advisory, Deep Day',
+  description: 'Ways of working together: Outcome Based Coaching, Retained Advisory over months, and a Deep Day for one decision. For founders and CEOs navigating what matters most.',
   openGraph: {
     title: 'Work — Lembert Studio',
     description: 'Retained Advisory. Deep Day. In the Rheintal.',
@@ -12,18 +12,20 @@ export const metadata = {
 }
 
 const offerSlugs: Record<string, string> = {
-  'retained advisory':          '/work/retained-advisory',
-  'deep day':                   '/work/deep-day',
-  'retreats in the rheintal':   '/work/retreats',
-  'team trainings & workshops': '/contact',
+  'outcome based coaching':            '/work/outcome-based-coaching',
+  'retained advisory':                 '/work/retained-advisory',
+  'deep day':                          '/work/deep-day',
+  'retreats in the rheintal':          '/work/retreats',
+  'retreats in switzerland and europe': '/work/retreats',
+  'team trainings & workshops':        '/contact',
 }
 
 function getOfferHref(title: string): string {
   return offerSlugs[title.trim().toLowerCase()] ?? '/work'
 }
 
-const MAIN_OFFERS = ['retained advisory', 'deep day']
-const RETREAT_KEY = 'retreats in the rheintal'
+const MAIN_OFFERS = ['outcome based coaching', 'retained advisory', 'deep day']
+const RETREAT_KEYS = ['retreats in the rheintal', 'retreats in switzerland and europe']
 
 export default function Work() {
   const page = getWorkPage()
@@ -32,7 +34,7 @@ export default function Work() {
     MAIN_OFFERS.includes(o.title.trim().toLowerCase())
   )
   const retreatOffer = page.offers.find(o =>
-    o.title.trim().toLowerCase() === RETREAT_KEY
+    RETREAT_KEYS.includes(o.title.trim().toLowerCase())
   )
 
   return (

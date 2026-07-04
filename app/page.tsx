@@ -6,9 +6,11 @@ import HeroParallax from '@/components/HeroParallax'
 import NewsletterSignup from '@/components/NewsletterSignup'
 
 const practiceLinks: Record<string, string> = {
-  'retained advisory':        '/work/retained-advisory',
-  'deep day':                 '/work/deep-day',
-  'retreats in the rheintal': '/work/retreats',
+  'outcome based coaching':             '/work/outcome-based-coaching',
+  'retained advisory':                  '/work/retained-advisory',
+  'deep day':                           '/work/deep-day',
+  'retreats in the rheintal':           '/work/retreats',
+  'retreats in switzerland and europe': '/work/retreats',
 }
 
 export default function Home() {
