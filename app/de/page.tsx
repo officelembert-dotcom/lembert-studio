@@ -9,10 +9,10 @@ import NewsletterSignup from '@/components/NewsletterSignup'
 export const metadata = {
   title: 'Moritz Lembert — Advisor & Executive Coach für Gründer & CEOs, Schweiz',
   description:
-    'Moritz Lembert arbeitet als Advisor und Executive Coach für Gründer & CEOs in der Schweiz und dem DACH-Raum. Strategische Entscheidungen und die Person, die sie trifft — beides gleichzeitig.',
+    'Ich arbeite mit Menschen, die an einer Zukunft bauen, in der wir leben wollen. Advisor und Executive Coach für Gründer, Inhaber und erfahrene Führungsleute, Schweiz und DACH.',
   openGraph: {
     title: 'Moritz Lembert — Advisor & Executive Coach für Gründer & CEOs',
-    description: 'Eine Beratungspraxis in langer Form, für die Momente, die zählen.',
+    description: 'Ich arbeite mit Menschen, die an einer Zukunft bauen, in der wir leben wollen.',
   },
   alternates: {
     canonical: 'https://lembertstudio.com/de',

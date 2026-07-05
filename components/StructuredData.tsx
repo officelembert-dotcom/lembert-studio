@@ -24,11 +24,13 @@ export default function StructuredData() {
       'Unternehmensberatung',
       'Trusted Advisor',
       'Transition Management',
-      'Ontological Coaching',
+      'Impact Entrepreneurship',
+      'Mittelstand Succession',
+      'Climate Founder Coaching',
     ],
     knowsLanguage: ['de', 'en'],
     description:
-      'Moritz Lembert works as an advisor and executive coach to founders & CEOs in Switzerland and the DACH region. He works with the strategic decisions and the person making them at the same time.',
+      'Moritz Lembert works with people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. He works with the hidden dynamics and the person doing the leading.',
     image: 'https://lembertstudio.com/images/portrait.jpeg',
     email: 'moritz@lembertstudio.com',
   }
@@ -41,7 +43,7 @@ export default function StructuredData() {
     url: 'https://lembertstudio.com',
     logo: 'https://lembertstudio.com/images/portrait.jpeg',
     description:
-      'An advisory practice for founders and owners of 10–100 person businesses in Switzerland and the DACH region. Retained advisory, deep working days, and retreats in the Rheintal.',
+      'An advisory practice for people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. Retained advisory, deep working days, and retreats.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Berneck',
@@ -68,7 +70,6 @@ export default function StructuredData() {
     ],
     founder: { '@type': 'Person', name: 'Moritz Lembert' },
     sameAs: ['https://www.linkedin.com/in/moritzlembert/'],
-    priceRange: 'CHF 4,500–30,000+',
     telephone: null,
     email: 'moritz@lembertstudio.com',
   }

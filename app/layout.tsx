@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Moritz Lembert works as an advisor and executive coach to founders & CEOs in Switzerland and the DACH region. Strategic decisions and the person making them — both at the same time.',
+    'Moritz Lembert works with people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. Advisor and executive coach, Switzerland and DACH.',
 
   keywords: [
     'trusted advisor Switzerland',
@@ -43,6 +43,12 @@ export const metadata: Metadata = {
     'coach für Unternehmer',
     'Führungsberatung Ostschweiz',
     'trusted advisor DACH',
+    'coach for climate founders',
+    'impact founder coach',
+    'executive coach impact entrepreneurs',
+    'Mittelstand Nachfolge Coaching',
+    'Coaching Unternehmensnachfolge',
+    'purpose-driven founder advisor',
     'Moritz Lembert',
     'Lembert Studio',
   ],
@@ -59,7 +65,7 @@ export const metadata: Metadata = {
     siteName: 'Lembert Studio',
     title: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
     description:
-      'Advisory and executive coaching for founders & CEOs in Switzerland and the DACH region. For the decisions that matter — and the person making them.',
+      'I work with people building a future we want to live in. Advisory and executive coaching for founders, owners, and senior operators in Switzerland and DACH.',
     images: [
       {
         url: '/images/heroImage.jpg',
@@ -74,7 +80,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Moritz Lembert — Advisor & Executive Coach to Founders & CEOs, Switzerland',
     description:
-      'Advisory and executive coaching for founders & CEOs in Switzerland and the DACH region.',
+      'I work with people building a future we want to live in. Advisory for founders, owners, and senior operators.',
     images: ['/images/heroImage.jpg'],
   },
 
