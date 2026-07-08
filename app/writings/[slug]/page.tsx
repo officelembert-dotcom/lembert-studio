@@ -52,7 +52,7 @@ export default function WritingPage({ params }: { params: { slug: string } }) {
             alt={writing.title}
             fill
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover grayscale object-center"
             priority
           />
           <div

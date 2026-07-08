@@ -4,8 +4,8 @@ import { getAllWritings } from '@/lib/writings'
 import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata = {
-  title: 'Texte — Essays über Führung, Entscheidungen und das Leben dahinter',
-  description: 'Gelegentliche Essays von Moritz Lembert über Führung, Entscheidungsfindung, Identität und das, was hinter der Arbeit steckt.',
+  title: 'Texte — Essays über Führung, das Menschsein und das, was darunter läuft',
+  description: 'Essays von Moritz Lembert für Gründerinnen und Inhaber, die an einer Zukunft bauen, in der wir leben wollen. Über Führung, verborgene Dynamiken und das, was unter der Oberfläche wirkt.',
   openGraph: {
     title: 'Texte — Lembert Studio',
     description: 'Essays über die Arbeit und das Leben dahinter.',
@@ -107,7 +107,7 @@ export default function WritingsDe() {
                     alt={writing.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-opacity duration-500 group-hover:opacity-80"
+                    className="object-cover grayscale transition-opacity duration-500 group-hover:opacity-80"
                   />
                 ) : (
                   <div
