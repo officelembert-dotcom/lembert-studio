@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getHomePage } from '@/lib/pages'
 import { getAllVoices } from '@/lib/voices'
+import { getAllWritings } from '@/lib/writings'
+import { getAllNotes } from '@/lib/notes'
 import HeroParallax from '@/components/HeroParallax'
 import NewsletterSignup from '@/components/NewsletterSignup'
 
@@ -17,6 +19,12 @@ export default function Home() {
   const page = getHomePage()
   const voices = getAllVoices()
   const highlightVoices = voices.filter((v) => v.highlight).slice(0, 2)
+  const latestWriting = getAllWritings('en')[0] ?? null
+  const latestNote = getAllNotes()[0] ?? null
+  const latestItems = [
+    latestWriting && { label: 'Essay', title: latestWriting.title, href: `/writings/${latestWriting.slug}` },
+    latestNote && { label: 'Note', title: latestNote.title, href: `/notes/${latestNote.slug}` },
+  ].filter(Boolean) as { label: string; title: string; href: string }[]
 
   return (
     <div className="page-enter">
@@ -79,6 +87,64 @@ export default function Home() {
             </span>
           </Link>
         </section>
+
+        {/* ── Latest ────────────────────────────────────────────── */}
+        {latestItems.length > 0 && (
+          <>
+            <div style={{ height: '5rem' }} />
+            <section
+              aria-labelledby="latest-label"
+              style={{ borderTop: '1px solid rgba(227,217,189,0.12)', paddingTop: '3rem' }}
+            >
+              <p
+                id="latest-label"
+                className="font-inter font-medium uppercase tracking-label mb-8"
+                style={{ fontSize: '11px', opacity: 0.55 }}
+              >
+                Latest
+              </p>
+              <ul className="list-none m-0 p-0" role="list">
+                {latestItems.map((entry, i) => (
+                  <li
+                    key={entry.href}
+                    style={{
+                      borderTop: i === 0 ? '1px solid rgba(227,217,189,0.12)' : undefined,
+                      borderBottom: '1px solid rgba(227,217,189,0.12)',
+                    }}
+                  >
+                    <Link
+                      href={entry.href}
+                      className="group flex items-baseline justify-between gap-6 no-underline"
+                      style={{ paddingTop: '1.1rem', paddingBottom: '1.1rem' }}
+                    >
+                      <span className="flex items-baseline gap-6 min-w-0">
+                        <span
+                          className="font-inter font-medium uppercase tracking-label shrink-0 hidden sm:inline"
+                          style={{ fontSize: '10px', opacity: 0.4, minWidth: '52px' }}
+                        >
+                          {entry.label}
+                        </span>
+                        <span
+                          className="font-fraunces font-normal text-birch transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2 truncate"
+                          style={{ fontSize: '1.1875rem', lineHeight: 1.5, opacity: 0.85 }}
+                        >
+                          {entry.title}
+                        </span>
+                      </span>
+                      <span
+                        className="font-inter text-birch transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 shrink-0"
+                        style={{ fontSize: '1rem', opacity: 0.45 }}
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
 
         {/* ── Practice ──────────────────────────────────────────── */}
         <div style={{ height: '5rem' }} />

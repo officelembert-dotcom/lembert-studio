@@ -5,6 +5,7 @@ export const dict = {
     nav: {
       work: 'Work',
       writings: 'Writings',
+      library: 'Library',
       about: 'About',
       voices: 'Voices',
       contact: 'Contact',
@@ -37,6 +38,7 @@ export const dict = {
     nav: {
       work: 'Arbeit',
       writings: 'Texte',
+      library: 'Bibliothek',
       about: 'Über mich',
       voices: 'Stimmen',
       contact: 'Kontakt',

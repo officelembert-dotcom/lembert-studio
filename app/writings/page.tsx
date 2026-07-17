@@ -46,6 +46,16 @@ export default function Writings() {
         Occasional writing on the work.
       </p>
 
+      <p className="mt-5">
+        <Link
+          href="/notes"
+          className="font-inter font-medium uppercase text-birch no-underline transition-all duration-300 hover:opacity-80 hover:translate-x-1 inline-block"
+          style={{ fontSize: '11px', letterSpacing: '0.24em', opacity: 0.55 }}
+        >
+          Notes — shorter thoughts →
+        </Link>
+      </p>
+
       {/* Subscribe block */}
       <div
         className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 sm:gap-12 py-10 mt-8"

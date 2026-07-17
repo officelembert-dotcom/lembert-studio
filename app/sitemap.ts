@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getAllWritings } from '@/lib/writings'
+import { getAllNotes } from '@/lib/notes'
+import { getAllLibraryItems } from '@/lib/library'
 
 const base = 'https://lembertstudio.com'
 
@@ -24,6 +26,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }))
+
+  const noteUrls = getAllNotes().flatMap((n) => [
+    { url: `${base}/notes/${n.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${base}/de/notes/${n.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 },
+  ])
+  const libraryUrlsEn = getAllLibraryItems('en').map((it) => ({
+    url: `${base}/library/${it.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7,
+  }))
+  const libraryUrlsDe = getAllLibraryItems('de').map((it) => ({
+    url: `${base}/de/library/${it.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7,
+  }))
 
   return [
     {
@@ -146,7 +159,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
+    {
+      url: `${base}/notes`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/de/notes`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/library`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/de/library`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     ...writingUrlsEn,
     ...writingUrlsDe,
+    ...noteUrls,
+    ...libraryUrlsEn,
+    ...libraryUrlsDe,
   ]
 }

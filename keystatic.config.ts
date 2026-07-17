@@ -16,13 +16,161 @@ export default config({
     brand: { name: 'Lembert Studio' },
     navigation: {
       'English — Pages': ['homePage', 'aboutPage', 'workPage', 'contactPage'],
-      'English — Content': ['writings', 'voices', 'workDetailPages'],
+      'English — Content': ['writings', 'voices', 'workDetailPages', 'library'],
       'Deutsch — Seiten': ['homePageDe', 'aboutPageDe', 'workPageDe', 'contactPageDe'],
-      'Deutsch — Inhalte': ['writingsDe', 'voicesDe', 'workDetailPagesDe'],
+      'Deutsch — Inhalte': ['writingsDe', 'voicesDe', 'workDetailPagesDe', 'libraryDe'],
+      'Notes (one stream, EN + DE)': ['notes'],
     },
   },
 
   collections: {
+
+    notes: collection({
+      label: 'Notes',
+      slugField: 'title',
+      path: 'content/notes/*',
+      format: { contentField: 'body' },
+      entryLayout: 'form',
+      schema: {
+        title: fields.slug({
+          name: { label: 'Title' },
+          slug: { label: 'URL slug', description: 'Auto-generated from title. Do not change after publishing.' },
+        }),
+        date: fields.date({
+          label: 'Date',
+          defaultValue: { kind: 'today' },
+          validation: { isRequired: true },
+        }),
+        body: fields.mdx({
+          label: 'Body',
+          description: 'Short-form. Write in English or German, whichever the thought came in.',
+          options: {
+            bold: true,
+            italic: true,
+            heading: false,
+            blockquote: true,
+            link: true,
+            divider: true,
+          },
+        }),
+      },
+    }),
+
+    library: collection({
+      label: 'Library',
+      slugField: 'title',
+      path: 'content/library/*',
+      format: { contentField: 'body' },
+      entryLayout: 'form',
+      schema: {
+        title: fields.slug({
+          name: { label: 'Title' },
+          slug: { label: 'URL slug', description: 'Auto-generated from title. Do not change after publishing.' },
+        }),
+        type: fields.select({
+          label: 'Type',
+          options: [
+            { label: 'Workbook', value: 'workbook' },
+            { label: 'Guide', value: 'guide' },
+            { label: 'Audio', value: 'audio' },
+          ],
+          defaultValue: 'guide',
+        }),
+        description: fields.text({
+          label: 'Description',
+          description: 'One short paragraph, shown in the Library list and on the item page.',
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        file: fields.file({
+          label: 'File (PDF or MP3)',
+          directory: 'public/library',
+          publicPath: '/library/',
+          validation: { isRequired: false },
+        }),
+        date: fields.date({
+          label: 'Date',
+          defaultValue: { kind: 'today' },
+          validation: { isRequired: true },
+        }),
+        order: fields.integer({
+          label: 'Display order',
+          description: 'Lower number = shown first. 1, 2, 3…',
+          defaultValue: 99,
+          validation: { isRequired: false },
+        }),
+        body: fields.mdx({
+          label: 'Item page text (optional)',
+          description: 'Extra context shown on the item page below the description.',
+          options: {
+            bold: true,
+            italic: true,
+            heading: [2, 3],
+            blockquote: true,
+            link: true,
+            divider: true,
+          },
+        }),
+      },
+    }),
+
+    libraryDe: collection({
+      label: 'Bibliothek (DE)',
+      slugField: 'title',
+      path: 'content/library-de/*',
+      format: { contentField: 'body' },
+      entryLayout: 'form',
+      schema: {
+        title: fields.slug({
+          name: { label: 'Titel' },
+          slug: { label: 'URL-Slug', description: 'Automatisch erzeugt. Nach Veröffentlichung nicht ändern.' },
+        }),
+        type: fields.select({
+          label: 'Typ',
+          options: [
+            { label: 'Workbook', value: 'workbook' },
+            { label: 'Guide', value: 'guide' },
+            { label: 'Audio', value: 'audio' },
+          ],
+          defaultValue: 'guide',
+        }),
+        description: fields.text({
+          label: 'Beschreibung',
+          description: 'Ein kurzer Absatz, sichtbar in der Bibliothek und auf der Detailseite.',
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        file: fields.file({
+          label: 'Datei (PDF oder MP3)',
+          directory: 'public/library',
+          publicPath: '/library/',
+          validation: { isRequired: false },
+        }),
+        date: fields.date({
+          label: 'Datum',
+          defaultValue: { kind: 'today' },
+          validation: { isRequired: true },
+        }),
+        order: fields.integer({
+          label: 'Anzeigereihenfolge',
+          description: 'Niedrigere Zahl = wird zuerst angezeigt. 1, 2, 3…',
+          defaultValue: 99,
+          validation: { isRequired: false },
+        }),
+        body: fields.mdx({
+          label: 'Text der Detailseite (optional)',
+          description: 'Zusätzlicher Kontext, unter der Beschreibung angezeigt.',
+          options: {
+            bold: true,
+            italic: true,
+            heading: [2, 3],
+            blockquote: true,
+            link: true,
+            divider: true,
+          },
+        }),
+      },
+    }),
 
     writings: collection({
       label: 'Writings',

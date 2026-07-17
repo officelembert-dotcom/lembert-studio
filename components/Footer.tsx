@@ -7,6 +7,7 @@ import { dict, type Locale } from '@/lib/i18n'
 const baseLinks = [
   { href: '/work',     key: 'work'     as const },
   { href: '/writings', key: 'writings' as const },
+  { href: '/library',  key: 'library'  as const },
   { href: '/about',    key: 'about'    as const },
   { href: '/voices',   key: 'voices'   as const },
   { href: '/contact',  key: 'contact'  as const },
