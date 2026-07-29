@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Practitioners Programme — Lembert Studio',
-  description: 'A 6-week group programme for coaches, consultants, and therapists ready to build a system that creates clients continuously.',
+  title: 'Always Have Clients: The Six-Week Practice — Lembert Studio',
+  description: 'Always Have Clients, the six-week practice: a group programme for coaches, consultants, and therapists who want a system that creates clients continuously.',
   robots: { index: false, follow: false },
 }
 
@@ -17,7 +17,9 @@ const weeks = [
 ]
 
 const CTA_HREF =
-  'mailto:moritz@lembertstudio.com?subject=Programme%20%E2%80%94%20I%E2%80%99d%20like%20to%20join'
+  'mailto:moritz@lembertstudio.com' +
+  '?subject=' + encodeURIComponent('Always Have Clients — I would like to join') +
+  '&body=' + encodeURIComponent('Hi Moritz,\n\nI would like to join the September cohort.\n\nMy name is: \nMy practice is: \n')
 
 const GUIDE_HREF =
   'https://docs.google.com/document/d/1HePBs6Epah2c-Rc3A_piF9KgVmRlKwnA7VRqOrL62-k/preview'
@@ -49,7 +51,7 @@ const testimonials = [
   },
   {
     quote:
-      'The scariest thing I did was my first reachout campaign: I called 70 people I had worked with over the years, in one week, and gained 7 new clients. In 4 months I earned more from my business than in the whole last year, with 15 to 20 clients a week. What I loved most is the combination of concrete business advice and deep personal work.',
+      'I earned back all the money I invested and more, with 15 to 20 clients a week. What I loved most is the combination of concrete business advice and deep personal work. Moritz walks his talk, and the playfulness makes reaching out to people much more lighthearted.',
     name: 'Lukas Teml',
     role: 'Grinberg Practitioner & Lebens- und Sozialberater',
   },
@@ -136,7 +138,7 @@ export default function ProgramPage() {
             className="font-inter font-medium uppercase tracking-label mb-8"
             style={{ fontSize: '11px', opacity: 0.55 }}
           >
-            Six weeks · Starting 23 September
+            Always Have Clients · The Six-Week Practice
           </p>
           <h1
             className="font-fraunces font-normal text-birch mb-6"
@@ -170,11 +172,11 @@ export default function ProgramPage() {
               className="font-fraunces italic text-birch mb-3"
               style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.9 }}
             >
-              "My practice is full. Instead of teaching scattered 6 days a week, I now teach 3
-              complete days, and doubled my income without working more."
+              "I called 70 people I had worked with, in one week, and gained 7 new clients.
+              In 4 months I earned more from my business than in the whole last year."
             </p>
             <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
-              — Alina Jacobs, Gyrotonic & Gyrokinesis trainer
+              — Lukas Teml, Grinberg Practitioner & Lebens- und Sozialberater
             </p>
           </div>
 
@@ -195,9 +197,17 @@ export default function ProgramPage() {
               Write to me to join
             </a>
             <p className="font-inter text-birch" style={{ fontSize: '12px', opacity: 0.5 }}>
-              Limited to 12 places
+              Limited to 12 places · Starting 23 September
             </p>
           </div>
+
+          {/* Guarantee, right at the decision */}
+          <p
+            className="font-fraunces italic text-birch mb-12"
+            style={{ fontSize: '1rem', lineHeight: 1.6, opacity: 0.6 }}
+          >
+            Sign a new client within the programme, or your money back.
+          </p>
 
           {/* Guide — top */}
           <GuideBlock />
@@ -498,6 +508,14 @@ export default function ProgramPage() {
           >
             Investment
           </p>
+          <p
+            className="font-fraunces font-normal text-birch mb-10"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85, maxWidth: '620px' }}
+          >
+            Everything included: six live calls, one assignment each week, tracking and
+            accountability between calls, the group thread, every call recorded, and the
+            money-back guarantee.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3">
             {pricing.map((tier, i) => (
               <div
@@ -533,6 +551,15 @@ export default function ProgramPage() {
               </div>
             ))}
           </div>
+          <p
+            className="font-fraunces italic text-birch mt-10"
+            style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.7, maxWidth: '520px' }}
+          >
+            "It's an investment that came back and was really worth doing."
+          </p>
+          <p className="font-inter text-birch mt-3" style={{ fontSize: '12px', opacity: 0.45 }}>
+            — Alice Shido, Founder Panta Rhei Studio
+          </p>
         </section>
 
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
