@@ -58,18 +58,18 @@ const testimonials = [
 const pricing = [
   {
     label: 'Solo',
-    price: 'CHF 690',
+    price: 'CHF 640',
     description: null,
   },
   {
-    label: 'With a partner',
-    price: 'CHF 550 each',
-    description: 'Bring a friend; you both pay only 550.',
+    label: 'With a friend',
+    price: 'CHF 450 each',
+    description: 'Bring a friend; you both pay only 450.',
   },
   {
-    label: 'Group of three or more',
-    price: 'CHF 450 each',
-    description: 'Bring colleagues so you can practice together long after.',
+    label: 'Programme + 1:1 coaching',
+    price: 'CHF 2,500',
+    description: 'Add me as your business coach: the programme plus 4 one-to-one sessions.',
   },
 ]
 
