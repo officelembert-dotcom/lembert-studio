@@ -51,7 +51,7 @@ const testimonials = [
     quote:
       'The scariest thing I did was my first reachout campaign: I called 70 people I had worked with over the years, in one week, and gained 7 new clients. In 4 months I earned more from my business than in the whole last year, with 15 to 20 clients a week. What I loved most is the combination of concrete business advice and deep personal work.',
     name: 'Lukas Teml',
-    role: 'Practitioner, one-year training',
+    role: 'Grinberg Practitioner & Lebens- und Sozialberater',
   },
 ]
 
