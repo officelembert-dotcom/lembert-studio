@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Always Have Clients: The Six-Week Practice — Lembert Studio',
-  description: 'Always Have Clients, the six-week practice: a group programme for coaches, consultants, and therapists who want a system that creates clients continuously.',
+  title: 'Always Have Clients: 6 Weeks Practice Dojo — Lembert Studio',
+  description: 'Always Have Clients, the 6 weeks practice dojo: a group programme for coaches, consultants, and therapists who want a system that creates clients continuously.',
   robots: { index: false, follow: false },
 }
 
@@ -138,7 +138,7 @@ export default function ProgramPage() {
             className="font-inter font-medium uppercase tracking-label mb-8"
             style={{ fontSize: '11px', opacity: 0.55 }}
           >
-            Always Have Clients · The Six-Week Practice
+            Always Have Clients · 6 Weeks Practice Dojo
           </p>
           <h1
             className="font-fraunces font-normal text-birch mb-6"
@@ -155,8 +155,8 @@ export default function ProgramPage() {
             className="font-fraunces font-normal text-birch mb-12"
             style={{ fontSize: '1.1875rem', lineHeight: 1.7, maxWidth: '560px', opacity: 0.75 }}
           >
-            This is the actual practice I and my most successful clients apply ourselves. Not
-            marketing theory. The work, done together, until it works.
+            This is the actual practice that successful clients and I apply, and what I used to
+            grow my coaching business from 2k in the first year to 130k last year.
           </p>
 
           {/* Hero testimonial */}
