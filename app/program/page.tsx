@@ -476,7 +476,7 @@ export default function ProgramPage() {
             className="font-inter font-medium uppercase tracking-label mb-10"
             style={{ fontSize: '11px', opacity: 0.55 }}
           >
-            What participants have said
+            What clients have said
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t) => (
