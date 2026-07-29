@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 const weeks = [
-  { n: 1, title: 'The two numbers that predict your income, and how to move them.' },
+  { n: 1, title: 'The two numbers that predict your income, and how to move them, creating your first offer or refining the one you have.' },
   { n: 2, title: 'Reaching out: who to contact, what to say, how to do it from service.' },
   { n: 3, title: 'Context: the idea that changed my earnings more than any other.' },
   { n: 4, title: 'The conversation: trust, help, and turning interest into clients.' },
@@ -236,7 +236,7 @@ export default function ProgramPage() {
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              This is not a discipline problem. It is a structural one. You never built a practice
+              This is not a discipline problem, not an intelligence or worthiness problem. It is a structural one. You never built a practice
               and system; you built a series of individual clients. And it somehow seems mysterious
               how you ever got that client, and why now they aren't flowing in.
             </p>
@@ -244,8 +244,9 @@ export default function ProgramPage() {
               className="font-fraunces font-normal text-birch"
               style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
             >
-              Meanwhile, income swings. Some months are full. You are good at what you do. You
-              genuinely want to help. You just don't have a reliable way to do it continuously.
+              Meanwhile, income swings. Some months are full. You are good at what you do. Only not
+              in the moments you doubt yourself and your ability to make a difference. You genuinely
+              want to help. You just don't have a reliable way to do it continuously.
             </p>
           </div>
         </section>
@@ -266,15 +267,17 @@ export default function ProgramPage() {
           >
             Everything in this programme comes down to one thing: conversations. New clients come
             from conversations. Trust is built in conversations. The question "Can I help this
-            person?" is answered in a conversation.
+            person?" is answered in a conversation. Conversations are held through our writing,
+            speaking, or media. Conversations designed to serve the person in front of us.
           </p>
           <p
             className="font-fraunces font-normal text-birch mb-5"
             style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
           >
             What we build here is not a marketing funnel, 15 webpages, a secret system. It is a
-            practice: a small number of things you do consistently, that create the conditions for
-            clients to come. You learn exactly what I did to grow my practice past six figures, and
+            practice: a small number of things you do consistently that create the conditions for
+            you to grow your business, have more happy customers, and a happier bank balance. You
+            learn exactly what I did to grow my practice past six figures, and
             what my clients have done to do the same.
           </p>
           <p
@@ -299,7 +302,7 @@ export default function ProgramPage() {
             {[
               'Create an offer you can sell.',
               'The activities that lead to clients, learned together in a group.',
-              'Build your own client creation system, one that works with how you work.',
+              'Build your own client creation system and structure, one that works with how you work.',
               'Shatter the beliefs and stories that keep you from building a practice with the income you want and the clients you love.',
               'Become clear on who to work with and how to reach them.',
               'Create the right context around you, in an environment of people who all work towards the same goal: a sustainable practice.',
@@ -378,7 +381,7 @@ export default function ProgramPage() {
           >
             Six Tuesdays, 19:00–20:30, live, starting 23 September; one assignment each week;
             tracking and accountability between calls; a group thread for momentum; every call
-            recorded; limited to 12 people, to keep it personal.
+            recorded; limited to 12 people, to give you maximum personalization and work with the business you have.
           </p>
         </section>
 
