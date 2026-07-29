@@ -47,6 +47,12 @@ const testimonials = [
     name: 'Felipe Bernardo',
     role: 'Leadership Coach & Founder, Servify Studios',
   },
+  {
+    quote:
+      'The scariest thing I did was my first reachout campaign: I called 70 people I had worked with over the years, in one week, and gained 7 new clients. In 4 months I earned more from my business than in the whole last year, with 15 to 20 clients a week. What I loved most is the combination of concrete business advice and deep personal work.',
+    name: 'Lukas Teml',
+    role: 'Practitioner, one-year training',
+  },
 ]
 
 const pricing = [
@@ -564,7 +570,7 @@ export default function ProgramPage() {
                 50 practitioners one-to-one and over 100 people in my groups. I have helped
                 coaches, massage therapists, and consultants double or triple their income; three
                 clients went from 30k to 120k, one to 250k. And I have generated over 500k in my
-                own coaching practice, 90% of it in the last four years.
+                own coaching practice, 80% of it in the last four years.
               </p>
               <p
                 className="font-fraunces font-normal text-birch"
