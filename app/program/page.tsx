@@ -271,6 +271,36 @@ export default function ProgramPage() {
 
         <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
 
+        {/* ── What you will learn ───────────────────────────────── */}
+        <section style={{ paddingTop: '5rem', paddingBottom: '5rem', maxWidth: '620px' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            What you will learn
+          </p>
+          <div className="space-y-5">
+            {[
+              'Create an offer you can sell.',
+              'The activities that lead to clients, learned together in a group.',
+              'Build your own client creation system, one that works with how you work.',
+              'Shatter the beliefs and stories that keep you from building a practice with the income you want and the clients you love.',
+              'Become clear on who to work with and how to reach them.',
+              'Create the right context around you, in an environment of people who all work towards the same goal: a sustainable practice.',
+            ].map((item) => (
+              <p
+                key={item}
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7, opacity: 0.85 }}
+              >
+                {item}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        <div style={{ borderTop: '1px solid rgba(227,217,189,0.12)' }} />
+
         {/* ── What we cover ─────────────────────────────────────── */}
         <section style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
           <p
@@ -336,6 +366,23 @@ export default function ProgramPage() {
           </p>
         </section>
 
+        {/* ── The outcome ───────────────────────────────────────── */}
+        <section style={{ paddingTop: '0', paddingBottom: '5rem', maxWidth: '620px' }}>
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-8"
+            style={{ fontSize: '11px', opacity: 0.55 }}
+          >
+            The outcome
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{ fontSize: '1.1875rem', lineHeight: 1.75, opacity: 0.9 }}
+          >
+            New clients. A system that works with how you work. Clarity on who you serve and how
+            to reach them, and daily actions to take.
+          </p>
+        </section>
+
         {/* ── The guarantee ─────────────────────────────────────── */}
         <section
           style={{
@@ -359,9 +406,8 @@ export default function ProgramPage() {
               opacity: 0.95,
             }}
           >
-            Show up to the calls, do the assignments, and do the outreach, and if you don't create
-            at least one new client within the six weeks, I will refund you in full. No questions
-            asked.
+            Apply what you learn in this programme, and if you do not sign a new client, I will
+            refund you the money.
           </p>
         </section>
 
@@ -514,16 +560,18 @@ export default function ProgramPage() {
                 className="font-fraunces font-normal text-birch mb-4"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                I built my own practice from near-zero to six figures. Before that: professional
-                dancer and choreographer across Europe, somatic teacher, martial artist, and several
-                thousand hours of meditation. I am ICF PCC-certified and have worked alongside
-                coaches, consultants, therapists, and founders for over seven years.
+                I have worked as a professional dancer and trainer, run 15 retreats, worked with
+                50 practitioners one-to-one and over 100 people in my groups. I have helped
+                coaches, massage therapists, and consultants double or triple their income; three
+                clients went from 30k to 120k, one to 250k. And I have generated over 500k in my
+                own coaching practice, 90% of it in the last four years.
               </p>
               <p
                 className="font-fraunces font-normal text-birch"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                What I teach here is what I did and what I have watched my clients do.
+                I did this through conversations and very little conventional marketing. If you
+                would like to create this yourself, this programme is for you.
               </p>
             </div>
           </div>
