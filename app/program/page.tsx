@@ -403,9 +403,9 @@ export default function ProgramPage() {
         <section
           style={{
             marginBottom: '5rem',
-            padding: '3rem',
+            padding: '2rem 2.25rem',
             border: '1px solid var(--amber)',
-            maxWidth: '720px',
+            maxWidth: '560px',
           }}
         >
           <p
@@ -417,8 +417,8 @@ export default function ProgramPage() {
           <p
             className="font-fraunces font-normal text-birch"
             style={{
-              fontSize: 'clamp(1.125rem, 2.5vw, 1.375rem)',
-              lineHeight: 1.65,
+              fontSize: '1.0625rem',
+              lineHeight: 1.7,
               opacity: 0.95,
             }}
           >
