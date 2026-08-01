@@ -206,7 +206,7 @@ export default function ProgramPage() {
             className="font-fraunces italic text-birch mb-12"
             style={{ fontSize: '1rem', lineHeight: 1.6, opacity: 0.6 }}
           >
-            Sign a new client within the programme, or your money back.
+            You leave with a new client, or I keep working with you until you do.
           </p>
 
           {/* Guide — top */}
@@ -425,8 +425,9 @@ export default function ProgramPage() {
               opacity: 0.95,
             }}
           >
-            Apply what you learn in this programme, and if you do not sign a new client, I will
-            refund you the money.
+            Show up to the calls, do the assignments, and do the outreach. If you haven't
+            signed a new client by the end of the six weeks, I keep working with you one-to-one
+            until you do. You will not leave this without a client.
           </p>
         </section>
 
