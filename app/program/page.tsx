@@ -597,18 +597,19 @@ export default function ProgramPage() {
                 className="font-fraunces font-normal text-birch mb-4"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                I have worked as a professional dancer and trainer, run 15 retreats, worked with
-                50 practitioners one-to-one and over 100 people in my groups. I have helped
+                I have worked as a professional dancer and trainer, run 12 retreats, worked with
+                50 practitioners one-to-one and over 200 people in my groups. I have helped
                 coaches, massage therapists, and consultants double or triple their income; three
-                clients went from 30k to 120k, one to 250k. And I have generated over 500k in my
+                clients went from 30k to over 100k, one to 250k, and my business clients have
+                generated hundreds of thousands in revenue. And I have generated over 600k in my
                 own coaching practice, 80% of it in the last four years.
               </p>
               <p
                 className="font-fraunces font-normal text-birch"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
               >
-                I did this through conversations and very little conventional marketing. If you
-                would like to create this yourself, this programme is for you.
+                I did this through conversations, referrals, and very little conventional
+                marketing. If you would like to create this yourself, this programme is for you.
               </p>
             </div>
           </div>
