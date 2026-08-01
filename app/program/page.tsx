@@ -133,7 +133,22 @@ export default function ProgramPage() {
       <div className="mx-auto max-w-page px-6 md:px-10">
 
         {/* ── Hero ──────────────────────────────────────────────── */}
-        <div style={{ paddingTop: '7rem', paddingBottom: '4rem' }}>
+        <div style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
+          <div className="relative mb-6" style={{ width: '104px', height: '130px' }}>
+            <Image
+              src="/images/portrait.jpeg"
+              alt="Moritz Lembert"
+              fill
+              sizes="104px"
+              className="object-cover object-top"
+              style={{
+                maskImage:
+                  'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+                WebkitMaskImage:
+                  'radial-gradient(ellipse 90% 90% at 50% 40%, black 40%, transparent 80%)',
+              }}
+            />
+          </div>
           <p
             className="font-inter font-medium uppercase tracking-label mb-8"
             style={{ fontSize: '11px', opacity: 0.55 }}
