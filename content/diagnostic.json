@@ -1,0 +1,173 @@
+{
+  "intro": {
+    "title": "The Lembert Method™ Deep-Tissue Diagnostic Matrix",
+    "subtitle": "An Ontological & Cybernetic Stress-Test for DACH Executives and Family-Owned Enterprises (Mittelstand)",
+    "framing": [
+      "Most business diagnostics fail because they measure symptoms (such as dropping EBIT margins, missing deadlines, or employee turnover) instead of the hidden structures that generate them. The Lembert Method™ looks underneath your operational data. It maps your enterprise as a living organism across three overlapping axes:"
+    ],
+    "axesSummary": [
+      { "title": "The Structural Architecture (Cybernetics)", "text": "How your organization distributes and processes market complexity." },
+      { "title": "The Linguistic Circuit (Ontology)", "text": "The clarity, hygiene, and accountability of the promises that keep your business working." },
+      { "title": "The Somatic-Emotional Base (Physiology & Moods)", "text": "Your physical capacity as a leader to process high stakes without bottlenecking the system." }
+    ],
+    "instruction": "Do not answer based on what you wish were true or what you wrote in your corporate handbook. Answer from the hard reality of your daily operations. Score each inquiry from 1 (Complete Breakdown / Never True) to 5 (Systemic Mastery / Always True). Takes about 5 minutes.",
+    "startButton": "Begin the diagnostic",
+    "timeEstimate": "About 5 minutes"
+  },
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "minLabel": "Complete Breakdown / Never True",
+    "maxLabel": "Systemic Mastery / Always True"
+  },
+  "axes": [
+    {
+      "id": "axis1",
+      "title": "The Contextual Deck & Integrity",
+      "attribution": "Erhard, Jensen, Zaffron",
+      "framing": "Integrity is not a moral virtue; it is an economic condition. It is defined strictly as workability. When a system or a promise is broken, performance drops to zero.",
+      "questions": [
+        {
+          "id": "1.1",
+          "name": "The \"Sovereignty of the Word\" Test",
+          "inquiry": "When I schedule time for strategic thinking, physical recovery, or my personal life, that appointment is treated with the exact same legal and operational gravity as a multi-million-euro client negotiation.",
+          "insight": "If you routinely break promises to yourself to handle \"urgent\" company tasks, you have institutionalized an internal integrity deficit. You are teaching your brain that your own word is disposable. This is the precise neurological origin of the Always-On Hero Complex."
+        },
+        {
+          "id": "1.2",
+          "name": "The \"Clearing the Air\" Operational Standard",
+          "inquiry": "When a target is missed, a deadline is blown, or a strategy fails, our executive team spends zero energy on blame, justifications, or pointing to DACH economic stagnation. Instead, we immediately isolate the broken promise, clean up the fallout, and generate a new commitment.",
+          "insight": "Excuses are linguistic toxic waste. They keep the organization focused on the unchangeable past. High-performance teams treat a broken promise as a neutral system breakdown to be repaired instantly, not a moral failure to be hidden or rationalized."
+        },
+        {
+          "id": "1.3",
+          "name": "The Historical Resentment Audit",
+          "inquiry": "The organization is entirely free of unspoken corporate grudges, historical restructuring traumas, or unacknowledged promises made by previous leadership generations.",
+          "insight": "Unspoken resentments act like a hidden tax on corporate energy. In generational successions (Mittelstand), the incoming team is often paralyzed by unsaid cultural friction with the founder. If you don't intentionally clear out old baggage, it dictates how the future occurs to your people."
+        },
+        {
+          "id": "1.4",
+          "name": "The \"Law of Occurring\" Assessment",
+          "inquiry": "When our leadership team encounters massive external disruptions (e.g., sudden AI shifts, heavy EU sustainability bureaucracy, or energy cost spikes), we experience them as structural design puzzles to be solved rather than suffocating, personal threats.",
+          "insight": "Your actions are a direct mirror of how the world shows up for you. If a regulation occurs to you as a \"bureaucratic chokehold,\" your corporate response will be sluggish, angry, and defensive. If it occurs as a \"fixed design constraint,\" you can build a flexible strategy around it."
+        }
+      ]
+    },
+    {
+      "id": "axis2",
+      "title": "The Conversational Circuit & Somatics",
+      "attribution": "Flores & Sieler",
+      "framing": "A business is not a collection of assets; it is a complex web of commitments generated through language, carried by physical bodies, and colored by long-term moods.",
+      "questions": [
+        {
+          "id": "2.1",
+          "name": "The Fact-vs.-Opinion (Assertion vs. Assessment) Filter",
+          "inquiry": "In strategic board meetings, my team and I strictly separate verified data (assertions) from our personal worries, predictions, or biases (assessments). We do not let ungrounded opinions masquerade as market realities.",
+          "insight": "Fear of AI irrelevance and panic over market stagnation usually stem from confusing ungrounded assessments with actual facts. When you ground your fears in hard data, panic vanishes and actionable strategy takes its place."
+        },
+        {
+          "id": "2.2",
+          "name": "The \"Somatic Capacity for Freedom\" Test",
+          "inquiry": "When I hand off a major project or task to a subordinate, my body remains completely relaxed, open, and physically grounded. I do not experience muscle tension, shallow breathing, or an urgent impulse to hover.",
+          "insight": "Micro-management is not a management problem—it is a physiological reflex. If your nervous system is trapped in a chronic fight-or-flight pattern, your body will experience delegation as a physical threat. You cannot build a free, autonomous business until your nervous system learns how to stay calm while letting go of control."
+        },
+        {
+          "id": "2.3",
+          "name": "The \"Anatomy of Commitment\" Hygiene Check",
+          "inquiry": "Requests within our business are never issued as vague complaints or open-ended hopes (\"We need to fix our customer service\"). Every single request specifies: Who, What, by When, and under what precise Metrics of Satisfaction.",
+          "insight": "Sloppy communication is the root cause of the \"Operational Trap.\" If you say, \"Get this done as soon as possible,\" you haven't made a request; you've thrown an ambiguous wish at your team. This creates delivery friction, forces you to step back in, and causes chronic team fatigue."
+        },
+        {
+          "id": "2.4",
+          "name": "The Ambient Mood Evaluation",
+          "inquiry": "The long-term, underlying emotional atmosphere of our offices is characterized by Ambition, Pride, and Curiosity, rather than a heavy climate of Resignation, Cynicism, or \"Quiet Quitting.\"",
+          "insight": "Moods are the invisible glass ceilings of performance. In a corporate mood of resignation, even the best business strategy will fail. Employees will simply do the bare minimum to survive. Leaders must actively track and shape the emotional weather of their organization."
+        }
+      ]
+    },
+    {
+      "id": "axis3",
+      "title": "Cybernetic Architecture & The VSM",
+      "attribution": "Stafford Beer",
+      "framing": "Structure dictates behavior. If you build a broken system design, even the most talented, well-meaning team will eventually burn out and fail.",
+      "questions": [
+        {
+          "id": "3.1",
+          "name": "The System 3/4 Homeostatic Dial (Now vs. Next)",
+          "inquiry": "My executive calendar is strictly divided: at least 40% of my weekly energy is insulated for long-term strategic forecasting, tracking macro trends, and deep innovation (System 4), entirely protected from daily client fires or operational crises (System 3).",
+          "insight": "When your company is understaffed or under pressure, System 3 completely devours System 4. You become so busy fighting today's fire that you fail to notice the competitor or technology that will disrupt you tomorrow. Drowning in the \"now\" makes you structurally blind to the future."
+        },
+        {
+          "id": "3.2",
+          "name": "The \"Requisite Variety\" Delegation Audit",
+          "inquiry": "Our frontline teams (System 1) have the complete legal, financial, and operational authority to handle unexpected customer issues or local crises without needing to ask an executive for permission.",
+          "insight": "If your employees have to check with you for every minor exception, you are violating Ashby's Law. You are forcing your single brain to absorb all the chaotic variety of the marketplace. This creates an executive bottleneck and paralyzes team responsiveness."
+        },
+        {
+          "id": "3.3",
+          "name": "The Coordination and Anti-Oscillation Layer",
+          "inquiry": "Our internal departments share automated processes, clear resource rules, and transparent scheduling protocols (System 2) that prevent them from competing for resources or working at cross-purposes.",
+          "insight": "Without a strong coordination layer, individual departments will turn into competing silos. The CEO is then forced to waste massive energy acting as a referee, smoothing over internal conflicts that should be automatically handled by system design."
+        },
+        {
+          "id": "3.4",
+          "name": "The Algodonic Panic Button",
+          "inquiry": "We have an explicit, fast-tracked communication protocol that allows a frontline worker to immediately flag a critical system failure directly to the executive team, completely bypassing intermediate management layers without fear of retaliation.",
+          "insight": "Bureaucracies are designed to filter out bad news. By the time a frontline crisis winds its way up a traditional corporate ladder, it is usually sugar-coated or too late to fix. A healthy enterprise needs an unblocked panic button to keep leadership grounded in real-world reality."
+        }
+      ]
+    }
+  ],
+  "emailGate": {
+    "heading": "Your diagnostic is ready.",
+    "body": "Enter your email to see your results.",
+    "privacyNote": "Your email and scores are used only to show your results and for a personal follow-up from Moritz. No newsletter, no sharing.",
+    "button": "Show my diagnostic",
+    "emailPlaceholder": "your@email.com",
+    "emailError": "Please enter a valid email address."
+  },
+  "bands": [
+    {
+      "min": 12,
+      "max": 28,
+      "title": "The Burning House",
+      "subtitle": "Structural & Somatic Crisis",
+      "reality": "Your business is currently running entirely on raw human adrenaline. The systems architecture is deeply broken, your communication loops are chaotic, and you are likely holding immense physical stress in your body. You are trapped in the Operational Trap, and scaling the business right now would cause a complete personal or financial collapse.",
+      "correction": "Stop trying to grow. First, execute a clean 'Word Cleansing' to restore foundational integrity with your team. Next, build basic System 2 coordination protocols to step away from daily firefighting, and engage in somatic coaching to lower your nervous system's stress baseline."
+    },
+    {
+      "min": 29,
+      "max": 45,
+      "title": "The Heroic Bottleneck",
+      "subtitle": "The Mittelstand Trap",
+      "reality": "Your business is functional and profitable, but it is entirely dependent on your personal energy. You have built a successful company but sacrificed your personal freedom to maintain it. Your System 3 operations are stable, but they are eating your System 4 strategic future. Your communication is often descriptive rather than action-oriented.",
+      "correction": "Shift from being an executive operator to an organizational architect. Transition your communication into strict Floresian Action Loops. Rebuild your teams into autonomous, self-regulating units (Fractals), forcing your business to absorb its own market complexity without relying on your personal hours."
+    },
+    {
+      "min": 46,
+      "max": 60,
+      "title": "The Viable Organism",
+      "subtitle": "Generative Freedom",
+      "reality": "Your organization operates with high structural integrity, exceptional conversational hygiene, and healthy system design. Your business is a true self-regulating organism that can handle market volatility while preserving your personal peace and quality of life.",
+      "correction": "Continuous optimization. Ensure that your System 5 identity and core vision remain intensely clear as you scale. Work on deep-level somatic mastery to unlock higher-tier creative thinking and prepare the next generation for long-term succession."
+    }
+  ],
+  "results": {
+    "totalLabel": "Your grand total",
+    "realityLabel": "The Diagnostic Reality",
+    "correctionLabel": "The Lembert Correction Path",
+    "subscoresLabel": "Your three axes",
+    "weakestLabel": "Weakest axis",
+    "weakestTiedLabel": "Weakest axes (tied)",
+    "insightsLabel": "Insights for the Leader",
+    "ctaText": "Want to walk through your result?",
+    "ctaButton": "Book a conversation with Moritz",
+    "ctaHref": "/contact"
+  },
+  "ui": {
+    "progressOf": "of",
+    "back": "Back",
+    "next": "Next",
+    "questionCountNote": "12 inquiries · 3 axes"
+  }
+}
