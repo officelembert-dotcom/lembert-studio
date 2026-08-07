@@ -1,6 +1,13 @@
 import { NextResponse } from 'next/server'
+import { getContactPage } from '@/lib/pages'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
+const AXIS_NAMES = [
+  'Contextual Deck & Integrity',
+  'Conversational Circuit & Somatics',
+  'Cybernetic Architecture & VSM',
+]
 
 export async function POST(request: Request) {
   let body: any
@@ -26,38 +33,42 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'invalid scores' }, { status: 400 })
   }
 
-  const webhookUrl = process.env.DIAGNOSTIC_SHEET_WEBHOOK_URL
-  if (!webhookUrl) {
-    console.error('diagnostic: DIAGNOSTIC_SHEET_WEBHOOK_URL not configured; lead not stored', {
+  const formspreeId = process.env.DIAGNOSTIC_FORMSPREE_ID || getContactPage().formspreeId
+  if (!formspreeId) {
+    console.error('diagnostic: no Formspree ID configured; lead not delivered', {
       email: email.trim(),
       grandTotal,
     })
-    return NextResponse.json({ ok: true, stored: false })
+    return NextResponse.json({ ok: true, delivered: false })
   }
 
+  const cleanEmail = email.trim()
+
   try {
-    const res = await fetch(webhookUrl, {
+    const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        timestamp: new Date().toISOString(),
-        email: email.trim(),
-        grand_total: grandTotal,
-        axis1_score: axisScores[0],
-        axis2_score: axisScores[1],
-        axis3_score: axisScores[2],
-        band: String(band ?? ''),
-        weakest_axis: String(weakestAxis ?? ''),
-        newsletter: newsletter ? 'yes' : 'no',
+        _subject: `Diagnostic: ${band ?? 'result'} (${grandTotal}/60) — ${cleanEmail}`,
+        _replyto: cleanEmail,
+        Email: cleanEmail,
+        'Grand total': `${grandTotal} / 60`,
+        Band: String(band ?? ''),
+        [AXIS_NAMES[0]]: `${axisScores[0]} / 20`,
+        [AXIS_NAMES[1]]: `${axisScores[1]} / 20`,
+        [AXIS_NAMES[2]]: `${axisScores[2]} / 20`,
+        'Weakest axis': String(weakestAxis ?? ''),
+        'Newsletter opt-in': newsletter ? 'yes' : 'no',
+        Completed: new Date().toISOString(),
       }),
     })
     if (!res.ok) {
-      console.error('diagnostic: sheet webhook returned', res.status, await res.text())
-      return NextResponse.json({ ok: true, stored: false })
+      console.error('diagnostic: formspree returned', res.status, await res.text())
+      return NextResponse.json({ ok: true, delivered: false })
     }
-    return NextResponse.json({ ok: true, stored: true })
+    return NextResponse.json({ ok: true, delivered: true })
   } catch (err) {
-    console.error('diagnostic: sheet webhook failed', err)
-    return NextResponse.json({ ok: true, stored: false })
+    console.error('diagnostic: formspree delivery failed', err)
+    return NextResponse.json({ ok: true, delivered: false })
   }
 }
