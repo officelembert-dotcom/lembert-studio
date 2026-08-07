@@ -43,6 +43,7 @@ export interface DiagnosticContent {
     button: string
     emailPlaceholder: string
     emailError: string
+    newsletterLabel: string
   }
   bands: Band[]
   results: {
@@ -93,6 +94,7 @@ export default function DiagnosticApp({ content }: { content: DiagnosticContent 
   const [answers, setAnswers] = useState<(number | null)[]>(Array(total).fill(null))
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
+  const [newsletter, setNewsletter] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
   const axisScores = content.axes.map((axis) => {
@@ -144,6 +146,7 @@ export default function DiagnosticApp({ content }: { content: DiagnosticContent 
       axisScores: axisScores.map((a) => a.score),
       band: band.title,
       weakestAxis: weakestAxes.map((a) => a.title).join(' + '),
+      newsletter,
     }
     fetch('/api/diagnostic', {
       method: 'POST',
@@ -151,6 +154,15 @@ export default function DiagnosticApp({ content }: { content: DiagnosticContent 
       body: JSON.stringify(payload),
       keepalive: true,
     }).catch((err) => console.error('diagnostic sheet write failed', err))
+
+    if (newsletter) {
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim(), language: 'en' }),
+        keepalive: true,
+      }).catch((err) => console.error('newsletter subscribe failed', err))
+    }
 
     setStep('results')
   }
@@ -356,6 +368,18 @@ export default function DiagnosticApp({ content }: { content: DiagnosticContent 
               {content.emailGate.emailError}
             </p>
           )}
+          <label
+            className="font-inter flex items-start gap-3 mb-6"
+            style={{ fontSize: '13px', lineHeight: 1.6, opacity: 0.75, cursor: 'pointer' }}
+          >
+            <input
+              type="checkbox"
+              checked={newsletter}
+              onChange={(e) => setNewsletter(e.target.checked)}
+              style={{ marginTop: '3px', accentColor: 'var(--amber)', width: '16px', height: '16px' }}
+            />
+            <span>{content.emailGate.newsletterLabel}</span>
+          </label>
           <button
             type="submit"
             disabled={submitting}

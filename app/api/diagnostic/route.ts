@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'invalid json' }, { status: 400 })
   }
 
-  const { email, grandTotal, axisScores, band, weakestAxis } = body ?? {}
+  const { email, grandTotal, axisScores, band, weakestAxis, newsletter } = body ?? {}
 
   if (typeof email !== 'string' || !EMAIL_RE.test(email.trim())) {
     return NextResponse.json({ ok: false, error: 'invalid email' }, { status: 400 })
@@ -48,6 +48,7 @@ export async function POST(request: Request) {
         axis3_score: axisScores[2],
         band: String(band ?? ''),
         weakest_axis: String(weakestAxis ?? ''),
+        newsletter: newsletter ? 'yes' : 'no',
       }),
     })
     if (!res.ok) {

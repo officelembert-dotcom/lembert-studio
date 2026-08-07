@@ -6,9 +6,18 @@
       "Most business diagnostics fail because they measure symptoms (such as dropping EBIT margins, missing deadlines, or employee turnover) instead of the hidden structures that generate them. The Lembert Method™ looks underneath your operational data. It maps your enterprise as a living organism across three overlapping axes:"
     ],
     "axesSummary": [
-      { "title": "The Structural Architecture (Cybernetics)", "text": "How your organization distributes and processes market complexity." },
-      { "title": "The Linguistic Circuit (Ontology)", "text": "The clarity, hygiene, and accountability of the promises that keep your business working." },
-      { "title": "The Somatic-Emotional Base (Physiology & Moods)", "text": "Your physical capacity as a leader to process high stakes without bottlenecking the system." }
+      {
+        "title": "The Structural Architecture (Cybernetics)",
+        "text": "How your organization distributes and processes market complexity."
+      },
+      {
+        "title": "The Linguistic Circuit (Ontology)",
+        "text": "The clarity, hygiene, and accountability of the promises that keep your business working."
+      },
+      {
+        "title": "The Somatic-Emotional Base (Physiology & Moods)",
+        "text": "Your physical capacity as a leader to process high stakes without bottlenecking the system."
+      }
     ],
     "instruction": "Do not answer based on what you wish were true or what you wrote in your corporate handbook. Answer from the hard reality of your daily operations. Score each inquiry from 1 (Complete Breakdown / Never True) to 5 (Systemic Mastery / Always True). Takes about 5 minutes.",
     "startButton": "Begin the diagnostic",
@@ -121,10 +130,11 @@
   "emailGate": {
     "heading": "Your diagnostic is ready.",
     "body": "Enter your email to see your results.",
-    "privacyNote": "Your email and scores are used only to show your results and for a personal follow-up from Moritz. No newsletter, no sharing.",
+    "privacyNote": "Your email and scores are used only to show your results and for a personal follow-up from Moritz. No newsletter unless you tick the box. No sharing.",
     "button": "Show my diagnostic",
     "emailPlaceholder": "your@email.com",
-    "emailError": "Please enter a valid email address."
+    "emailError": "Please enter a valid email address.",
+    "newsletterLabel": "Also send me Moritz's newsletter: occasional essays on leadership and the work, no noise."
   },
   "bands": [
     {
