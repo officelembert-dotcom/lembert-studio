@@ -27,11 +27,11 @@ const tools = [
     note: 'Der Website-Code und alle Inhalte sind in einem privaten GitHub-Repository gespeichert.',
   },
   {
-    name: 'Fathom Analytics',
-    purpose: 'Datenschutzfreundliche Website-Analyse',
-    location: 'Kanada (EU-Serverstandorte verfügbar)',
-    url: 'https://usefathom.com/privacy',
-    note: 'Fathom erhebt keine personenbezogenen Daten, setzt keine Cookies und ist DSGVO-konform. Es werden keine IP-Adressen gespeichert.',
+    name: 'MailerLite',
+    purpose: 'Versand des Newsletters',
+    location: 'Litauen (EU)',
+    url: 'https://www.mailerlite.com/legal/privacy-policy',
+    note: 'E-Mail-Adressen werden nur gespeichert, wenn der Newsletter aktiv abonniert wurde. Eine Abmeldung ist jederzeit über jeden Newsletter möglich.',
   },
   {
     name: 'Google Drive (Google LLC)',
@@ -99,10 +99,10 @@ export default function Impressum() {
         </p>
         <div className="space-y-2">
           {[
+            'Lembert Studio GmbH',
             'Moritz Lembert',
-            'Lembert Studio',
-            '(betrieben durch Being Institute GmbH, in Umbenennung)',
-            'Berneck, Kanton St. Gallen, Schweiz',
+            'Augiessenstrasse 22',
+            '9443 Widnau, Kanton St. Gallen, Schweiz',
             'moritz@lembertstudio.com',
             'lembertstudio.com',
           ].map((line) => (
@@ -116,9 +116,6 @@ export default function Impressum() {
 
         <p className="font-fraunces font-normal text-birch" style={{ fontSize: '0.9375rem', lineHeight: 1.75, opacity: 0.65 }}>
           Inhaltlich verantwortlich gemäss § 55 Abs. 2 RStV: Moritz Lembert, Anschrift wie oben.
-        </p>
-        <p className="font-fraunces font-normal text-birch mt-4" style={{ fontSize: '0.9375rem', lineHeight: 1.75, opacity: 0.65 }}>
-          Diese Angaben werden aktualisiert, sobald eine neue Geschäftsadresse und die Umbenennung der GmbH abgeschlossen sind.
         </p>
       </section>
 

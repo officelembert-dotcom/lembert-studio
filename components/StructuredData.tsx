@@ -11,7 +11,7 @@ export default function StructuredData() {
     ],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Berneck',
+      addressLocality: 'Widnau',
       addressRegion: 'St. Gallen',
       addressCountry: 'CH',
     },
@@ -38,23 +38,24 @@ export default function StructuredData() {
   const professionalService = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Lembert Studio',
-    alternateName: 'Lembert Studio Advisory',
+    name: 'Lembert Studio GmbH',
+    alternateName: 'Lembert Studio',
     url: 'https://lembertstudio.com',
     logo: 'https://lembertstudio.com/images/portrait.jpeg',
     description:
       'An advisory practice for people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. Retained advisory, deep working days, and retreats.',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Berneck',
+      addressLocality: 'Widnau',
       addressRegion: 'St. Gallen',
-      postalCode: '9442',
+      streetAddress: 'Augiessenstrasse 22',
+      postalCode: '9443',
       addressCountry: 'CH',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '47.4167',
-      longitude: '9.6500',
+      latitude: '47.4047',
+      longitude: '9.6370',
     },
     areaServed: [
       { '@type': 'Country', name: 'Switzerland' },

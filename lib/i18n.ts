@@ -13,7 +13,7 @@ export const dict = {
     footer: {
       impressum: 'Impressum',
       tagline: 'Coaching & consulting since 2019',
-      location: 'Lembert Studio · Berneck',
+      location: 'Lembert Studio GmbH · Widnau',
       est: 'between the Alpstein and the Bodensee',
     },
     practice: 'Practice',
@@ -46,7 +46,7 @@ export const dict = {
     footer: {
       impressum: 'Impressum',
       tagline: 'Coaching & Beratung seit 2019',
-      location: 'Lembert Studio · Berneck',
+      location: 'Lembert Studio GmbH · Widnau',
       est: 'zwischen Alpstein und Bodensee',
     },
     practice: 'Praxis',
