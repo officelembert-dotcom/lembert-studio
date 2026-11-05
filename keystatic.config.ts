@@ -20,6 +20,7 @@ export default config({
       'Deutsch — Seiten': ['homePageDe', 'aboutPageDe', 'workPageDe', 'contactPageDe'],
       'Deutsch — Inhalte': ['writingsDe', 'voicesDe', 'workDetailPagesDe', 'libraryDe'],
       'Notes (one stream, EN + DE)': ['notes'],
+      'Unlisted pages': ['creationPage'],
     },
   },
 
@@ -382,6 +383,95 @@ export default config({
   },
 
   singletons: {
+
+    creationPage: singleton({
+      label: 'A Year of Creation',
+      path: 'content/creation',
+      format: { data: 'json' },
+      schema: {
+        label: fields.text({
+          label: 'Small label above the title',
+        }),
+        title: fields.text({
+          label: 'Page title',
+          validation: { isRequired: true },
+        }),
+        pairs: fields.array(
+          fields.text({ label: 'Pair' }),
+          {
+            label: 'The list under the title',
+            description: 'One per line, e.g. "Results and peace"',
+            itemLabel: (props) => props.value,
+          }
+        ),
+        opening: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          {
+            label: 'Opening paragraphs',
+            itemLabel: (props) => props.value.slice(0, 60) + '…',
+          }
+        ),
+        questions: fields.array(
+          fields.text({ label: 'Question', multiline: true }),
+          {
+            label: 'Questions',
+            description: 'Shown in italics beside the amber rule',
+            itemLabel: (props) => props.value.slice(0, 60) + '…',
+          }
+        ),
+        callToQuestion: fields.text({
+          label: 'The big question',
+          description: 'The large line that closes the first half of the page',
+          multiline: true,
+        }),
+        qualificationsLabel: fields.text({ label: 'Qualifications heading' }),
+        qualifications: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          {
+            label: 'Qualifications',
+            itemLabel: (props) => props.value.slice(0, 60) + '…',
+          }
+        ),
+        notForLabel: fields.text({ label: '"Not for you" heading' }),
+        notFor: fields.array(
+          fields.text({ label: 'Line' }),
+          {
+            label: 'This is not for you if',
+            description: 'Each line continues the heading, so start lowercase',
+            itemLabel: (props) => props.value.slice(0, 60) + '…',
+          }
+        ),
+        formatLabel: fields.text({ label: '"How it runs" heading' }),
+        format: fields.array(
+          fields.text({ label: 'Line', multiline: true }),
+          {
+            label: 'How it runs',
+            description: 'Length, online or in person, where and when you meet',
+            itemLabel: (props) => props.value.slice(0, 60) + '…',
+          }
+        ),
+        closing: fields.text({
+          label: 'Closing line',
+          multiline: true,
+        }),
+        details: fields.array(
+          fields.object({
+            label: fields.text({ label: 'Label' }),
+            value: fields.text({ label: 'Value' }),
+          }),
+          {
+            label: 'Details grid',
+            description: 'Program start, places, application deadline',
+            itemLabel: (props) => props.fields.label.value + ': ' + props.fields.value.value,
+          }
+        ),
+        ctaButton: fields.text({ label: 'Button text' }),
+        email: fields.text({
+          label: 'Email address',
+          description: 'Where the button writes to',
+        }),
+      },
+    }),
 
     homePage: singleton({
       label: 'Home page',

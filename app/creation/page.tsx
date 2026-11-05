@@ -12,6 +12,8 @@ interface CreationContent {
   qualifications: string[]
   notForLabel: string
   notFor: string[]
+  formatLabel: string
+  format: string[]
   closing: string
   details: { label: string; value: string }[]
   ctaButton: string
@@ -177,6 +179,29 @@ export default function CreationPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <div style={{ borderTop: border, maxWidth: '720px' }} />
+
+      {/* ── How it runs ───────────────────────────────────────── */}
+      <section style={{ paddingTop: '4rem', paddingBottom: '4rem', maxWidth: '620px' }}>
+        <p
+          className="font-inter font-medium uppercase tracking-label mb-8"
+          style={{ fontSize: '11px', opacity: 0.55 }}
+        >
+          {content.formatLabel}
+        </p>
+        <div className="space-y-5">
+          {content.format.map((p, i) => (
+            <p
+              key={i}
+              className="font-fraunces font-normal text-birch"
+              style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+            >
+              {p}
+            </p>
+          ))}
+        </div>
       </section>
 
       <div style={{ borderTop: border, maxWidth: '720px' }} />
