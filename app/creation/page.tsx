@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 
-interface IncreaseContent {
+interface CreationContent {
   label: string
   title: string
-  increases: string[]
+  pairs: string[]
   opening: string[]
   questions: string[]
   callToQuestion: string
@@ -18,31 +18,31 @@ interface IncreaseContent {
   email: string
 }
 
-const content: IncreaseContent = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'content', 'increase.json'), 'utf-8')
+const content: CreationContent = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), 'content', 'creation.json'), 'utf-8')
 )
 
 export const metadata = {
-  title: 'A Year of Increase — Lembert Studio Program 2027',
+  title: 'A Year of Creation — Lembert Studio Program 2027',
   description:
-    'A year spent increasing life, wealth, time, joy, health and freedom, with a group of people all playing the same game. Max 8 places. Starts 27 February 2027.',
+    'One year creating what you actually want, and dropping what is no longer needed, with seven other business owners playing full out. Max 8 places. Starts 27 February 2027.',
   robots: { index: false, follow: false },
   openGraph: {
-    title: 'A Year of Increase',
-    description: 'The impossible game: ending up with more life as time passes. Max 8 places, 2027.',
+    title: 'A Year of Creation',
+    description: 'Results and peace. Wealth and presence. Max 8 places, 2027.',
   },
 }
 
 const CTA_HREF =
   `mailto:${content.email}` +
-  '?subject=' + encodeURIComponent('A Year of Increase — let us talk') +
+  '?subject=' + encodeURIComponent('A Year of Creation — let us talk') +
   '&body=' + encodeURIComponent(
-    'Hi Moritz,\n\nSomething in this resonates.\n\nMy name is: \nMy business is: \nWhat I want to increase: \n'
+    'Hi Moritz,\n\nSomething in this resonates.\n\nMy name is: \nMy business is: \nWhat I want to create next year: \n'
   )
 
 const border = '1px solid rgba(227,217,189,0.12)'
 
-export default function IncreasePage() {
+export default function CreationPage() {
   return (
     <div className="page-enter mx-auto max-w-page px-6 md:px-10">
       <div style={{ height: '7rem' }} />
@@ -67,9 +67,9 @@ export default function IncreasePage() {
         {content.title}
       </h1>
 
-      {/* ── The six increases ─────────────────────────────────── */}
+      {/* ── Both, fully ───────────────────────────────────────── */}
       <ul className="list-none m-0 p-0 mb-16" role="list" style={{ maxWidth: '520px' }}>
-        {content.increases.map((item, i) => (
+        {content.pairs.map((item, i) => (
           <li
             key={item}
             style={{
