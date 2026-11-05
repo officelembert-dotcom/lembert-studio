@@ -39,6 +39,24 @@
     "The program runs online.",
     "We meet in person twice: once in June, once in November."
   ],
+  "voicesLabel": "What clients have said",
+  "voices": [
+    {
+      "quote": "Moritz helped me realign with what's important to me and double my clients and revenue. … There's room for more growth and next steps, without actually working harder, but with more enjoyment.",
+      "name": "Alice Shido",
+      "title": "Founder Panta Rhei Studio"
+    },
+    {
+      "quote": "Not because I was stuck, but because I believe that coaching, even when everything is going well, can help you become happier, more efficient, and see yourself and your work with greater clarity. … I have not only improved my professional performance but also developed a deeper connection with myself and my loved ones.",
+      "name": "Kristin Hannon",
+      "title": ""
+    },
+    {
+      "quote": "I was facing an important decision: to go my own way and buy into the firm. Moritz did not take that decision off my hands. He gave me the space to order my thoughts, to take my doubts seriously, and to find my own answers.",
+      "name": "Florian Ecker-Pfleger",
+      "title": "Managing Partner, WTH Steuerberatung"
+    }
+  ],
   "closing": "If something in you resonates, even if you cannot justify wanting it, let us talk.",
   "details": [
     { "label": "Program start", "value": "27 February 2027" },

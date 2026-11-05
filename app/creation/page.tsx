@@ -14,6 +14,8 @@ interface CreationContent {
   notFor: string[]
   formatLabel: string
   format: string[]
+  voicesLabel: string
+  voices: { quote: string; name: string; title: string }[]
   closing: string
   details: { label: string; value: string }[]
   ctaButton: string
@@ -200,6 +202,39 @@ export default function CreationPage() {
             >
               {p}
             </p>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ borderTop: border, maxWidth: '720px' }} />
+
+      {/* ── Voices ────────────────────────────────────────────── */}
+      <section style={{ paddingTop: '4rem', paddingBottom: '4rem', maxWidth: '620px' }}>
+        <p
+          className="font-inter font-medium uppercase tracking-label mb-10"
+          style={{ fontSize: '11px', opacity: 0.55 }}
+        >
+          {content.voicesLabel}
+        </p>
+        <div className="space-y-12">
+          {content.voices.map((v) => (
+            <figure key={v.name} className="m-0">
+              <blockquote className="m-0 p-0">
+                <p
+                  className="font-fraunces font-normal text-birch"
+                  style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+                >
+                  {v.quote}
+                </p>
+              </blockquote>
+              <figcaption
+                className="font-inter font-medium uppercase tracking-label mt-5"
+                style={{ fontSize: '10px', opacity: 0.45 }}
+              >
+                {v.name}
+                {v.title ? ` · ${v.title}` : ''}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </section>

@@ -450,6 +450,21 @@ export default config({
             itemLabel: (props) => props.value.slice(0, 60) + '…',
           }
         ),
+        voicesLabel: fields.text({ label: 'Testimonials heading' }),
+        voices: fields.array(
+          fields.object({
+            quote: fields.text({ label: 'Quote', multiline: true }),
+            name: fields.text({ label: 'Name' }),
+            title: fields.text({
+              label: 'Role & company',
+              description: 'Leave empty to show the name on its own',
+            }),
+          }),
+          {
+            label: 'Testimonials',
+            itemLabel: (props) => props.fields.name.value,
+          }
+        ),
         closing: fields.text({
           label: 'Closing line',
           multiline: true,
