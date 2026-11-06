@@ -21,6 +21,12 @@ export interface HomeData {
 export interface AboutData {
   paragraphs: string[]
   portrait?: string | null
+  experienceLabel?: string
+  experienceIntro?: string
+  functionsLabel?: string
+  functions?: string[]
+  certificationsLabel?: string
+  certifications?: string[]
 }
 
 export interface Offer {

@@ -471,6 +471,17 @@ export default config({
             itemLabel: (props) => props.fields.name.value,
           }
         ),
+        links: fields.array(
+          fields.object({
+            label: fields.text({ label: 'Link text' }),
+            href: fields.text({ label: 'Path', description: 'e.g. /voices or /about' }),
+          }),
+          {
+            label: 'Links',
+            description: 'Shown under the testimonials',
+            itemLabel: (props) => props.fields.label.value,
+          }
+        ),
         closing: fields.text({
           label: 'Closing line',
           multiline: true,
@@ -551,6 +562,22 @@ export default config({
           publicPath: '/images/',
           validation: { isRequired: false },
         }),
+        experienceLabel: fields.text({ label: 'Coaching experience heading' }),
+        experienceIntro: fields.text({
+          label: 'Coaching experience',
+          description: 'Describe the organisations without naming them',
+          multiline: true,
+        }),
+        functionsLabel: fields.text({ label: 'Functions heading' }),
+        functions: fields.array(
+          fields.text({ label: 'Function' }),
+          { label: 'Functions', itemLabel: (props) => props.value }
+        ),
+        certificationsLabel: fields.text({ label: 'Certifications heading' }),
+        certifications: fields.array(
+          fields.text({ label: 'Certification' }),
+          { label: 'Certifications', itemLabel: (props) => props.value }
+        ),
       },
     }),
 
@@ -691,6 +718,22 @@ export default config({
           publicPath: '/images/',
           validation: { isRequired: false },
         }),
+        experienceLabel: fields.text({ label: 'Überschrift Coaching-Erfahrung' }),
+        experienceIntro: fields.text({
+          label: 'Coaching-Erfahrung',
+          description: 'Die Organisationen beschreiben, ohne sie zu nennen',
+          multiline: true,
+        }),
+        functionsLabel: fields.text({ label: 'Überschrift Bereiche' }),
+        functions: fields.array(
+          fields.text({ label: 'Bereich' }),
+          { label: 'Bereiche', itemLabel: (props) => props.value }
+        ),
+        certificationsLabel: fields.text({ label: 'Überschrift Zertifizierungen' }),
+        certifications: fields.array(
+          fields.text({ label: 'Zertifizierung' }),
+          { label: 'Zertifizierungen', itemLabel: (props) => props.value }
+        ),
       },
     }),
 

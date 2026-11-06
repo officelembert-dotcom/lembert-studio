@@ -6,5 +6,23 @@
     "Most people in high-stakes roles think they have to choose. But do you? I am fascinated by what allows us to thrive. Can you be playful and drive results? Can you keep a lighthearted smile and perform? From an early age, I rejected that either-or, the belief that your private wants and your career can't get together.",
     "I live between the Alpstein and the Bodensee with my wife, Jae. I write regularly, with a deep interest in philosophy, science, business, and the human condition. I'm ICF PCC-certified, with training in leadership coaching, ACT therapy, business development, and contemplative practice."
   ],
-  "portrait": "/images/portrait.jpeg"
+  "portrait": "/images/portrait.jpeg",
+  "experienceLabel": "Coaching experience",
+  "experienceIntro": "Alongside founders and owners, I coach professionals inside large organisations: a global industrial gases and engineering group, a US software company, a Swiss cantonal pension fund, and an Austrian tax advisory firm.",
+  "functionsLabel": "Across functions",
+  "functions": [
+    "Human Resources",
+    "Finance",
+    "Legal",
+    "Marketing",
+    "Sales",
+    "Research & Development",
+    "C-Suite and general management"
+  ],
+  "certificationsLabel": "Certifications",
+  "certifications": [
+    "International Coaching Federation, Professional Certified Coach (PCC)",
+    "Energy Leadership Index (ELI)",
+    "Energy Leadership Index Master Practitioner (ELI-MP)"
+  ]
 }

@@ -6,5 +6,23 @@
     "Die meisten Menschen in fordernden Rollen glauben, sie müssten sich entscheiden. Aber musst du das wirklich? Mich fasziniert, was uns aufblühen lässt. Kannst du spielerisch sein und gleichzeitig Ergebnisse liefern? Kannst du ein leichtes Lächeln behalten und trotzdem Leistung bringen? Schon früh habe ich dieses Entweder-oder abgelehnt, den Glauben, dass private Wünsche und Karriere nicht zusammenpassen.",
     "Ich lebe mit meiner Frau Jae zwischen Alpstein und Bodensee, verbringe Zeit mit der Familie und führe lange Gespräche über das, was uns gerade begeistert. Ich schreibe regelmäßig und interessiere mich tief für Philosophie, Wissenschaft, Wirtschaft und das Menschsein. Ich bin ICF PCC-zertifiziert, mit Ausbildungen in Leadership Coaching, ACT-Therapie, Business Development und kontemplativer Praxis."
   ],
-  "portrait": "/images/portrait.jpeg"
+  "portrait": "/images/portrait.jpeg",
+  "experienceLabel": "Coaching-Erfahrung",
+  "experienceIntro": "Neben Gründerinnen und Inhabern begleite ich Fach- und Führungskräfte in großen Organisationen: einem globalen Industriegase- und Anlagenbaukonzern, einem US-amerikanischen Softwareunternehmen, einer Schweizer kantonalen Pensionskasse und einer österreichischen Steuerberatungskanzlei.",
+  "functionsLabel": "Über Bereiche hinweg",
+  "functions": [
+    "Personal",
+    "Finanzen",
+    "Recht",
+    "Marketing",
+    "Vertrieb",
+    "Forschung & Entwicklung",
+    "Geschäftsleitung"
+  ],
+  "certificationsLabel": "Zertifizierungen",
+  "certifications": [
+    "International Coaching Federation, Professional Certified Coach (PCC)",
+    "Energy Leadership Index (ELI)",
+    "Energy Leadership Index Master Practitioner (ELI-MP)"
+  ]
 }

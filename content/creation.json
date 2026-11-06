@@ -64,6 +64,10 @@
       "title": "Managing Partner, WTH Steuerberatung"
     }
   ],
+  "links": [
+    { "label": "All client voices", "href": "/voices" },
+    { "label": "About Moritz", "href": "/about" }
+  ],
   "closing": "If something in you resonates, even if you cannot justify wanting it, let us talk.",
   "details": [
     { "label": "Program start", "value": "February 2027" },

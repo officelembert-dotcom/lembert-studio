@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { getAboutPageDe } from '@/lib/pages'
+import AboutCredentials from '@/components/AboutCredentials'
 
 export const metadata = {
   title: 'Über Moritz Lembert — Advisor & Executive Coach für Gründer & CEOs',
@@ -87,6 +88,10 @@ export default function AboutDe() {
         </div>
 
       </div>
+
+      <div style={{ height: '5rem' }} />
+
+      <AboutCredentials page={page} />
 
       <div style={{ height: '8rem' }} />
     </div>

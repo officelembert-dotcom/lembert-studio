@@ -18,6 +18,7 @@ interface CreationContent {
   promise: string
   voicesLabel: string
   voices: { quote: string; name: string; title: string }[]
+  links: { label: string; href: string }[]
   closing: string
   details: { label: string; value: string }[]
   ctaButton: string
@@ -265,6 +266,30 @@ export default function CreationPage() {
                 {v.title ? ` · ${v.title}` : ''}
               </figcaption>
             </figure>
+          ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row sm:gap-10 gap-4 mt-12">
+          {content.links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="group flex items-center gap-3 no-underline"
+            >
+              <span
+                className="font-fraunces font-normal text-birch transition-all duration-300 group-hover:translate-x-1"
+                style={{ fontSize: '1rem', opacity: 0.85 }}
+              >
+                {l.label}
+              </span>
+              <span
+                className="font-inter text-birch transition-all duration-300 group-hover:translate-x-1"
+                style={{ fontSize: '13px', opacity: 0.45 }}
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
           ))}
         </div>
       </section>

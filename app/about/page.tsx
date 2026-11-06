@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { getAboutPage } from '@/lib/pages'
+import AboutCredentials from '@/components/AboutCredentials'
 
 
 export const metadata = {
@@ -80,6 +81,10 @@ export default function About() {
         </div>
 
       </div>
+
+      <div style={{ height: '5rem' }} />
+
+      <AboutCredentials page={page} />
 
       <div style={{ height: '8rem' }} />
     </div>
