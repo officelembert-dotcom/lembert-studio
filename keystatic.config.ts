@@ -441,15 +441,21 @@ export default config({
             itemLabel: (props) => props.value.slice(0, 60) + '…',
           }
         ),
-        formatLabel: fields.text({ label: '"How it runs" heading' }),
-        format: fields.array(
-          fields.text({ label: 'Line', multiline: true }),
+        logisticsLabel: fields.text({ label: 'Logistics heading' }),
+        logistics: fields.array(
+          fields.text({ label: 'Line' }),
           {
-            label: 'How it runs',
-            description: 'Length, online or in person, where and when you meet',
-            itemLabel: (props) => props.value.slice(0, 60) + '…',
+            label: 'Logistics',
+            description: 'Length, meeting rhythm, sessions, investment',
+            itemLabel: (props) => props.value,
           }
         ),
+        promiseLabel: fields.text({ label: 'Promise heading' }),
+        promise: fields.text({
+          label: 'The promise',
+          description: 'Shown beside an amber rule under the logistics',
+          multiline: true,
+        }),
         voicesLabel: fields.text({ label: 'Testimonials heading' }),
         voices: fields.array(
           fields.object({

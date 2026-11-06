@@ -12,8 +12,10 @@ interface CreationContent {
   qualifications: string[]
   notForLabel: string
   notFor: string[]
-  formatLabel: string
-  format: string[]
+  logisticsLabel: string
+  logistics: string[]
+  promiseLabel: string
+  promise: string
   voicesLabel: string
   voices: { quote: string; name: string; title: string }[]
   closing: string
@@ -29,7 +31,7 @@ const content: CreationContent = JSON.parse(
 export const metadata = {
   title: 'A Year of Creation — Lembert Studio Program 2027',
   description:
-    'One year creating what you actually want, and dropping what is no longer needed, with seven other business owners playing full out. Max 8 places. Starts 27 February 2027.',
+    'Ten months creating what you actually want, and letting go of what is no longer needed, with a group of business owners playing full out. Max 10 spots. Starts February 2027.',
   robots: { index: false, follow: false },
   openGraph: {
     title: 'A Year of Creation',
@@ -185,24 +187,52 @@ export default function CreationPage() {
 
       <div style={{ borderTop: border, maxWidth: '720px' }} />
 
-      {/* ── How it runs ───────────────────────────────────────── */}
+      {/* ── Logistics + promise ───────────────────────────────── */}
       <section style={{ paddingTop: '4rem', paddingBottom: '4rem', maxWidth: '620px' }}>
         <p
           className="font-inter font-medium uppercase tracking-label mb-8"
           style={{ fontSize: '11px', opacity: 0.55 }}
         >
-          {content.formatLabel}
+          {content.logisticsLabel}
         </p>
-        <div className="space-y-5">
-          {content.format.map((p, i) => (
-            <p
-              key={i}
-              className="font-fraunces font-normal text-birch"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.85 }}
+
+        <ul className="list-none m-0 p-0" role="list" style={{ maxWidth: '520px' }}>
+          {content.logistics.map((item, i) => (
+            <li
+              key={item}
+              style={{
+                borderTop: i === 0 ? border : undefined,
+                borderBottom: border,
+                paddingTop: '0.9rem',
+                paddingBottom: '0.9rem',
+              }}
             >
-              {p}
-            </p>
+              <span
+                className="font-fraunces font-normal text-birch"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.6, opacity: 0.85 }}
+              >
+                {item}
+              </span>
+            </li>
           ))}
+        </ul>
+
+        <div
+          className="mt-10"
+          style={{ borderLeft: '2px solid var(--amber)', paddingLeft: '1.75rem' }}
+        >
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-3"
+            style={{ fontSize: '10px', opacity: 0.55 }}
+          >
+            {content.promiseLabel}
+          </p>
+          <p
+            className="font-fraunces font-normal text-birch"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.8, opacity: 0.9 }}
+          >
+            {content.promise}
+          </p>
         </div>
       </section>
 
