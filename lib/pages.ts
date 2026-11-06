@@ -16,6 +16,10 @@ export interface HomeData {
   practiceItems: string[]
   heroImage?: string | null
   newsletterIntro?: string
+  announcementLabel?: string
+  announcementTitle?: string
+  announcementText?: string
+  announcementHref?: string
 }
 
 export interface AboutData {

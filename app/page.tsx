@@ -36,8 +36,63 @@ export default function Home() {
         subheadline={page.subheadline}
       />
 
-      {/* ── Newsletter + portrait ─────────────────────────────── */}
+      {/* ── Program announcement ──────────────────────────────── */}
       <div className="mx-auto max-w-page px-6 md:px-10">
+        {page.announcementTitle && page.announcementHref && (
+          <>
+            <div style={{ height: '5rem' }} />
+            <Link
+              href={page.announcementHref}
+              className="group block no-underline"
+              style={{
+                borderTop: '1px solid rgba(227,217,189,0.12)',
+                borderBottom: '1px solid rgba(227,217,189,0.12)',
+                paddingTop: '2rem',
+                paddingBottom: '2rem',
+              }}
+            >
+              <div className="flex items-center justify-between gap-8">
+                <div className="min-w-0">
+                  {page.announcementLabel && (
+                    <p
+                      className="font-inter font-medium uppercase tracking-label mb-4"
+                      style={{ fontSize: '11px', color: 'var(--amber)' }}
+                    >
+                      {page.announcementLabel}
+                    </p>
+                  )}
+                  <p
+                    className="font-fraunces font-normal text-birch transition-all duration-300 group-hover:translate-x-2"
+                    style={{
+                      fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                      lineHeight: 1.2,
+                      letterSpacing: '-0.015em',
+                    }}
+                  >
+                    {page.announcementTitle}
+                  </p>
+                  {page.announcementText && (
+                    <p
+                      className="font-fraunces font-normal text-birch mt-3"
+                      style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.6, maxWidth: '520px' }}
+                    >
+                      {page.announcementText}
+                    </p>
+                  )}
+                </div>
+                <span
+                  className="font-inter text-birch shrink-0 transition-all duration-300 group-hover:translate-x-1"
+                  style={{ fontSize: '15px', opacity: 0.45 }}
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </div>
+            </Link>
+          </>
+        )}
+
+        {/* ── Newsletter + portrait ─────────────────────────────── */}
         <div style={{ height: '6rem' }} />
 
         <section

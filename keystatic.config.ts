@@ -539,6 +539,27 @@ export default config({
           multiline: true,
           validation: { isRequired: false },
         }),
+        announcementLabel: fields.text({
+          label: 'Announcement label',
+          description: 'Small amber line above the title, e.g. "New program · 2027"',
+          validation: { isRequired: false },
+        }),
+        announcementTitle: fields.text({
+          label: 'Announcement title',
+          description: 'Clear this and the whole band disappears from the homepage',
+          validation: { isRequired: false },
+        }),
+        announcementText: fields.text({
+          label: 'Announcement text',
+          description: 'One line under the title',
+          multiline: true,
+          validation: { isRequired: false },
+        }),
+        announcementHref: fields.text({
+          label: 'Announcement link',
+          description: 'e.g. /creation',
+          validation: { isRequired: false },
+        }),
       },
     }),
 
