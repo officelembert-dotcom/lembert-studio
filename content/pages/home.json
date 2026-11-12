@@ -9,8 +9,8 @@
   ],
   "heroImage": "/images/heroImage.jpg",
   "newsletterIntro": "I write about leadership, human nature, and what runs underneath the work. Leave your email if you'd like it in your inbox.",
-  "announcementLabel": "New program · 2027",
-  "announcementTitle": "A Year of Creation",
-  "announcementText": "Ten months creating what you actually want, with a small group of business owners. Max 10 spots.",
-  "announcementHref": "/creation"
+  "announcementLabel": "",
+  "announcementTitle": "",
+  "announcementText": "",
+  "announcementHref": ""
 }
