@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { getWorkPageDe } from '@/lib/pages'
 
 export const metadata = {
-  title: 'Zusammenarbeit — Outcome Based Coaching, Retained Advisory, Deep Day',
+  title: 'Zusammenarbeit — Partnerschaft, Deep Day, Retreats',
   description:
-    'Wege der Zusammenarbeit: Outcome Based Coaching, Retained Advisory über mehrere Monate und ein Deep Day für eine entscheidende Frage. Für Gründer und CEOs in der Schweiz und im DACH-Raum.',
+    'Wege der Zusammenarbeit: eine Partnerschaft für die Spiele, die dir wirklich wichtig sind, ein Deep Day für eine entscheidende Frage und Retreats im Rheintal. Für Gründer und CEOs in der Schweiz und im DACH-Raum.',
   openGraph: {
     title: 'Zusammenarbeiten mit Moritz Lembert — Lembert Studio',
-    description: 'Outcome Based Coaching, Retained Advisory und Deep Day.',
+    description: 'Partnerschaft, Deep Day und Retreats im Rheintal.',
   },
   alternates: {
     canonical: 'https://lembertstudio.com/de/work',
@@ -20,8 +20,8 @@ export const metadata = {
 }
 
 const offerSlugs: Record<string, string> = {
+  'partnerschaft':                      '/de/work/outcome-based-coaching',
   'outcome based coaching':             '/de/work/outcome-based-coaching',
-  'retained advisory':                  '/de/work/retained-advisory',
   'deep day':                           '/de/work/deep-day',
   'retreats im rheintal':               '/de/work/retreats',
   'retreats in der schweiz und europa': '/de/work/retreats',
@@ -32,7 +32,7 @@ function getOfferHref(title: string): string {
   return offerSlugs[title.trim().toLowerCase()] ?? '/de/work'
 }
 
-const MAIN_OFFERS = ['outcome based coaching', 'retained advisory', 'deep day']
+const MAIN_OFFERS = ['partnerschaft', 'outcome based coaching', 'deep day']
 const RETREAT_KEYS = ['retreats im rheintal', 'retreats in der schweiz und europa']
 
 export default function WorkDe() {

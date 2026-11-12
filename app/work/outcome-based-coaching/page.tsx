@@ -4,11 +4,11 @@ import { getOutcomeBasedCoachingPage } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Outcome Based Coaching — Lembert Studio',
-  description: 'A custom coaching program built around the outcomes we agree on together. For founders and CEOs who want change they can measure.',
+  title: 'Partnership — Coaching for Founders and CEOs',
+  description: 'A partnership built around the games that truly matter to you, with outcomes we agree on before we begin. For founders and CEOs who want change they can measure.',
   openGraph: {
-    title: 'Outcome Based Coaching — Lembert Studio',
-    description: 'We agree on outcomes. Then we build your program around them.',
+    title: 'Partnership — Lembert Studio',
+    description: 'I partner with you on the games that truly matter to you.',
   },
 }
 
@@ -23,7 +23,7 @@ export default function OutcomeBasedCoaching() {
         aria-hidden="true"
       >
         {page.image ? (
-          <Image src={page.image} alt="Outcome Based Coaching" fill sizes="100vw" className="object-cover object-center" priority />
+          <Image src={page.image} alt="Partnership" fill sizes="100vw" className="object-cover object-center" priority />
         ) : (
           <div className="absolute inset-0" style={{ background: 'linear-gradient(155deg, #0d100e 0%, #12161a 50%, #0a0d10 100%)' }} />
         )}
@@ -38,7 +38,7 @@ export default function OutcomeBasedCoaching() {
         <div style={{ height: '3rem' }} />
 
         <p className="font-inter font-medium uppercase tracking-label mb-6" style={{ fontSize: '11px', opacity: 0.55 }}>
-          Outcome Based Coaching
+          Partnership
         </p>
         <h1 className="font-fraunces font-normal text-birch mb-12" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', lineHeight: 1.1, letterSpacing: '-0.025em', maxWidth: '620px' }}>
           {page.headline}

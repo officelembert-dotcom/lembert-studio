@@ -4,7 +4,11 @@ const nextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    return [{ source: '/increase', destination: '/creation', permanent: false }]
+    return [
+      { source: '/increase', destination: '/creation', permanent: false },
+      { source: '/work/retained-advisory', destination: '/work', permanent: false },
+      { source: '/de/work/retained-advisory', destination: '/de/work', permanent: false },
+    ]
   },
 }
 

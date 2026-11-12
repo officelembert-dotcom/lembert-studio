@@ -218,7 +218,7 @@ export default config({
       schema: {
         title: fields.slug({
           name: { label: 'Page name' },
-          slug: { label: 'Slug (do not change)', description: 'retained-advisory, deep-day, or retreats' },
+          slug: { label: 'Slug (do not change)', description: 'outcome-based-coaching, deep-day, or retreats' },
         }),
         headline: fields.text({ label: 'Headline' }),
         paragraphs: fields.array(
@@ -322,7 +322,7 @@ export default config({
       schema: {
         title: fields.slug({
           name: { label: 'Seitenname' },
-          slug: { label: 'Slug (nicht ändern)', description: 'retained-advisory, deep-day oder retreats' },
+          slug: { label: 'Slug (nicht ändern)', description: 'outcome-based-coaching, deep-day oder retreats' },
         }),
         headline: fields.text({ label: 'Überschrift' }),
         paragraphs: fields.array(

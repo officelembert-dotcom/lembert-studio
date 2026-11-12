@@ -3,17 +3,17 @@ import Link from 'next/link'
 import { getWorkPage } from '@/lib/pages'
 
 export const metadata = {
-  title: 'Work with Moritz Lembert — Outcome Based Coaching, Retained Advisory, Deep Day',
-  description: 'Ways of working together: Outcome Based Coaching, Retained Advisory over months, and a Deep Day for one decision. For founders and CEOs navigating what matters most.',
+  title: 'Work with Moritz Lembert — Partnership, Deep Day, Retreats',
+  description: 'Ways of working together: a partnership built around the games that truly matter to you, a Deep Day for one decision, and retreats in the Rheintal. For founders and CEOs navigating what matters most.',
   openGraph: {
     title: 'Work — Lembert Studio',
-    description: 'Retained Advisory. Deep Day. In the Rheintal.',
+    description: 'Partnership. Deep Day. In the Rheintal.',
   },
 }
 
 const offerSlugs: Record<string, string> = {
+  'partnership':                       '/work/outcome-based-coaching',
   'outcome based coaching':            '/work/outcome-based-coaching',
-  'retained advisory':                 '/work/retained-advisory',
   'deep day':                          '/work/deep-day',
   'retreats in the rheintal':          '/work/retreats',
   'retreats in switzerland and europe': '/work/retreats',
@@ -24,7 +24,7 @@ function getOfferHref(title: string): string {
   return offerSlugs[title.trim().toLowerCase()] ?? '/work'
 }
 
-const MAIN_OFFERS = ['outcome based coaching', 'retained advisory', 'deep day']
+const MAIN_OFFERS = ['partnership', 'outcome based coaching', 'deep day']
 const RETREAT_KEYS = ['retreats in the rheintal', 'retreats in switzerland and europe']
 
 export default function Work() {
@@ -91,7 +91,7 @@ export default function Work() {
       <div className="mx-auto max-w-page px-6 md:px-10">
         <div style={{ height: '5rem' }} />
 
-        {/* Main offers — Retained Advisory + Deep Day */}
+        {/* Main offers — Partnership + Deep Day */}
         <div className="max-w-[680px]">
           {mainOffers.map((offer, i) => {
             const [lead, secondary] = offer.body.split('\n')

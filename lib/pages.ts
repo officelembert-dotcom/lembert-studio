@@ -65,7 +65,7 @@ export const getHomePage = (): HomeData =>
   readJson('content/pages/home.json', {
     headline: "Build without sacrificing the life you're building it for.",
     subheadline: 'An advisory practice held in long form, for the moments that matter.',
-    practiceItems: ['Retained advisory', 'Deep day', 'Retreats in the Rheintal'],
+    practiceItems: ['Partnership', 'Deep day', 'Retreats in the Rheintal'],
     heroImage: null,
     newsletterIntro:
       "I write when something is worth saying — about decisions, leadership, and what I notice in the work. Leave your email if you'd like it in your inbox.",
@@ -93,13 +93,6 @@ export interface WorkDetailData {
 export const getOutcomeBasedCoachingPage = (): WorkDetailData =>
   readJson('content/work-pages/outcome-based-coaching.json', {
     headline: 'We agree on outcomes. Then we build your program around them.',
-    paragraphs: [],
-    image: null,
-  })
-
-export const getRetainedAdvisoryPage = (): WorkDetailData =>
-  readJson('content/work-pages/retained-advisory.json', {
-    headline: 'Retained Advisory',
     paragraphs: [],
     image: null,
   })
@@ -133,7 +126,7 @@ export const getHomePageDe = (): HomeData =>
   readJson('content/pages/home-de.json', {
     headline: 'Bauen, ohne das Leben zu opfern, für das du es baust.',
     subheadline: 'Eine Beratungspraxis in langer Form, für die Momente, die zählen.',
-    practiceItems: ['Retained Advisory', 'Deep Day', 'Retreats im Rheintal'],
+    practiceItems: ['Partnerschaft', 'Deep Day', 'Retreats im Rheintal'],
     heroImage: null,
     newsletterIntro:
       'Ich schreibe, wenn etwas wirklich zu sagen ist — über Entscheidungen, Führung und das, was mir in der Arbeit auffällt. Lass deine E-Mail hier, wenn du es in deinem Posteingang haben möchtest.',
@@ -155,13 +148,6 @@ export const getWorkPageDe = (): WorkData =>
 export const getOutcomeBasedCoachingPageDe = (): WorkDetailData =>
   readJson('content/work-pages-de/outcome-based-coaching.json', {
     headline: 'Wir vereinbaren Ergebnisse. Dann bauen wir dein Programm darum.',
-    paragraphs: [],
-    image: null,
-  })
-
-export const getRetainedAdvisoryPageDe = (): WorkDetailData =>
-  readJson('content/work-pages-de/retained-advisory.json', {
-    headline: 'Retained Advisory',
     paragraphs: [],
     image: null,
   })

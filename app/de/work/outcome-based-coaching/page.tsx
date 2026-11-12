@@ -4,11 +4,11 @@ import { getOutcomeBasedCoachingPageDe } from '@/lib/pages'
 
 
 export const metadata = {
-  title: 'Outcome Based Coaching — Lembert Studio',
-  description: 'Ein persönliches Coaching-Programm, gebaut um die Ergebnisse, die wir gemeinsam vereinbaren. Für Gründer und CEOs, die messbare Veränderung wollen.',
+  title: 'Partnerschaft — Coaching für Gründer und CEOs',
+  description: 'Eine Partnerschaft für die Spiele, die dir wirklich wichtig sind, mit Ergebnissen, die wir vereinbaren, bevor wir beginnen. Für Gründer und CEOs, die messbare Veränderung wollen.',
   openGraph: {
-    title: 'Outcome Based Coaching — Lembert Studio',
-    description: 'Wir vereinbaren Ergebnisse. Dann bauen wir dein Programm darum.',
+    title: 'Partnerschaft — Lembert Studio',
+    description: 'Ich bin dein Partner in den Spielen, die dir wirklich wichtig sind.',
   },
   alternates: {
     canonical: 'https://lembertstudio.com/de/work/outcome-based-coaching',
@@ -30,7 +30,7 @@ export default function OutcomeBasedCoachingDe() {
         aria-hidden="true"
       >
         {page.image ? (
-          <Image src={page.image} alt="Outcome Based Coaching" fill sizes="100vw" className="object-cover object-center" priority />
+          <Image src={page.image} alt="Partnerschaft" fill sizes="100vw" className="object-cover object-center" priority />
         ) : (
           <div className="absolute inset-0" style={{ background: 'linear-gradient(155deg, #0d100e 0%, #12161a 50%, #0a0d10 100%)' }} />
         )}
@@ -45,7 +45,7 @@ export default function OutcomeBasedCoachingDe() {
         <div style={{ height: '3rem' }} />
 
         <p className="font-inter font-medium uppercase tracking-label mb-6" style={{ fontSize: '11px', opacity: 0.55 }}>
-          Outcome Based Coaching
+          Partnerschaft
         </p>
         <h1 className="font-fraunces font-normal text-birch mb-12" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', lineHeight: 1.1, letterSpacing: '-0.025em', maxWidth: '620px' }}>
           {page.headline}

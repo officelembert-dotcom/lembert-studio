@@ -43,7 +43,7 @@ export default function StructuredData() {
     url: 'https://lembertstudio.com',
     logo: 'https://lembertstudio.com/images/portrait.jpeg',
     description:
-      'An advisory practice for people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. Retained advisory, deep working days, and retreats.',
+      'An advisory practice for people building a future we want to live in: climate and impact founders, next-generation Mittelstand successors, mission-driven operators. Partnership on the games that truly matter, deep working days, and retreats.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Widnau',
