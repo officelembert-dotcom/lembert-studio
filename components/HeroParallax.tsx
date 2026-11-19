@@ -7,9 +7,18 @@ interface Props {
   src?: string | null
   headline: string
   subheadline: string
+  studioLine?: string
+  headlineLines?: string[]
 }
 
-export default function HeroParallax({ src, headline, subheadline }: Props) {
+export default function HeroParallax({
+  src,
+  headline,
+  subheadline,
+  studioLine,
+  headlineLines,
+}: Props) {
+  const lines = headlineLines && headlineLines.length > 0 ? headlineLines : [headline]
   const imgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -70,16 +79,29 @@ export default function HeroParallax({ src, headline, subheadline }: Props) {
         className="absolute inset-x-0 bottom-0 mx-auto max-w-page px-6 md:px-10"
         style={{ paddingBottom: '5rem' }}
       >
+        {studioLine && (
+          <p
+            className="font-inter font-medium uppercase tracking-label mb-6"
+            style={{ fontSize: '11px', opacity: 0.6 }}
+          >
+            {studioLine}
+          </p>
+        )}
+
         <h1
           className="font-fraunces font-normal text-birch"
           style={{
-            fontSize: 'clamp(2rem, 4vw, 2.75rem)',
-            lineHeight: 1.1,
+            fontSize: 'clamp(1.5rem, 4vw, 2.75rem)',
+            lineHeight: 1.18,
             letterSpacing: '-0.025em',
-            maxWidth: '640px',
+            maxWidth: '680px',
           }}
         >
-          {headline}
+          {lines.map((line, i) => (
+            <span key={i} style={{ display: 'block' }}>
+              {line}
+            </span>
+          ))}
         </h1>
 
         <p

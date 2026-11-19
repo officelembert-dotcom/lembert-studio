@@ -10,12 +10,30 @@ function readJson<T>(filePath: string, fallback: T): T {
   }
 }
 
+export interface Dimension {
+  title: string
+  body: string
+}
+
 export interface HomeData {
   headline: string
   subheadline: string
   practiceItems: string[]
   heroImage?: string | null
   newsletterIntro?: string
+  studioLine?: string
+  headlineLines?: string[]
+  workLabel?: string
+  workParagraphs?: string[]
+  dimensionsLabel?: string
+  dimensions?: Dimension[]
+  longGameLabel?: string
+  longGame?: string
+  practiceLabel?: string
+  practiceIntro?: string
+  humanNote?: string[]
+  invitation?: string
+  invitationCta?: string
   announcementLabel?: string
   announcementTitle?: string
   announcementText?: string

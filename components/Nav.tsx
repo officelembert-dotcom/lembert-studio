@@ -8,7 +8,6 @@ import { dict, type Locale } from '@/lib/i18n'
 const baseLinks = [
   { href: '/work',     key: 'work'     as const },
   { href: '/writings', key: 'writings' as const },
-  { href: '/library',  key: 'library'  as const },
   { href: '/about',    key: 'about'    as const },
   { href: '/voices',   key: 'voices'   as const },
   { href: '/contact',  key: 'contact'  as const },
@@ -51,7 +50,7 @@ export default function Nav() {
         WebkitBackdropFilter: showBackground ? 'blur(8px)' : 'none',
       }}
     >
-      <div className="mx-auto max-w-page px-6 md:px-10 flex items-center justify-between py-7">
+      <div className="mx-auto max-w-page px-6 md:px-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6 justify-between py-5 sm:py-7">
         <Link
           href={withLocale('/', locale)}
           className="font-inter font-medium tracking-label uppercase text-birch transition-all duration-300 hover:opacity-80 hover:-translate-y-px"
@@ -60,9 +59,9 @@ export default function Nav() {
           Lembert Studio
         </Link>
 
-        <div className="flex items-center gap-5 md:gap-9 ml-6 md:ml-0">
+        <div className="flex items-center gap-4 md:gap-9 ml-0">
           <nav aria-label="Main navigation">
-            <ul className="flex items-center gap-5 md:gap-9 list-none m-0 p-0">
+            <ul className="flex items-center gap-4 md:gap-9 list-none m-0 p-0">
               {baseLinks.map(({ href, key }) => {
                 const localizedHref = withLocale(href, locale)
                 const isActive =

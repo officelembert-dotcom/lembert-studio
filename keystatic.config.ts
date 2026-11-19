@@ -15,12 +15,12 @@ export default config({
   ui: {
     brand: { name: 'Lembert Studio' },
     navigation: {
-      'English — Pages': ['homePage', 'aboutPage', 'workPage', 'contactPage'],
+      'English — Pages': ['homePage', 'gamesPage', 'aboutPage', 'workPage', 'contactPage'],
       'English — Content': ['writings', 'voices', 'workDetailPages', 'library'],
-      'Deutsch — Seiten': ['homePageDe', 'aboutPageDe', 'workPageDe', 'contactPageDe'],
+      'Deutsch — Seiten': ['homePageDe', 'gamesPageDe', 'aboutPageDe', 'workPageDe', 'contactPageDe'],
       'Deutsch — Inhalte': ['writingsDe', 'voicesDe', 'workDetailPagesDe', 'libraryDe'],
       'Notes (one stream, EN + DE)': ['notes'],
-      'Unlisted pages': ['creationPage'],
+      'Unlisted pages': ['creationPage', 'apePage'],
     },
   },
 
@@ -505,11 +505,94 @@ export default config({
       },
     }),
 
+    gamesPage: singleton({
+      label: 'Games Worth Playing (EN)',
+      path: 'content/pages/games',
+      format: { data: 'json' },
+      schema: {
+        label: fields.text({ label: 'Label above title', validation: { isRequired: false } }),
+        title: fields.text({ label: 'Title', validation: { isRequired: true } }),
+        standfirst: fields.text({ label: 'Standfirst (italic)', multiline: true, validation: { isRequired: false } }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+      },
+    }),
+
+    gamesPageDe: singleton({
+      label: 'Games Worth Playing (DE)',
+      path: 'content/pages/games-de',
+      format: { data: 'json' },
+      schema: {
+        label: fields.text({ label: 'Label über dem Titel', validation: { isRequired: false } }),
+        title: fields.text({ label: 'Titel', validation: { isRequired: true } }),
+        standfirst: fields.text({ label: 'Vorspann (kursiv)', multiline: true, validation: { isRequired: false } }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Absatz', multiline: true }),
+          { label: 'Absätze', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+      },
+    }),
+
+    apePage: singleton({
+      label: 'An Ape in Infinity (unlisted)',
+      path: 'content/pages/ape',
+      format: { data: 'json' },
+      schema: {
+        label: fields.text({ label: 'Label above title', validation: { isRequired: false } }),
+        title: fields.text({ label: 'Title', validation: { isRequired: true } }),
+        standfirst: fields.text({ label: 'Standfirst (italic)', multiline: true, validation: { isRequired: false } }),
+        paragraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'Paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        linkLabel: fields.text({ label: 'Outbound link label', description: 'Leave both link fields empty to hide the link', validation: { isRequired: false } }),
+        linkHref: fields.url({ label: 'Outbound link URL', validation: { isRequired: false } }),
+      },
+    }),
+
     homePage: singleton({
       label: 'Home page',
       path: 'content/pages/home',
       format: { data: 'json' },
       schema: {
+        studioLine: fields.text({
+          label: 'Studio line',
+          description: 'Small uppercase line above the headline, e.g. Games Worth Playing',
+          validation: { isRequired: false },
+        }),
+        headlineLines: fields.array(
+          fields.text({ label: 'Line' }),
+          {
+            label: 'Headline lines',
+            description: 'Each one breaks onto its own line. Leave empty to use the single headline below.',
+            itemLabel: (props) => props.value,
+          }
+        ),
+        workLabel: fields.text({ label: 'Work section label', validation: { isRequired: false } }),
+        workParagraphs: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'The work — paragraphs', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        dimensionsLabel: fields.text({ label: 'Dimensions section label', validation: { isRequired: false } }),
+        dimensions: fields.array(
+          fields.object({
+            title: fields.text({ label: 'Title' }),
+            body: fields.text({ label: 'Body', multiline: true }),
+          }),
+          { label: 'Three dimensions', itemLabel: (props) => props.fields.title.value }
+        ),
+        longGameLabel: fields.text({ label: 'Long game section label', validation: { isRequired: false } }),
+        longGame: fields.text({ label: 'The long game', multiline: true, validation: { isRequired: false } }),
+        practiceLabel: fields.text({ label: 'Practice section label', validation: { isRequired: false } }),
+        practiceIntro: fields.text({ label: 'Practice intro', multiline: true, validation: { isRequired: false } }),
+        humanNote: fields.array(
+          fields.text({ label: 'Paragraph', multiline: true }),
+          { label: 'The human note (amber rule)', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        invitation: fields.text({ label: 'Invitation line', multiline: true, validation: { isRequired: false } }),
+        invitationCta: fields.text({ label: 'Invitation button', validation: { isRequired: false } }),
         headline: fields.text({
           label: 'Main headline',
           validation: { isRequired: true },
@@ -687,6 +770,42 @@ export default config({
       path: 'content/pages/home-de',
       format: { data: 'json' },
       schema: {
+        studioLine: fields.text({
+          label: 'Studio-Zeile',
+          description: 'Kleine Grossbuchstaben-Zeile über der Überschrift',
+          validation: { isRequired: false },
+        }),
+        headlineLines: fields.array(
+          fields.text({ label: 'Zeile' }),
+          {
+            label: 'Überschrift, Zeilen',
+            description: 'Jede Zeile bricht einzeln um. Leer lassen, um die einzelne Überschrift unten zu nutzen.',
+            itemLabel: (props) => props.value,
+          }
+        ),
+        workLabel: fields.text({ label: 'Label Abschnitt Arbeit', validation: { isRequired: false } }),
+        workParagraphs: fields.array(
+          fields.text({ label: 'Absatz', multiline: true }),
+          { label: 'Die Arbeit — Absätze', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        dimensionsLabel: fields.text({ label: 'Label Abschnitt Dimensionen', validation: { isRequired: false } }),
+        dimensions: fields.array(
+          fields.object({
+            title: fields.text({ label: 'Titel' }),
+            body: fields.text({ label: 'Text', multiline: true }),
+          }),
+          { label: 'Drei Dimensionen', itemLabel: (props) => props.fields.title.value }
+        ),
+        longGameLabel: fields.text({ label: 'Label Abschnitt langes Spiel', validation: { isRequired: false } }),
+        longGame: fields.text({ label: 'Das lange Spiel', multiline: true, validation: { isRequired: false } }),
+        practiceLabel: fields.text({ label: 'Label Abschnitt Praxis', validation: { isRequired: false } }),
+        practiceIntro: fields.text({ label: 'Praxis — Einleitung', multiline: true, validation: { isRequired: false } }),
+        humanNote: fields.array(
+          fields.text({ label: 'Absatz', multiline: true }),
+          { label: 'Die menschliche Note (bernsteinfarbene Linie)', itemLabel: (props) => props.value.slice(0, 60) + '…' }
+        ),
+        invitation: fields.text({ label: 'Einladungszeile', multiline: true, validation: { isRequired: false } }),
+        invitationCta: fields.text({ label: 'Einladungs-Button', validation: { isRequired: false } }),
         headline: fields.text({
           label: 'Haupt-Überschrift',
           validation: { isRequired: true },

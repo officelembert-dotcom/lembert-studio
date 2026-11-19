@@ -1,11 +1,48 @@
 {
-  "headline": "Bauen, ohne das Leben zu opfern, für das du es baust.",
-  "subheadline": "Ich arbeite mit Menschen, die an einer Zukunft bauen, in der wir leben wollen.",
+  "studioLine": "Games Worth Playing",
+  "headlineLines": [
+    "Die Entwicklung des Gründers.",
+    "Die Entwicklung des Unternehmens.",
+    "Die Zukunft, die wir gemeinsam schaffen."
+  ],
+  "headline": "Die Entwicklung des Gründers. Die Entwicklung des Unternehmens. Die Zukunft, die wir gemeinsam schaffen.",
+  "subheadline": "Ich arbeite mit einem kleinen Kreis von Gründern als Denkpartner, Berater und Executive Coach.",
+  "workLabel": "Die Arbeit",
+  "workParagraphs": [
+    "Mich fasziniert, was passiert, wenn ehrgeizige, neugierige Menschen zusammenkommen, um auszuloten, was möglich ist, und dann tatsächlich losgehen und es schaffen.",
+    "Im Kern der Arbeit steht eine Frage danach, wer du bist, während du handelst. Wie du dich selbst siehst, die anderen und die Welt, in der du unterwegs bist. Was deine Handlungen bestimmt. Was deinen Spielraum begrenzt. Und was verfügbar wird, wenn diese Grenzen nicht mehr im Spiel sind.",
+    "Gemeinsam finden wir heraus, wer du werden musst, um das zu verwirklichen, was du siehst: außergewöhnliche Menschen zu gewinnen, eine Organisation zu bauen, die trägt, und eine Zukunft zu schaffen, die nicht bloß eine Verlängerung der Vergangenheit ist."
+  ],
+  "dimensionsLabel": "Drei Dimensionen",
+  "dimensions": [
+    {
+      "title": "Der Gründer",
+      "body": "Wie du dich selbst siehst, die anderen und die Welt, in der du unterwegs bist. Was deine Handlungen bestimmt, und was verfügbar wird, wenn es das nicht mehr tut."
+    },
+    {
+      "title": "Die Organisation",
+      "body": "Wer du werden musst, wenn das Unternehmen komplexer wird, und was es braucht, etwas zu bauen, das trägt, was du vorhast."
+    },
+    {
+      "title": "Die Zukunft",
+      "body": "Was wir tatsächlich schaffen. Keine Verlängerung der Vergangenheit."
+    }
+  ],
+  "longGameLabel": "Das lange Spiel",
+  "longGame": "Das Spiel, das ich spiele, ist ein langes. Ich baue Beziehungen zu Gründern über Jahre auf, manchmal über Jahrzehnte, und begleite sie durch die verschiedenen Phasen des Unternehmensaufbaus. Wie sie sich entwickeln, so entwickelt sich die Arbeit. Wir erweitern, was möglich ist, nehmen größere Herausforderungen an und finden heraus, was wir gemeinsam schaffen können.",
+  "practiceLabel": "Wie ich arbeite",
+  "practiceIntro": "Die Beziehung ist das Eigentliche. Alles andere ist ein Instrument darin. Je nachdem, worum es gerade geht, heißt das: Arbeit mit dir allein, mit deinem Führungsteam, mit der Organisation, oder an einer bestimmten strategischen Frage.",
   "practiceItems": [
     "Partnerschaft",
     "Deep Day",
     "Retreats im Rheintal"
   ],
+  "humanNote": [
+    "Und bei aller Verbundenheit mit dem Gründer und mit dem, was wir schaffen, verliere ich nie aus dem Blick, dass wir ein Haufen weiterentwickelter Affen auf einem Felsen sind, der durch ein scheinbar unendliches Universum fliegt.",
+    "Wir können also genauso gut herausfinden, wozu wir fähig sind, ein paar Dinge bauen, die es wert sind, und unterwegs eine gute Zeit haben."
+  ],
+  "invitation": "Es beginnt mit einem Gespräch, in dem wir uns über das Spiel auseinandersetzen, das du spielst.",
+  "invitationCta": "Gespräch beginnen",
   "heroImage": "/images/heroImage.jpg",
   "newsletterIntro": "Ich schreibe über Führung, das Menschsein und das, was unter der Oberfläche wirkt. Lass deine E-Mail hier, wenn du es in deinem Posteingang haben möchtest."
 }
