@@ -91,14 +91,14 @@ export default function HeroParallax({
         <h1
           className="font-fraunces font-normal text-birch"
           style={{
-            fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+            fontSize: 'clamp(1.5rem, 4vw, 2.75rem)',
             lineHeight: 1.18,
             letterSpacing: '-0.025em',
             maxWidth: '680px',
           }}
         >
           {lines.map((line, i) => (
-            <span key={i} className="block">
+            <span key={i} style={{ display: 'block' }}>
               {line}
             </span>
           ))}
