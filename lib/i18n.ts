@@ -3,7 +3,7 @@ export type Locale = 'en' | 'de'
 export const dict = {
   en: {
     nav: {
-      work: 'Work',
+      work: 'Practice',
       writings: 'Writings',
       library: 'Library',
       about: 'About',
@@ -36,7 +36,7 @@ export const dict = {
   },
   de: {
     nav: {
-      work: 'Arbeit',
+      work: 'Praxis',
       writings: 'Texte',
       library: 'Bibliothek',
       about: 'Über mich',
