@@ -1,11 +1,48 @@
 {
-  "headline": "Build without sacrificing the life you're building it for.",
-  "subheadline": "I work with people building a future we want to live in.",
+  "studioLine": "Games Worth Playing",
+  "headlineLines": [
+    "The evolution of the founder.",
+    "The evolution of the company.",
+    "The futures we create together."
+  ],
+  "headline": "The evolution of the founder. The evolution of the company. The futures we create together.",
+  "subheadline": "I work with a small circle of founders as a thinking partner, advisor and executive coach.",
+  "workLabel": "The work",
+  "workParagraphs": [
+    "I am fascinated by what happens when you bring ambitious, curious people together to explore what is possible, and then actually go out and create it.",
+    "At the heart of the work is a question about who you are being. How you see yourself, other people, and the world you are operating in. What governs your actions. What limits your range. And what becomes available when those limits are no longer in play.",
+    "Together we work out who you need to become to realise what you can see: to attract exceptional people, build an organisation that functions, and create futures that are not simply extensions of the past."
+  ],
+  "dimensionsLabel": "Three dimensions",
+  "dimensions": [
+    {
+      "title": "The founder",
+      "body": "How you see yourself, other people and the world you operate in. What governs your actions, and what becomes available when it no longer does."
+    },
+    {
+      "title": "The organisation",
+      "body": "Who you need to become as the company grows more complex, and what it takes to build something that can hold what you intend."
+    },
+    {
+      "title": "The futures",
+      "body": "What we actually create. Not extensions of the past."
+    }
+  ],
+  "longGameLabel": "The long game",
+  "longGame": "The game I play is a long one. I build relationships with founders over years, sometimes decades, working alongside them through the different stages of building a company. As they evolve, so does the work. We expand what is possible, take on more ambitious challenges, and find out what we are capable of creating together.",
+  "practiceLabel": "How I work",
+  "practiceIntro": "The relationship is the thing. Everything else is an instrument inside it. Depending on what you are up against, that means working with you on your own, with your leadership team, with the wider organisation, or on one specific strategic question.",
   "practiceItems": [
     "Partnership",
     "Deep day",
     "Retreats in the Rheintal"
   ],
+  "humanNote": [
+    "And while I am deeply committed to the founder and to what we create, I never lose sight of the fact that we are a bunch of evolved apes on a rock travelling through a seemingly infinite universe.",
+    "We might as well see what we are capable of, build some things worth building, and have a good time along the way."
+  ],
+  "invitation": "It starts with a conversation, where we spar on the game you are playing.",
+  "invitationCta": "Start a conversation",
   "heroImage": "/images/heroImage.jpg",
   "newsletterIntro": "I write about leadership, human nature, and what runs underneath the work. Leave your email if you'd like it in your inbox.",
   "announcementLabel": "",
